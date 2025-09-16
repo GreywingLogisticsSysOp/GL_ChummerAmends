@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file is part of Chummer5a.
+
+Chummer5a is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Chummer5a is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
+
+  You can obtain the full source code for Chummer5a at
+  https://github.com/chummer5a/chummer5a
+-->
+<chummer xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema armor.xsd">
+  <armors>
+    <armor>
+      <name>Critter Body Armor</name>
+      <rating>100</rating>
+    </armor>
+	<armor>
+	  <name>Vashon Island: Sleeping Tiger</name>
+	  <mods amendoperation="replace">
+        <name>Custom Fit</name>
+        <name>Newest Model</name>
+        <name>Electrochromic Clothing</name>
+      </mods>
+	</armor>
+    <!-- Adding Environmental adaptations-->
+    <armor>
+      <name>Arctic Diving Suit</name>
+      <mods amendoperation="append">
+        <name>Environmental Adaptation (Cold)</name>
+      </mods>
+    </armor>
+
+    <armor>
+      <name>Ares Arctic Forces Suit</name>
+      <mods amendoperation="append">
+        <name>Environmental Adaptation (Cold)</name>
+      </mods>
+    </armor>
+
+    <armor>
+      <name>Ares Armored Coldsuit</name>
+      <mods amendoperation="append">
+        <name>Environmental Adaptation (Cold)</name>
+      </mods>
+    </armor>
+
+    <armor>
+      <name>Ares Armored Survivalist</name>
+      <mods amendoperation="append">
+        <name>Environmental Adaptation</name>
+      </mods>
+    </armor>
+
+    <armor>
+      <name>Ares Polar Sneak Suit</name>
+      <mods amendoperation="append">
+        <name>Environmental Adaptation (Cold)</name>
+      </mods>
+    </armor>
+
+    <armor>
+      <name>Coldsuit</name>
+      <mods amendoperation="append">
+        <name>Environmental Adaptation (Cold)</name>
+      </mods>
+    </armor>
+
+    <armor>
+      <name>Polar Survival Suit</name>
+      <mods amendoperation="append">
+        <name>Environmental Adaptation (Cold)</name>
+      </mods>
+    </armor>
+
+    <armor>
+      <name>Desert Suit</name>
+      <mods amendoperation="append">
+        <name>Environmental Adaptation (Arid)</name>
+      </mods>
+    </armor>
+
+    <armor>
+      <name>Hazmat Suit</name>
+      <mods amendoperation="append">
+        <name>Environmental Adaptation (Irradiated)</name>
+      </mods>
+    </armor>
+
+    <armor>
+      <name>Ares Victory: Big Game Hunter</name>
+      <mods amendoperation="append">
+        <name>Environmental Adaptation</name>
+      </mods>
+    </armor>
+
+    <armor>
+      <name>Ares Victory: Globetrotter Jacket</name>
+      <mods amendoperation="append">
+        <name>Environmental Adaptation</name>
+      </mods>
+    </armor>
+
+    <armor>
+      <name>Ares Victory: Globetrotter Vest</name>
+      <mods amendoperation="append">
+        <name>Environmental Adaptation</name>
+      </mods>
+    </armor>
+
+    <armor>
+      <name>Ares Victory: Globetrotter Clothing</name>
+      <mods amendoperation="append">
+        <name>Environmental Adaptation</name>
+      </mods>
+    </armor>
+
+    <armor>
+      <name>Ares Victory: Wild Hunt</name>
+      <mods amendoperation="append">
+        <name>Environmental Adaptation</name>
+      </mods>
+    </armor>
+
+
+
+    <!-- Content from State of the Art ADL -->
+    <armor>
+      <id>60c7a349-d3a9-4a5c-a9cc-6e9d473c1e20</id>
+      <name>Franzinger Fashion Tenor: Swallowtail Outfit</name>
+    </armor>
+    <armor>
+      <id>6dad32b2-8714-4dab-a9e7-0692f233a2e7</id>
+      <name>Franzinger Fashion Tenor: Swallowtail Coat</name>
+    </armor>
+    <armor amendoperation="append">
+      <name>Rheingold Pro Tec Plus: Coat</name>
+      <mods>
+        <name>Concealability</name>
+        <name>Gear Access</name>
+      </mods>
+      <gears>
+        <usegear>Holster</usegear>
+      </gears>
+    </armor>
+    <armor amendoperation="append">
+      <name>Rheingold Pro Tec Plus: Suit</name>
+      <bonus>
+        <limitmodifier>
+          <limit>Social</limit>
+          <value>1</value>
+          <condition>LimitCondition_Visible</condition>
+        </limitmodifier>
+      </bonus>
+      <gears>
+        <usegear>Micro-Transceiver</usegear>
+      </gears>
+    </armor>
+    <armor xpathfilter="contains(name,'StattKrieg')" amendoperation="append">
+      <mods>
+        <name>Electrochromic Clothing</name>
+      </mods>
+    </armor>
+  </armors>
+  <!-- Armors added to chummer -->
+  <armors amendoperation="append">
+    <armor>
+      <id>711b5901-b7a7-4bd0-8d3c-20912111a541</id>
+      <name>Bunker Shield</name>
+      <category>Armor</category>
+      <armor>+8</armor>
+      <armorcapacity>8</armorcapacity>
+      <addweapon>Bunker Shield</addweapon>
+      <avail>10R</avail>
+      <cost>3000</cost>
+      <bonus>
+        <limitmodifier>
+          <limit>Physical</limit>
+          <value>-1</value>
+          <condition>LimitCondition_ShieldPhysicalPenalty</condition>
+        </limitmodifier>
+      </bonus>
+      <source>MPR</source>
+      <page>0</page>
+    </armor>
+    <armor>
+      <id>469a783f-07cb-4ce8-a058-df08dc040a8c</id>
+      <name>Montagne Shield</name>
+      <category>Armor</category>
+      <armor>+10</armor>
+      <armorcapacity>10</armorcapacity>
+      <addweapon>Montagne Shield</addweapon>
+      <avail>12R</avail>
+      <cost>8000</cost>
+      <bonus>
+        <limitmodifier>
+          <limit>Physical</limit>
+          <value>-1</value>
+          <condition>LimitCondition_ShieldPhysicalPenalty</condition>
+        </limitmodifier>
+      </bonus>
+      <source>MPR</source>
+      <page>0</page>
+    </armor>
+  </armors>
+  <!-- Adds shock frills weapons to Shock Frills -->
+  <mods>
+    <mod amendoperation = "append">
+      <name>Shock Frills</name>
+      <addweapon>Shock Frills</addweapon>
+    </mod>
+    <mod>
+      <name>Grey Mana Integration</name>
+      <avail>FixedValues(6R,6R,6R,9R,9R,9R)</avail>
+    </mod>
+	<mod>
+	  <name>Full Body Armor: Chemical Seal</name>
+	  <hide />
+	</mod>
+  </mods>
+
+  <!-- Adds the new armor mods based on the house rules -->
+  <mods amendoperation = "append">
+    <mod>
+      <id>a1852e9f-028e-439a-94f5-7306d5d2d69a</id>
+      <name>Urban Explorer Jumpsuit: Melter</name>
+      <category>Urban Explorer Jumpsuit Accessories</category>
+      <maxrating>1</maxrating>
+      <armorcapacity>[0]</armorcapacity>
+      <gearcapacity>0</gearcapacity>
+      <avail>0</avail>
+      <cost>50</cost>
+      <source>MPR</source>
+      <page>0</page>
+    </mod>
+    <mod>
+      <id>65357521-6601-4d36-9a6b-3bf8053c5c6a</id>
+      <name>Rapid Transit Jumpsuit: Melter</name>
+      <category>Rapid Transit Detailing</category>
+      <maxrating>1</maxrating>
+      <armorcapacity>[0]</armorcapacity>
+      <gearcapacity>0</gearcapacity>
+      <avail>0</avail>
+      <cost>50</cost>
+      <source>MPR</source>
+      <page>0</page>
+    </mod>
+
+    <mod>
+      <id>b82281e6-935e-43a2-a0b9-8982eed65abe</id>
+      <name>Environmental Adaptation</name>
+      <category>General</category>
+      <armor>0</armor>
+      <maxrating>1</maxrating>
+      <armorcapacity>[0]</armorcapacity>
+      <avail>+3</avail>
+      <cost>1500</cost>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>MPR</source>
+      <page>0</page>
+    </mod>
+
+    <!-- Hidden environmental for the armors that ship with it -->
+    <mod>
+      <hidden />
+      <id>ff70ad36-09d3-4ca4-a56a-4a92121fd678</id>
+      <name>Environmental Adaptation (Cold)</name>
+      <category>General</category>
+      <armor>0</armor>
+      <maxrating>1</maxrating>
+      <armorcapacity>[0]</armorcapacity>
+      <avail>+3</avail>
+      <cost>1500</cost>
+      <bonus />
+      <source>MPR</source>
+      <page>0</page>
+    </mod>
+
+    <mod>
+      <hidden />
+      <id>b84c19d3-4a79-4572-8a4a-89afc8f71492</id>
+      <name>Environmental Adaptation (Arid)</name>
+      <category>General</category>
+      <armor>0</armor>
+      <maxrating>1</maxrating>
+      <armorcapacity>[0]</armorcapacity>
+      <avail>+3</avail>
+      <cost>1500</cost>
+      <bonus />
+      <source>MPR</source>
+      <page>0</page>
+    </mod>
+
+    <mod>
+      <hidden />
+      <id>3ad59f0e-6dbe-499d-91a2-ef3c313b0c24</id>
+      <name>Environmental Adaptation (Irradiated)</name>
+      <category>General</category>
+      <armor>0</armor>
+      <maxrating>1</maxrating>
+      <armorcapacity>[0]</armorcapacity>
+      <avail>+3</avail>
+      <cost>1500</cost>
+      <bonus />
+      <source>MPR</source>
+      <page>0</page>
+    </mod>
+
+    <!-- Homebrew shield mods -->
+    <mod>
+      <id>af5f2e64-cb3a-488f-9bad-acd1afd5e8aa</id>
+      <name>Claymore Modification</name>
+      <category>General</category>
+      <maxrating>1</maxrating>
+      <armorcapacity>[2]</armorcapacity>
+      <required>
+        <OR>
+          <parentdetails>
+            <name>Ballistic Shield</name>
+          </parentdetails>
+          <parentdetails>
+            <name>Riot Shield</name>
+          </parentdetails>
+          <parentdetails>
+            <name>Ares FlaShield</name>
+          </parentdetails>
+          <parentdetails>
+            <name>Ares Briefcase Shield</name>
+          </parentdetails>
+          <parentdetails>
+            <name>EVO/Yamatetsu Naval Technologies Rampart</name>
+          </parentdetails>
+          <parentdetails>
+            <name>Bunker Shield</name>
+          </parentdetails>
+          <parentdetails>
+            <name>Montagne Shield</name>
+          </parentdetails>
+        </OR>
+      </required>
+      <avail>+2F</avail>
+      <cost>3000</cost>
+      <source>MPR</source>
+      <page>0</page>
+    </mod>
+    <mod>
+      <id>63660bd5-c5d0-4bed-8d08-d4f022497599</id>
+      <name>Combat Modification</name>
+      <category>General</category>
+      <maxrating>1</maxrating>
+      <armorcapacity>[2]</armorcapacity>
+      <required>
+        <OR>
+          <parentdetails>
+            <name>Ballistic Shield</name>
+          </parentdetails>
+          <parentdetails>
+            <name>Riot Shield</name>
+          </parentdetails>
+          <parentdetails>
+            <name>Ares FlaShield</name>
+          </parentdetails>
+          <parentdetails>
+            <name>Ares Briefcase Shield</name>
+          </parentdetails>
+          <parentdetails>
+            <name>EVO/Yamatetsu Naval Technologies Rampart</name>
+          </parentdetails>
+          <parentdetails>
+            <name>Bunker Shield</name>
+          </parentdetails>
+          <parentdetails>
+            <name>Montagne Shield</name>
+          </parentdetails>
+        </OR>
+      </required>
+      <avail>+2F</avail>
+      <cost>1000</cost>
+      <source>MPR</source>
+      <page>0</page>
+    </mod>
+    <mod>
+      <id>d8accff3-ec17-46a6-8b57-47d8cad63557</id>
+      <name>Electrochromic Modification</name>
+      <category>General</category>
+      <maxrating>1</maxrating>
+      <armorcapacity>[0]</armorcapacity>
+      <required>
+        <OR>
+          <parentdetails>
+            <name>Ballistic Shield</name>
+          </parentdetails>
+          <parentdetails>
+            <name>Riot Shield</name>
+          </parentdetails>
+          <parentdetails>
+            <name>Ares FlaShield</name>
+          </parentdetails>
+          <parentdetails>
+            <name>Ares Briefcase Shield</name>
+          </parentdetails>
+          <parentdetails>
+            <name>EVO/Yamatetsu Naval Technologies Rampart</name>
+          </parentdetails>
+          <parentdetails>
+            <name>Bunker Shield</name>
+          </parentdetails>
+          <parentdetails>
+            <name>Montagne Shield</name>
+          </parentdetails>
+        </OR>
+      </required>
+      <avail>+2R</avail>
+      <cost>500</cost>
+      <source>MPR</source>
+      <page>0</page>
+    </mod>
+  </mods>
+</chummer>

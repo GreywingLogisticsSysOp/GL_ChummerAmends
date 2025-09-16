@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file is part of Chummer5a.
+
+Chummer5a is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Chummer5a is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
+
+  You can obtain the full source code for Chummer5a at
+  https://github.com/chummer5a/chummer5a
+-->
+<chummer xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema powers.xsd">
+  <powers>
+    <power>
+      <name>Adept Spell</name>
+      <points>1</points>
+      <levels>True</levels>
+      <limit>1</limit>
+      <maxlevels>100</maxlevels>
+    </power>
+	<power>
+      <name>Enhanced Accuracy (skill)</name>
+      <bonus>
+        <weaponskillaccuracy amenoperation="replace">
+          <selectskill skillcategory="Combat Active" />
+          <value>1</value>
+        </weaponskillaccuracy>
+      </bonus>
+    </power>
+	<power>
+      <name>Critical Strike</name>
+      <bonus>
+        <weaponcategorydv amendoperation="replace">
+          <selectskill limittoskill="Astral Combat,Blades,Clubs,Unarmed Combat,Atypical Melee,Flexile Melee" />
+          <bonus>1</bonus>
+        </weaponcategorydv>
+      </bonus>
+    </power>
+	<power>
+	  <name>Osmosis</name>
+	  <points>0.5</points>
+	  <maxlevels>1</maxlevels>
+	</power>
+	<power>
+	  <name>Mimic</name>
+	  <points>0.5</points>
+	  <maxlevels>1</maxlevels>
+	</power>
+  </powers>
+
+
+  <powers amendoperation="append">
+    <!-- 6th Edition Adept power-->
+    <power>
+      <id>80289a31-3e5f-40d1-a23c-2806ae00c530</id>
+      <name>Dash</name>
+      <points>0.25</points>
+      <levels>True</levels>
+      <limit>1</limit>
+      <source>6e</source>
+      <page>0</page>
+    </power>
+
+    <!-- Homebrew Powers -->
+    <power>
+      <id>72fe989b-f77b-4236-ba8f-c894785abdd8</id>
+      <name>Homeostasis</name>
+      <points>0.25</points>
+      <levels>False</levels>
+      <limit>1</limit>
+      <source>MPR</source>
+      <page>0</page>
+    </power>
+  </powers>
+</chummer>

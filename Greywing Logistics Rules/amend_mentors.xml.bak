@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file is part of Chummer5a.
+
+    Chummer5a is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Chummer5a is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
+
+    You can obtain the full source code for Chummer5a at
+    https://github.com/chummer5a/chummer5a
+-->
+<chummer>
+  <mentors>
+    <mentor>
+      <name>Doom</name>
+      <hide />
+    </mentor>
+    <mentor>
+      <name>Disease</name>
+      <hide />
+    </mentor>
+    <mentor>
+      <name>Mutation</name>
+      <hide />
+    </mentor>
+	<mentor>
+      <name>Pollution</name>
+      <hide />
+    </mentor>
+<!--    <mentor>
+      <name>Boar</name>
+      <disadvantage>When a Boar magician makes a plan, she sticks to it. You must make a Charisma + Willpower (3) Test to abandon a planned course of action in favor of a new one. If you fail, you must endeavor to continue with your original plan, even if it means going on alone. Similarly, you must succeed in a Charisma + Willpower (3) Test to proceed in anything without a plan.</disadvantage>
+    </mentor> -->
+    <mentor>
+      <name>Horse</name>
+      <hide />
+    </mentor>
+    <mentor>
+      <name>Planar Entity</name>
+      <hide />
+    </mentor>
+    <mentor>
+      <name>Tohu Wa-Bohu</name>
+      <hide />
+    </mentor>
+    <mentor>
+      <name>Guanyin</name>
+      <hide />
+    </mentor>
+    <mentor>
+      <name>Goddess</name>
+      <hide />
+    </mentor>
+    
+    <!-- Bans the mentors spirits not approved from the german content -->
+    <mentor>
+      <name>Mystic Guardian</name>
+      <hide />
+    </mentor>
+    <mentor>
+      <name>Little Red Riding Hood</name>
+      <hide />
+    </mentor>
+    <mentor>
+      <name>Treasure Hunter</name>
+      <hide />
+    </mentor>
+    <mentor>
+      <name>Brother at Arms</name>
+      <hide />
+    </mentor>
+    <mentor>
+      <name>Eurasian Jay</name>
+      <hide />
+    </mentor>
+    <mentor>
+      <name>Tide</name>
+      <hide />
+    </mentor>
+    <mentor>
+      <id>62188234-323a-4c8e-96c4-b8b8a750e272</id>
+      <name>Brownie</name>
+    </mentor>
+    <mentor>
+      <name>Badger</name>
+      <advantage>All: +1 to assensing and perception.</advantage>
+      <bonus>
+        <specificskill>
+          <name>Assensing</name>
+          <bonus>1</bonus>
+        </specificskill>
+        <specificskill>
+          <name>Perception</name>
+          <bonus>1</bonus>
+      </bonus>
+    </mentor>
+    <mentor>
+      <name>Fox</name>
+      <disadvantage>If Fox fights, it'll fight to kill. A follower of this mentor spirit must make a Willpower + CHA (3) Test to spare an overpowered foe.</disadvantage>
+    </mentor>
+  </mentors>
+  
+  <!-- Adds the mentors missing from German SG -->
+  <mentors>
+    <mentor>
+      <id>d546b4fe-1d0d-4c4b-8d09-af82cb8048c1</id>
+      <name>Klabautermann</name>
+      <advantage>All: +2 dice for Mechanic tests.</advantage>
+      <disadvantage>Whenever a follower of Klabautermann is in danger (in reality or only in his imagination) or is on a vehicle for an extended period of time (be it a car, ship, plane or train), he must succeed in a Willpower + Charisma (3) test. If he fails, the character is convinced that he has seen the Klabautermann, and will attempt to flee, as well as trying to convince other characters that their plan will not end well.</disadvantage>
+      <bonus>
+        <specificskill>
+          <name>Mechanic</name>
+          <bonus>2</bonus>
+        </specificskill>
+      </bonus>
+      <choices>
+        <choice>
+          <name>Magician: +2 dice for Detection spells</name>
+          <bonus>
+            <spellcategory>
+              <name>Detection</name>
+              <val>2</val>
+            </spellcategory>
+          </bonus>
+        </choice>
+        <choice>
+          <name>Adept: 2 free ranks of Danger Sense</name>
+          <bonus>
+            <specificpower>
+              <name>Danger Sense</name>
+              <val>2</val>
+            </specificpower>>
+          </bonus>
+        </choice>
+      </choices>
+      <source>SG</source>
+      <page>0</page>
+    </mentor>
+    <mentor>
+      <id>7f595157-c5ac-4de6-874b-a52965d1675f</id>
+      <name>Marmor</name>
+      <advantage>All: +1 dice for Perception and Etiquette.</advantage>
+      <disadvantage>If a Marmot supporter enters a fight (intentionally or unintentionally), he must succeed on a Willpower + Charisma (3) in order to not immediately run away.</disadvantage>
+      <bonus>
+        <specificskill>
+          <name>Etiquette</name>
+          <bonus>1</bonus>
+        </specificskill>
+        <specificskill>
+          <name>Perception</name>
+          <bonus>1</bonus>
+        </specificskill>
+      </bonus>
+      <choices>
+        <choice>
+          <name>Magician: +2 dice for Detection spells</name>
+          <bonus>
+            <spellcategory>
+              <name>Detection</name>
+              <val>2</val>
+            </spellcategory>
+          </bonus>
+        </choice>
+        <choice>
+          <name>Adept: 2 free levels of Attribute Boost (Strength)</name>
+          <bonus>
+            <specificpower>
+              <name>Attribute Boost</name>
+              <val>2</val>
+              <bonusoverride>
+                <selectattribute>
+                  <attribute>STR</attribute>
+                </selectattribute>
+              </bonusoverride>
+            </specificpower>
+          </bonus>
+        </choice>
+        <choice>
+          <name>Adept: Gain the Motion Sense power for free.</name>
+          <bonus>
+            <specificpower>
+              <name>Motion Sense</name>
+            </specificpower>
+          </bonus>
+        </choice>
+      </choices>
+      <source>SG</source>
+      <page>0</page>
+    </mentor>
+    <mentor>
+      <id>3b9c99d9-abed-4fd6-997c-9919c10c800e</id>
+      <name>Moon (Alt)</name>
+      <advantage>All: +2 dice to Negotiation tests.</advantage>
+      <disadvantage>The moon is independent and free. A follower of Luna must succeed on a Charisma + Willpower (3) to follow a direct order that does not correspond to their current desires - especially if their own logic tells her that it would be better to disregard her own desires for the moment.</disadvantage>
+      <bonus>
+        <specificskill>
+          <name>Negotiation</name>
+          <bonus>2</bonus>
+        </specificskill>
+      </bonus>
+      <choices>
+        <choice>
+          <name>Magician: +2 dice for Illusion spells, preparations, and spell rituals.</name>
+          <bonus>
+            <spellcategory>
+              <name>Illusion</name>
+              <val>2</val>
+            </spellcategory>
+          </bonus>
+        </choice>
+        <choice>
+          <name>Adept: 2 free levels of Enhanced Accuracy (skill)</name>
+          <bonus>
+            <specificpower>
+              <name>Enhanced Accuracy (skill)</name>
+              <val>1</val>
+            </specificpower>
+            <specificpower>
+              <name>Enhanced Accuracy (skill)</name>
+              <val>1</val>
+            </specificpower>
+          </bonus>
+        </choice>
+        <choice>
+          <name>Adept: 1 free level of Spell Resistance</name>
+          <bonus>
+            <specificpower>
+              <name>Spell Resistance</name>
+              <val>1</val>
+            </specificpower>
+          </bonus>
+        </choice>
+      </choices>
+      <source>SG</source>
+      <page>0</page>
+    </mentor>
+  </mentors>
+</chummer>

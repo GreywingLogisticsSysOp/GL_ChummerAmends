@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--This file is part of Chummer5a.
+
+Chummer5a is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Chummer5a is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
+
+  You can obtain the full source code for Chummer5a at
+  https://github.com/chummer5a/chummer5a
+-->
+<chummer xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.w3.org/2001/XMLSchema priorities.xsd">
+
+<priorities>
+  <!-- Region Metatypes-->
+  <priority>
+    <name>A - Any metatype</name>
+    <metatypes>
+      <metatype>
+        <name>Human</name>
+        <metavariants amendoperation="append">
+          <metavariant>
+            <name>Valkyrie</name>
+            <value>8</value>
+            <karma>15</karma>
+          </metavariant>
+        </metavariants>
+      </metatype>
+      <metatype amendoperation="replace">
+        <name>Ork</name>
+        <value>8</value>
+        <karma>0</karma>
+        <metavariants>
+          <metavariant>
+            <name>Hobgoblin</name>
+            <value>8</value>
+            <karma>5</karma>
+          </metavariant>
+          <metavariant>
+            <name>Ogre</name>
+            <value>8</value>
+            <karma>8</karma>
+          </metavariant>
+          <metavariant>
+            <name>Oni</name>
+            <value>8</value>
+            <karma>4</karma>
+          </metavariant>
+          <metavariant>
+            <name>Satyr</name>
+            <value>8</value>
+            <karma>10</karma>
+          </metavariant>
+        </metavariants>
+      </metatype>
+      <metatype amendoperation="replace">
+        <name>Troll</name>
+        <value>7</value>
+        <karma>0</karma>
+        <metavariants>
+          <metavariant>
+            <name>Cyclops</name>
+            <value>7</value>
+            <karma>2</karma>
+          </metavariant>
+          <metavariant>
+            <name>Fomorian</name>
+            <value>7</value>
+            <karma>12</karma>
+          </metavariant>
+          <metavariant>
+            <name>Giant</name>
+            <value>7</value>
+            <karma>2</karma>
+          </metavariant>
+          <metavariant>
+            <name>Minotaur</name>
+            <value>7  </value>
+            <karma>2</karma>
+          </metavariant>
+        </metavariants>
+      </metatype>
+    </metatypes>
+    <metatypes amendoperation="append">
+      <metatype>
+        <name>AI</name>
+        <value>8</value>
+        <karma>0</karma>
+        <metavariants>
+          <metavariant>
+            <name>Pilot A.I.</name>
+            <value>7</value>
+            <karma>0</karma>
+          </metavariant>
+          <metavariant>
+            <name>Realms A.I.</name>
+            <value>7</value>
+            <karma>0</karma>
+          </metavariant>
+		  <metavariant>
+            <name>E-Ghost</name>
+            <value>7</value>
+            <karma>0</karma>
+          </metavariant>
+          <metavariant>
+            <name>Deep Foundation A.I.</name>
+            <value>3</value>
+            <karma>0</karma>
+          </metavariant>
+        </metavariants>
+      </metatype>
+    </metatypes>
+  </priority>
+
+  <priority>
+    <name>B - Any metatype</name>
+    <metatypes>
+      <metatype>
+        <name>Human</name>
+        <metavariants amendoperation="append">
+          <metavariant>
+            <name>Valkyrie</name>
+            <value>6</value>
+            <karma>15</karma>
+          </metavariant>
+        </metavariants>
+      </metatype>
+      <metatype amendoperation="replace">
+        <name>Ork</name>
+        <value>6</value>
+        <karma>0</karma>
+        <metavariants>
+          <metavariant>
+            <name>Ogre</name>
+            <value>6</value>
+            <karma>8</karma>
+          </metavariant>
+          <metavariant>
+            <name>Oni</name>
+            <value>6</value>
+            <karma>4</karma>
+          </metavariant>
+          <metavariant>
+            <name>Satyr</name>
+            <value>6</value>
+            <karma>10</karma>
+          </metavariant>
+          <metavariant>
+            <name>Hobgoblin</name>
+            <value>6</value>
+            <karma>5</karma>
+          </metavariant>
+        </metavariants>
+      </metatype>
+      <metatype amendoperation="replace">
+        <name>Troll</name>
+        <value>4</value>
+        <karma>0</karma>
+        <metavariants>
+          <metavariant>
+            <name>Cyclops</name>
+            <value>4</value>
+            <karma>2</karma>
+          </metavariant>
+          <metavariant>
+            <name>Fomorian</name>
+            <value>4</value>
+            <karma>12</karma>
+          </metavariant>
+          <metavariant>
+            <name>Giant</name>
+            <value>4</value>
+            <karma>2</karma>
+          </metavariant>
+          <metavariant>
+            <name>Minotaur</name>
+            <value>4</value>
+            <karma>2</karma>
+          </metavariant>
+        </metavariants>
+      </metatype>
+    </metatypes>
+    <metatypes amendoperation="append">
+      <metatype>
+        <name>AI</name>
+        <value>6</value>
+        <karma>0</karma>
+        <metavariants>
+          <metavariant>
+            <name>Pilot A.I.</name>
+            <value>5</value>
+            <karma>0</karma>
+          </metavariant>
+          <metavariant>
+            <name>Realms A.I.</name>
+            <value>5</value>
+            <karma>0</karma>
+          </metavariant>
+		  <metavariant>
+            <name>E-Ghost</name>
+            <value>5</value>
+            <karma>0</karma>
+          </metavariant>
+          <metavariant>
+            <name>Deep Foundation A.I.</name>
+            <value>0</value>
+            <karma>0</karma>
+          </metavariant>
+        </metavariants>
+      </metatype>
+    </metatypes>
+  </priority>
+
+  <priority>
+    <id>988b7ce3-5739-4300-bc21-a6c92b869262</id>
+    <name>C - Any metatype</name>
+    <metatypes>
+      <metatype>
+        <name>Human</name>
+        <metavariants amendoperation="append">
+          <metavariant>
+            <name>Valkyrie</name>
+            <value>4</value>
+            <karma>15</karma>
+          </metavariant>
+        </metavariants>
+      </metatype>
+      <metatype amendoperation = "replace">
+        <name>Ork</name>
+        <value>3</value>
+        <karma>0</karma>
+        <metavariants>
+          <metavariant>
+            <name>Ogre</name>
+            <value>3</value>
+            <karma>8</karma>
+          </metavariant>
+          <metavariant>
+            <name>Oni</name>
+            <value>3</value>
+            <karma>4</karma>
+          </metavariant>
+          <metavariant>
+            <name>Satyr</name>
+            <value>3</value>
+            <karma>10</karma>
+          </metavariant>
+          <metavariant>
+            <name>Hobgoblin</name>
+            <value>3</value>
+            <karma>5</karma>
+          </metavariant>
+        </metavariants>
+      </metatype>
+    </metatypes>
+    <metatypes amendoperation="append">
+      <metatype>
+        <name>Troll</name>
+        <value>1</value>
+        <karma>0</karma>
+        <metavariants>
+          <metavariant>
+            <name>Cyclops</name>
+            <value>1</value>
+            <karma>2</karma>
+          </metavariant>
+          <metavariant>
+            <name>Fomorian</name>
+            <value>1</value>
+            <karma>12</karma>
+          </metavariant>
+          <metavariant>
+            <name>Giant</name>
+            <value>1</value>
+            <karma>2</karma>
+          </metavariant>
+          <metavariant>
+            <name>Minotaur</name>
+            <value>1</value>
+            <karma>2</karma>
+          </metavariant>
+        </metavariants>
+      </metatype>
+      <metatype>
+        <name>AI</name>
+        <value>3</value>
+        <karma>0</karma>
+        <metavariants>
+          <metavariant>
+            <name>Pilot A.I.</name>
+            <value>1</value>
+            <karma>0</karma>
+          </metavariant>
+          <metavariant>
+            <name>Realms A.I.</name>
+            <value>1</value>
+            <karma>0</karma>
+          </metavariant>
+		  <metavariant>
+            <name>E-Ghost</name>
+            <value>1</value>
+            <karma>0</karma>
+          </metavariant>
+        </metavariants>
+      </metatype>
+    </metatypes>
+  </priority>
+
+  <priority>
+    <id>255da2ba-8d21-4a73-9f81-37156901db72</id>
+    <name>D - Human, Elf, Ork or A.I.</name>
+    <metatypes>
+      <metatype>
+        <name>Human</name>
+        <metavariants amendoperation="append">
+          <metavariant>
+            <name>Valkyrie</name>
+            <value>2</value>
+            <karma>15</karma>
+          </metavariant>
+        </metavariants>
+      </metatype>
+    </metatypes>
+    <metatypes amendoperation="append">
+      <metatype>
+        <name>Ork</name>
+        <value>0</value>
+        <karma>0</karma>
+        <metavariants>
+          <metavariant>
+            <name>Ogre</name>
+            <value>0</value>
+            <karma>8</karma>
+          </metavariant>
+          <metavariant>
+            <name>Oni</name>
+            <value>0</value>
+            <karma>-4</karma>
+          </metavariant>
+          <metavariant>
+            <name>Satyr</name>
+            <value>0</value>
+            <karma>10</karma>
+          </metavariant>
+          <metavariant>
+            <name>Hobgoblin</name>
+            <value>0</value>
+            <karma>-5</karma>
+          </metavariant>
+        </metavariants>
+      </metatype>
+      <metatype>
+        <name>AI</name>
+        <value>0</value>
+        <karma>0</karma>
+      </metatype>
+    </metatypes>
+  </priority>
+
+  <priority>
+    <name>E - Human</name>
+    <metatypes>
+      <metatype>
+        <name>Human</name>
+        <metavariants amendoperation="append">
+          <metavariant>
+            <name>Valkyrie</name>
+            <value>1</value>
+            <karma>15</karma>
+          </metavariant>
+        </metavariants>
+      </metatype>
+    </metatypes>
+  </priority>
+  <!-- End Region -->
+  <!-- Region Talents -->
+  <priority xpathfilter="contains(category, 'Talent')">
+    <talents>
+      <talent xpathfilter="contains(name,'Magic')">
+        <forbidden>
+          <oneof>
+            <metatype>AI</metatype>
+          </oneof>
+        </forbidden>
+      </talent>
+    </talents>
+  </priority>
+  <priority>
+    <id>b97be625-a732-4c3c-80e4-06c4d88bac91</id>
+    <name>D - Adept, Aspected Magician or EI</name>
+    <talents amendoperation="append">
+      <talent>
+        <name>Technomancer - 1 Resonance</name>
+        <value>Technomancer</value>
+        <qualities>
+          <quality>Technomancer</quality>
+        </qualities>
+        <resonance>1</resonance>
+        <cfp>1</cfp>
+        <skilltype>resonance</skilltype>
+        <required>
+          <oneof>
+            <metatype>AI</metatype>
+          </oneof>
+        </required>
+      </talent>
+    </talents>
+  </priority>
+  <priority>
+    <name>E - Mundane</name>
+    <talents amendoperation="replace">
+      <talent>
+        <name>Mundane</name>
+        <value>Mundane</value>
+      </talent>
+    </talents>
+  </priority>
+  <!-- End Region -->
+  <!-- Region Attributes -->
+  <!-- End Region -->
+  <!-- Region Skills -->
+  <!-- Region Default -->
+  <!-- End Region -->
+  <!-- End Region -->
+  <!-- Region Resources    -->
+  <!-- Region Standard -->
+  <!-- End Region -->
+  <!-- Region Street Level -->
+  <!-- End Region    -->
+  <!-- End Region    -->
+</priorities>
+</chummer>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file is part of Chummer5a.
+
+Chummer5a is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Chummer5a is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
+
+  You can obtain the full source code for Chummer5a at
+  https://github.com/chummer5a/chummer5a
+-->
+<chummer xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema lifestyles.xsd">
+  <lifestyles>
+    <lifestyle>
+      <name>Commercial</name>
+      <hide />
+    </lifestyle>
+    <lifestyle>
+      <name>Traveler</name>
+      <hide />
+    </lifestyle>
+  </lifestyles>
+
+  <qualities>
+    <quality>
+      <name>Hotel California</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>One Good Thing About This Place</name>
+      <hide />
+    </quality>
+
+    <!-- Assumed to be part of baseline olfactory booster/sensor functionality. -->
+    <quality>
+      <name>Pheromone Detection</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Limited Building Space</name>
+      <hide />
+    </quality>
+
+    <!-- Hides the monthly docwagon contracts because they do not exist. -->
+    <quality>
+      <name>DocWagon Contract, Basic</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>DocWagon Contract, Gold</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>DocWagon Contract, Platinum</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>DocWagon Contract, Super-Platinum</name>
+      <hide />
+    </quality>
+
+    <!-- Change skillsoft pricing-->
+    <quality>
+      <name>Skillsoft Network, Basic</name>
+      <cost>500</cost>
+    </quality>
+
+    <quality>
+      <name>Skillsoft Network, Silver</name>
+      <cost>5000</cost>
+    </quality>
+
+    <quality>
+      <name>Skillsoft Network, Gold</name>
+      <cost>10000</cost>
+    </quality>
+
+    <quality>
+      <name>Skillsoft Network, Platinum</name>
+      <cost>15000</cost>
+    </quality>
+	
+  </qualities>
+
+  <qualities amendoperation="append">
+    <!-- Adds a Lifestyle quality when you have Trust Fund.-->
+    <quality>
+      <id>b9a9f683-acd4-4689-8330-42bf36dc69a7</id>
+      <name>Trust Fund</name>
+      <category>Positive</category>
+      <lp>0</lp>
+      <allowed>Low, Medium, High</allowed>
+      <multiplier>-100</multiplier>
+      <required>
+        <oneof>
+          <characterquality>Trust Fund I</characterquality>
+          <characterquality>Trust Fund II</characterquality>
+          <characterquality>Trust Fund III</characterquality>
+          <characterquality>Trust Fund IV</characterquality>
+        </oneof>
+      </required>
+      <source>RF</source>
+      <page>151</page>
+    </quality>
+
+    <!-- Adds the quality 'Sterile Sanctuary' -->
+    <quality>
+      <id>7f4a601e-78be-4016-b750-380a5770b606</id>
+      <name>Sterile Sanctuary</name>
+      <category>Positive</category>
+      <lp>0</lp>
+      <allowed>Squatter, Low, Medium, High, Luxury</allowed>
+      <multiplier>100</multiplier>
+      <source>SR5</source>
+      <page>0</page>
+    </quality>
+
+
+    <!-- Add Uncontrolled Metastasis Expense Workaround -->
+    <quality>
+      <id>cb627dce-37d9-4f9f-9c13-ccdc1996ac49</id>
+      <name>Uncontrolled Metastasis Treatment 1</name>
+      <category>Positive</category>
+      <lp>0</lp>
+      <allowed>Street, Squatter, Low, Medium, High, Luxury</allowed>
+      <cost>2000</cost>
+      <source>6e</source>
+      <page>0</page>
+    </quality>
+    <quality>
+      <id>265e6bfc-39b3-4ac7-a433-4565bd795bb3</id>
+      <name>Uncontrolled Metastasis Treatment 2</name>
+      <category>Positive</category>
+      <lp>0</lp>
+      <allowed>Street, Squatter, Low, Medium, High, Luxury</allowed>
+      <cost>4000</cost>
+      <source>6e</source>
+      <page>0</page>
+    </quality>
+	
+	<!-- Add Illness and Clinical Depression Medications -->
+    <quality>
+      <id>110402b6-7299-415a-9f70-f0d419242749</id>
+      <name>Illness Medication (Mild)</name>
+      <category>Positive</category>
+      <lp>0</lp>
+      <allowed>Street, Squatter, Low, Medium, High, Luxury</allowed>
+      <cost>1000</cost>
+      <source>BB</source>
+      <page>12</page>
+    </quality>
+    <quality>
+      <id>92429938-446e-4551-afce-fd7102f2a5e2</id>
+      <name>Illness Medication (Moderate)</name>
+      <category>Positive</category>
+      <lp>0</lp>
+      <allowed>Street, Squatter, Low, Medium, High, Luxury</allowed>
+      <cost>2000</cost>
+      <source>BB</source>
+      <page>12</page>
+    </quality>
+    <quality>
+      <id>5df11c4b-4f19-4eda-b655-9e0fc8aff8e4</id>
+      <name>Illness Medication (Severe)</name>
+      <category>Positive</category>
+      <lp>0</lp>
+      <allowed>Street, Squatter, Low, Medium, High, Luxury</allowed>
+      <cost>3000</cost>
+      <source>BB</source>
+      <page>12</page>
+    </quality>
+    <quality>
+      <id>20dacf49-0dc9-489a-9d19-2ae73748bf71</id>
+      <name>Antidepressants</name>
+      <category>Positive</category>
+      <lp>0</lp>
+      <allowed>Street, Squatter, Low, Medium, High, Luxury</allowed>
+      <cost>2000</cost>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+  </qualities>
+</chummer>

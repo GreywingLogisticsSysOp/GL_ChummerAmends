@@ -1,0 +1,2850 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file is part of Chummer5a.
+
+Chummer5a is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Chummer5a is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
+
+  You can obtain the full source code for Chummer5a at
+  https://github.com/chummer5a/chummer5a
+-->
+<chummer xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema weapons.xsd">
+  <categories amendoperation="replace">
+    <category blackmarket="Weapons" type="melee">Blades</category>
+    <category blackmarket="Weapons" type="melee">Clubs</category>
+    <category blackmarket="Weapons" type="melee">Improvised Weapons</category>
+    <category blackmarket="Weapons" type="melee">Exotic Melee Weapons</category>
+    <category blackmarket="Weapons" type="exotic">Exotic Ranged Weapons</category>
+    <category blackmarket="Weapons" type="melee">Bio-Weapon</category>
+    <category blackmarket="Weapons" type="melee">Cyberweapon</category>
+    <category blackmarket="Weapons" type="melee">Unarmed</category>
+    <category blackmarket="Weapons" type="bow">Bows</category>
+    <category blackmarket="Weapons" type="crossbow">Crossbows</category>
+    <category blackmarket="Weapons" type="taser" gunneryspec="Energy">Tasers</category>
+    <category blackmarket="Weapons" type="gun" gunneryspec="Ballistic">Holdouts</category>
+    <category blackmarket="Weapons" type="gun" gunneryspec="Ballistic">Light Pistols</category>
+    <category blackmarket="Weapons" type="gun" gunneryspec="Ballistic">Heavy Pistols</category>
+    <category blackmarket="Weapons" type="gun" gunneryspec="Ballistic">Machine Pistols</category>
+    <category blackmarket="Weapons" type="gun" gunneryspec="Ballistic">Submachine Guns</category>
+    <category blackmarket="Weapons" type="gun" gunneryspec="Ballistic">Assault Rifles</category>
+    <category blackmarket="Weapons" type="gun" gunneryspec="Ballistic">Carbines</category>
+    <category blackmarket="Weapons" type="gun" gunneryspec="Ballistic">Sporting Rifles</category>
+    <category blackmarket="Weapons" type="gun" gunneryspec="Ballistic">Sniper Rifles</category>
+    <category blackmarket="Weapons" type="gun" gunneryspec="Ballistic">Shotguns</category>
+    <category blackmarket="Weapons" type="gun" gunneryspec="Ballistic">Light Machine Guns</category>
+    <category blackmarket="Weapons" type="gun" gunneryspec="Ballistic">Medium Machine Guns</category>
+    <category blackmarket="Weapons" type="gun" gunneryspec="Ballistic">Heavy Machine Guns</category>
+    <category blackmarket="Weapons" type="gun">Underbarrel Weapons</category>
+    <category blackmarket="Weapons" type="gun">Micro-Drone Weapons</category>
+    <category blackmarket="Weapons" type="gun">Mini-Drone Weapons</category>
+    <category blackmarket="Weapons" type="gun" gunneryspec="Ballistic">Assault Cannons</category>
+    <category blackmarket="Weapons" type="flame" gunneryspec="Energy">Flamethrowers</category>
+    <category blackmarket="Weapons" type="energy" gunneryspec="Energy">Laser Weapons</category>
+    <category blackmarket="Weapons" type="glauncher" gunneryspec="Artillery">Grenade Launchers</category>
+    <category blackmarket="Weapons" type="mlauncher" gunneryspec="Rocket">Missile Launchers</category>
+  </categories>
+
+  <weapons>
+    <weapon>
+      <name>Ranger Silver Pistol Crossbow</name>
+      <concealability>0</concealability>
+    </weapon>
+    <weapon>
+      <name>Light Crossbow</name>
+      <concealability>5</concealability>
+    </weapon>
+    <weapon>
+      <name>Medium Crossbow</name>
+      <concealability>6</concealability>
+    </weapon>
+    <weapon>
+      <name>Heavy Crossbow</name>
+      <concealability>7</concealability>
+    </weapon>
+    <weapon>
+      <name>Pepper Punch Pen</name>
+      <range>Spray Pens</range>
+	  <useskill>Spray Weapons</useskill>
+	  <spec>Spray Pen</spec>
+    </weapon>
+    <weapon>
+      <name>Modified Spray Pen</name>
+      <range>Spray Pens</range>
+	  <useskill>Spray Weapons</useskill>
+	  <spec>Spray Pen</spec>
+    </weapon>
+
+	<!-- Exotic Weapon skill changes (also throughout this doc as some weapons already have an entry)-->
+	<weapon>
+      <name>Ares Screech Sonic Rifle</name>
+      <useskill>Directed Energy</useskill>
+    </weapon>
+	<weapon>
+      <name>Fichetti Pain Inducer</name>
+      <useskill>Directed Energy</useskill>
+    </weapon>
+	<weapon>
+	  <name>Ares Redline</name>
+      <useskill>Directed Energy</useskill>
+    </weapon>
+	<weapon>
+	  <name>Ares Lancer MP Laser</name>
+      <useskill>Directed Energy</useskill>
+    </weapon>
+	<weapon>
+	  <name>Ares Archon Heavy MP Laser</name>
+      <useskill>Directed Energy</useskill>
+    </weapon>
+	<weapon>
+	  <name>Ares Armatus</name>
+      <useskill>Directed Energy</useskill>
+    </weapon>
+	<weapon>
+	  <name>Repeating Laser</name>
+      <useskill>Directed Energy</useskill>
+    </weapon>
+	<weapon>
+	  <name>Microwave Gun, High Frequency</name>
+      <useskill>Directed Energy</useskill>
+    </weapon>
+	<weapon>
+	  <name>Microwave Gun, Low Frequency</name>
+      <useskill>Directed Energy</useskill>
+    </weapon>
+	<weapon>
+	  <name>Blowgun</name>
+      <useskill>Exotic Ballistic</useskill>
+    </weapon>
+	<weapon>
+	  <name>Grapple Gun</name>
+      <useskill>Exotic Ballistic</useskill>
+    </weapon>
+	<weapon>
+	  <name>Tactical Grapple Gun</name>
+      <useskill>Exotic Ballistic</useskill>
+    </weapon>
+	<weapon>
+	  <name>Grapple Fist</name>
+      <useskill>Exotic Ballistic</useskill>
+    </weapon>
+	<weapon>
+	  <name>SA Retarius Net Gun</name>
+      <useskill>Exotic Ballistic</useskill>
+	  <spec>Net Guns</spec>
+    </weapon>
+	<weapon>
+	  <name>SA Retarius Net Gun XL</name>
+      <useskill>Exotic Ballistic</useskill>
+	  <spec>Net Guns</spec>
+    </weapon>
+	<weapon>
+	  <name>Underbarrel Bola Launcher</name>
+      <useskill>Exotic Ballistic</useskill>
+    </weapon>
+	<weapon>
+	  <name>Ares S-III Super Squirt</name>
+      <useskill>Spray Weapons</useskill>
+    </weapon>
+	<weapon>
+	  <name>Halloweener Barbecue Lighter</name>
+      <useskill>Spray Weapons</useskill>
+    </weapon>
+	<weapon>
+	  <name>Shiawase Arms Incinerator</name>
+      <useskill>Spray Weapons</useskill>
+    </weapon>
+	<weapon>
+	  <name>Shiawase Blazer</name>
+      <useskill>Spray Weapons</useskill>
+    </weapon>
+	<weapon>
+	  <name>Flame Bracer</name>
+      <useskill>Spray Weapons</useskill>
+	  <spec>Flamethrowers</spec>
+    </weapon>
+	<weapon>
+	  <name>Flametosser</name>
+      <useskill>Spray Weapons</useskill>
+    </weapon>
+	<weapon>
+	  <name>Narcoject Gas Gun</name>
+      <useskill>Spray Weapons</useskill>
+    </weapon>
+	<weapon>
+	  <name>Narcoject Trackstopper</name>
+      <useskill>Spray Weapons</useskill>
+    </weapon>
+	<weapon>
+			<name>Hold-Fast Sprayer</name>
+			<useskill>Spray Weapons</useskill>
+			<spec>Hold-Fast Sprayer</spec>
+	</weapon>
+	<weapon>
+	  <name>Oral Slasher</name>
+      <useskill>Flexile Melee</useskill>
+    </weapon>
+	<weapon>
+	  <name>Monofilament Whip</name>
+      <useskill>Flexile Melee</useskill>
+	  <spec>Whips</spec>
+    </weapon>
+	<weapon>
+	  <name>Bullwhip</name>
+      <useskill>Flexile Melee</useskill>
+	  <spec>Whips</spec>
+    </weapon>
+	<weapon>
+			<name>Bladed Yo-Yo</name>
+			<useskill>Flexile Melee</useskill>
+			<spec>Yo-Yo</spec>
+		</weapon>
+		<weapon>
+			<name>Hardened Yo-Yo</name>
+			<useskill>Flexile Melee</useskill>
+			<spec>Yo-Yo</spec>
+		</weapon>
+		<weapon>
+			<name>Monofilament Yo-Yo</name>
+			<useskill>Flexile Melee</useskill>
+			<spec>Yo-Yo</spec>
+		</weapon>
+		<weapon>
+			<name>Chain</name>
+			<useskill>Flexile Melee</useskill>
+			<spec>Improvised</spec>
+		</weapon>
+		<weapon>
+			<name>Oral Slasher</name>
+			<useskill>Flexile Melee</useskill>
+			<spec>Oral Slasher</spec>
+		</weapon>
+		<weapon>
+			<name>Monofilament Chainsaw</name>
+			<useskill>Atypical Melee</useskill>
+			<spec>Chainsaws</spec>
+		</weapon>
+		<weapon>
+			<name>Chainsaw</name>
+			<useskill>Atypical Melee</useskill>
+			<spec>Chainsaws</spec>
+		</weapon>
+		<weapon>
+			<name>Ash Arms Combat Chainsaw</name>
+			<useskill>Atypical Melee</useskill>
+			<spec>Chainsaws</spec>
+		</weapon>
+		<weapon>
+			<name>Ash Arms Monofilament Chainsaw</name>
+			<useskill>Atypical Melee</useskill>
+			<spec>Chainsaws</spec>
+		</weapon>
+		<weapon>
+			<name>Injector Pen</name>
+			<useskill>Atypical Melee</useskill>
+			<spec>Injection</spec>
+		</weapon>
+		<weapon>
+			<name>Krime Stun Lance</name>
+			<useskill>Atypical Melee</useskill>
+			<spec>Krime Stun Lance</spec>
+		</weapon>
+		<weapon>
+			<name>Hardened Skateboard</name>
+			<useskill>Atypical Melee</useskill>
+			<spec>Rolling Blades</spec>
+		</weapon>
+		<weapon>
+			<name>Bladed Skateboard</name>
+			<useskill>Atypical Melee</useskill>
+			<spec>Rolling Blades</spec>
+		</weapon>
+		<weapon>
+			<name>Rolling Blades</name>
+			<useskill>Atypical Melee</useskill>
+			<spec>Rolling Blades</spec>
+		</weapon>
+		<weapon>
+			<name>Ballistic Shield</name>
+			<useskill>Atypical Melee</useskill>
+			<spec>Shields</spec>
+		</weapon>
+		<weapon>
+			<name>Blast Shield</name>
+			<useskill>Atypical Melee</useskill>
+			<spec>Shields</spec>
+		</weapon>
+		<weapon>
+			<name>Riot Shield</name>
+			<useskill>Atypical Melee</useskill>
+		</weapon>
+		<weapon>
+			<name>Ares Briefcase Shield</name>
+			<useskill>Atypical Melee</useskill>
+		</weapon>
+		<weapon>
+			<name>Bola</name>
+			<useskill>Throwing Weapons</useskill>
+		</weapon>
+		<weapon>
+			<name>Monofilament Bola</name>
+			<useskill>Throwing Weapons</useskill>
+		</weapon>
+		<weapon>
+			<!-- Chakram (Melee) -->
+			<id>dc18811b-eb07-43d8-8d95-d5c468f048f4</id>
+			<useskill>Blades</useskill>
+		</weapon>
+		<weapon>
+			<name>FN-AAL Gyrojet Pistol</name>
+			<useskill>Pistols</useskill>
+		</weapon>
+		<weapon>
+			<name>Knockoff Gun Cane</name>
+			<useskill>Pistols</useskill>
+		</weapon>
+		<weapon>
+			<name>Mortimer of London 'Trafalger' Gun Cane</name>
+			<useskill>Pistols</useskill>
+		</weapon>
+		<weapon>
+			<name>Micro Flare Launcher</name>
+			<useskill>Pistols</useskill>
+		</weapon>
+		<weapon>
+			<name>Parashield Dart Pistol</name>
+			<useskill>Pistols</useskill>
+		</weapon>
+		<weapon>
+			<name>Parashield Dart Rifle</name>
+			<useskill>Longarms</useskill>
+		</weapon>
+		<weapon>
+			<name>Shiawase Arms Simoom</name>
+			<useskill>Pistols</useskill>
+		</weapon>
+		<weapon>
+			<name>Parashield Dart Rifle</name>
+			<useskill>Longarms</useskill>
+		</weapon>
+		<weapon>
+			<name>Stimtouch Hosiery</name>
+			<useskill>Unarmed Combat</useskill>
+		</weapon>
+		<weapon>
+			<name>Throwing Syringe</name>
+			<useskill>Throwing Weapons</useskill>
+		</weapon>
+	
+
+    <!-- Changes the P.E.P slightly to use 'Energy' instead of 'energy' (also exotic change) -->
+    <weapon>
+      <name>Narcoject PEP</name>
+      <weapontype>Energy</weapontype>
+	  <useskill>Directed Energy</useskill>
+    </weapon>	  
+
+    <!-- Corrects Run and Gun stat blocks -->
+    <weapon>
+      <name>Onotari Arms JP-K50</name>
+      <rc>0</rc>
+    </weapon>
+
+    
+
+    <!--Adds the Semi-auto spec to the Gemini-->
+    <weapon>
+      <name>Hammerli Gemini</name>
+      <spec>Semi-Automatics</spec>
+    </weapon>
+
+    <!--Adds the Natural Weapons spec to all natural weapons-->
+    <weapon>
+      <name>Digging Claws</name>
+      <spec>Natural Weapons</spec>
+    </weapon>
+    <weapon>
+      <name>Razor Claws</name>
+      <spec>Natural Weapons</spec>
+    </weapon>
+    <weapon>
+      <name>Claws (Sasquatch)</name>
+      <spec>Natural Weapons</spec>
+    </weapon>
+    <weapon>
+      <name>Claws (Bio-Weapon)</name>
+      <spec>Natural Weapons</spec>
+    </weapon>
+    <weapon>
+      <name>Retractable Claws (Bio-Weapon)</name>
+      <spec>Natural Weapons</spec>
+    </weapon>
+    <weapon>
+      <name>Fangs (Bio-Weapon)</name>
+      <spec>Natural Weapons</spec>
+    </weapon>
+    <weapon>
+      <name>Retractable Fangs (Bio-Weapon)</name>
+      <spec>Natural Weapons</spec>
+    </weapon>
+    <weapon>
+      <name>Bone Spike I</name>
+      <spec>Natural Weapons</spec>
+    </weapon>
+    <weapon>
+      <name>Bone Spike II</name>
+      <spec>Natural Weapons</spec>
+    </weapon>
+    <weapon>
+      <name>Bone Spike III</name>
+      <spec>Natural Weapons</spec>
+    </weapon>
+    <weapon>
+      <name>Functional Tail (Thagomizer)</name>
+      <useskill>Unarmed Combat</useskill>
+      <spec>Natural Weapons</spec>
+    </weapon>
+    <weapon>
+      <name>Goring Horns</name>
+      <useskill>Unarmed Combat</useskill>
+      <spec>Natural Weapons</spec>
+    </weapon>
+    <weapon>
+      <name>Larger Tusks</name>
+      <spec>Natural Weapons</spec>
+    </weapon>
+    <weapon>
+      <name>Proboscis</name>
+      <spec>Natural Weapons</spec>
+    </weapon>
+    <weapon>
+      <name>Fangs</name>
+      <spec>Natural Weapons</spec>
+    </weapon>
+    <weapon>
+      <name>Bite (Infected)</name>
+      <spec>Natural Weapons</spec>
+    </weapon>
+    <weapon>
+      <name>Bite (Naga)</name>
+      <spec>Natural Weapons</spec>
+    </weapon>
+
+    <!--Cyberweapons missing the Cyber Implants spec-->
+    <weapon>
+      <name>Cyberfangs</name>
+      <spec>Cyber Implants</spec>
+    </weapon>
+    <weapon>
+      <name>Extreme Cyberimplant</name>
+      <spec>Cyber Implants</spec>
+    </weapon>
+    <weapon>
+      <name>Junkyard Jaw</name>
+      <spec>Cyber Implants</spec>
+    </weapon>
+
+    <!-- Minor chummer tweaks -->
+    <weapon>
+      <name>Nodachi</name>
+      <conceal>+10</conceal>
+    </weapon>
+    <weapon>
+      <name>Razor Claws</name>
+      <hide />
+    </weapon>
+
+    <!--Adds the Polearms spec to all weapons that are a polearm-->
+    <weapon>
+      <name>Pole Arm</name>
+      <spec>Polearms</spec>
+    </weapon>
+    <weapon>
+      <name>Cougar Collapsible Spear</name>
+      <spec>Polearms</spec>
+    </weapon>
+    <weapon>
+      <name>Krime Bill</name>
+      <spec>Polearms</spec>
+    </weapon>
+
+    <!--Removes the combat boots AP-->
+    <weapon>
+      <name>Lone Star Bates-Brown Tactical Combat Boots</name>
+      <ap>0</ap>
+    </weapon>
+
+    <!-- Makes Garrotes unarmed -->
+    <weapon>
+      <name>Garrote</name>
+      <category>Unarmed</category>
+    </weapon>
+
+    <!-- Gives UZI full auto -->
+    <weapon>
+      <name>Uzi IV</name>
+      <mode>BF/FA</mode>
+    </weapon>
+
+    <!-- Banned items-->
+    <weapon>
+      <name>Stoner-Ares M-22A1</name>
+      <hide />
+    </weapon>
+
+    <weapon>
+      <name>Underbarrel Grenade Launcher</name>
+      <avail>10F</avail>
+      <cost>3500</cost>
+    </weapon>
+
+    <!-- Krime Katalog Adjustments -->
+    <weapon>
+      <name>Krime Heater</name>
+      <accuracy>4</accuracy>
+      <damage>8P</damage>
+      <ap>-2</ap>
+      <cost>475</cost>
+    </weapon>
+    <weapon>
+      <name>Krime Varmint</name>
+      <accuracy>4</accuracy>
+      <damage>8P</damage>
+      <ap>-2</ap>
+      <rc>-1</rc>
+      <cost>600</cost>
+    </weapon>
+    <weapon>
+      <name>Krime Chatter</name>
+      <accuracy>4</accuracy>
+      <damage>6P</damage>
+      <cost>380</cost>
+    </weapon>
+    <weapon>
+      <name>Krime Tradition</name>
+      <accuracy>5</accuracy>
+      <damage>7P</damage>
+      <rc>-3</rc>
+      <cost>500</cost>
+      <avail>15R</avail>
+    </weapon>
+    <weapon>
+      <name>Krime Ditch (Shotgun)</name>
+      <damage>13P</damage>
+    </weapon>
+    <weapon>
+      <name>Krime Ditch (Rifle)</name>
+      <damage>12P</damage>
+    </weapon>
+    <weapon>
+      <name>Krime Stopper-II (Homeguard)</name>
+      <damage>10P</damage>
+    </weapon>
+    <weapon>
+      <name>Krime Stopper-II (Shopkeeper)</name>
+      <damage>10P</damage>
+    </weapon>
+    <weapon>
+      <name>Krime Stopper-II</name>
+      <damage>10P</damage>
+    </weapon>
+    <weapon>
+      <name>Krime Soldier</name>
+      <accuracy>4</accuracy>
+      <cost>8500</cost>
+    </weapon>
+    <weapon>
+      <name>Krime KAR-97-H</name>
+      <accuracy>5</accuracy>
+    </weapon>
+    <weapon>
+      <name>Krime Monster</name>
+      <accuracy>3</accuracy>
+      <damage>13P</damage>
+      <ap>-4</ap>
+      <mode>FA</mode>
+      <ammo>100(belt)</ammo>
+      <cost>14000</cost>
+    </weapon>
+    <weapon>
+      <name>Krime Confederate</name>
+      <accuracy>4</accuracy>
+      <damage>15P</damage>
+      <cost>18500</cost>
+    </weapon>
+    <weapon>
+      <name>Krime Escalation</name>
+      <damage>Missile</damage>
+    </weapon>
+
+    <!-- Changes weapons according to the CC patch notes -->
+    <weapon>
+      <name>Ares HVAR</name>
+      <ap>-5</ap>
+    </weapon>
+    <weapon>
+      <name>Krupp Arms Kriegfaust</name>
+      <accuracy>5</accuracy>
+      <damage>11P</damage>
+      <ap>-2</ap>
+    </weapon>
+    <weapon>
+      <name>SVD</name>
+      <damage>11P</damage>
+    </weapon>
+    <weapon>
+      <name>Morrissey Alta</name>
+      <avail>7R</avail>
+    </weapon>
+    <weapon>
+      <name>Underbarrel Grenade Launcher</name>
+      <accuracy>4</accuracy>
+    </weapon>
+    <weapon>
+      <name>Remington Roomsweeper</name>
+      <damage>8P</damage>
+    </weapon>
+	<weapon>
+      <name>Ares Redline</name>
+      <damage>7P</damage>
+	  <ap>-12</ap>
+	  <conceal>+0</conceal>
+    </weapon>
+	<weapon>
+      <name>Ares Lancer MP Laser</name>
+      <damage>9P</damage>
+	  <ap>-12</ap>
+	  <conceal>+2</conceal>
+    </weapon>
+	<weapon>
+      <name>Ares Archon Heavy MP Laser</name>
+      <damage>12P</damage>
+	  <ap>-12</ap>
+	  <conceal>+10</conceal>
+    </weapon>
+	<weapon>
+      <name>Ares Armatus</name>
+      <damage>10P</damage>
+	  <ap>-5</ap>
+	  <conceal>+6</conceal>
+    </weapon>
+	<weapon>
+      <name>Repeating Laser</name>
+      <damage>7P</damage>
+	  <ap>-12</ap>
+	  <conceal>+6</conceal>
+	  <cost>30000</cost>
+    </weapon>
+	
+
+    <!-- Banned items from the Krime Katalog-->
+    <weapon>
+      <name>Krime Saint Nicholas</name>
+      <hide />
+    </weapon>
+    <weapon>
+      <name>Krime T-Shirt Cannon</name>
+      <hide />
+    </weapon>
+    <weapon>
+      <name>Krime Calliope</name>
+      <hide />
+    </weapon>
+    <weapon>
+      <name>Krime Ripper</name>
+      <hide />
+    </weapon>
+    <weapon>
+      <name>Krime Carpet</name>
+      <hide />
+    </weapon>
+    <!-- Banned items/Modified items from the German Books (specifically SoTA ADL and Datapuls or whatever)-->
+    <weapon>
+      <name>Walther Secura Superkompakt</name>
+      <hide />
+    </weapon>
+    <weapon>
+      <id>6dbfa770-8506-479c-9465-a1d8dd3a09d3</id>
+      <name>Glock-Swarovski Eagle Eye</name>
+      <accessories amendoperation="replace">
+        <accessory>
+          <name>Improved Range Finder</name>
+        </accessory>
+        <accessory>
+          <name>Smartgun System, Internal</name>
+        </accessory>
+      </accessories>
+    </weapon>
+    <weapon>
+      <name>HK Urban Fighter (ADL)</name>
+      <hide />
+    </weapon>
+    <weapon>
+      <name>Walther Secura II</name>
+      <hide />
+    </weapon>
+    <weapon>
+      <name>Glock MP Custodes (MPK)</name>
+      <cost>1550</cost>
+      <accessories amendoperation="replace">
+        <accessory>
+          <name>Folding Stock</name>
+        </accessory>
+        <accessory>
+          <name>Gas-Vent 1 System</name>
+        </accessory>
+        <accessory>
+          <name>Ceramic/Plasteel Components</name>
+          <rating>2</rating>
+        </accessory>
+        <accessory>
+          <name>Sling</name>
+        </accessory>
+      </accessories>
+    </weapon>
+    <weapon>
+      <name>HK 223C</name>
+      <ammo>40(c)</ammo>
+    </weapon>
+    <weapon>
+      <name>HK G12A4</name>
+      <category>Carbines</category>
+    </weapon>
+    <weapon>
+      <name>Steyr UCR</name>
+      <category>Carbines</category>
+    </weapon>
+    <weapon>
+      <name>HK Urban Enforcer</name>
+      <hide />
+    </weapon>
+    <weapon>
+      <name>Steyr AUG-CSL III (Assault Rifle)</name>
+      <hide />
+    </weapon>
+    <weapon>
+      <name>HK Urban Striker</name>
+      <hide />
+    </weapon>
+    <weapon>
+      <name>PJSS Model 75</name>
+      <hide />
+    </weapon>
+    <weapon>
+      <name>PJSS Model 75-III (Shotgun Barrel)</name>
+      <hide />
+    </weapon>
+    <weapon>
+      <name>Ruhrmetall SMK 252</name>
+      <range>Sniper Rifles</range>
+    </weapon>
+    <weapon>
+      <name>Katzbalger</name>
+      <hide />
+    </weapon>
+    <weapon>
+      <name>Folding Spade</name>
+      <hide />
+    </weapon>
+    <weapon>
+      <name>Walther Battle Sword</name>
+      <hide />
+    </weapon>
+    <weapon>
+      <name>HK Urban Assassin</name>
+      <hide />
+    </weapon>
+    <weapon>
+      <id>08a0ab4f-e5db-4306-875b-df552d0811f7</id>
+      <name>Strikecannon</name>
+    </weapon>
+    <weapon>
+      <name>Donnerbüchse</name>
+      <hide />
+    </weapon>
+    <weapon>
+      <name>Blaser R11 Conqueror</name>
+      <category>Sporting Rifles</category>
+      <range>Sporting Rifles</range>
+      <spec>Sporting Rifles</spec>
+    </weapon>
+    <weapon>
+      <name>Krupp Munitions 3E Firefighting Cannon</name>
+      <hide />
+    </weapon>
+    <weapon>
+      <name>Ruhrmetall SFW-30</name>
+      <ap>-4</ap>
+      <mode>BF</mode>
+    </weapon>
+    <weapon>
+      <name>HK DMR 11D</name>
+      <avail>10R</avail>
+    </weapon>
+  </weapons>
+
+  <!-- Adds Shock Frills and other stuff as weapons -->
+  <weapons amendoperation="append">
+    <weapon>
+      <id>496145fa-2e92-4e43-9aba-0ec8df0aedbd</id>
+      <name>Shock Frills</name>
+      <category>Unarmed</category>
+      <type>Melee</type>
+      <conceal>0</conceal>
+      <accuracy>Physical</accuracy>
+      <reach>0</reach>
+      <damage>8S(e)</damage>
+      <ap>-5</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>0</avail>
+      <cost>0</cost>
+      <source>SR5</source>
+      <page>438</page>
+      <useskill>Unarmed Combat</useskill>
+      <hide />
+    </weapon>
+    <weapon>
+      <id>60aaa95b-e27d-4ccd-95d8-65b537ac15e9</id>
+      <name>Arm Blade</name>
+      <category>Blades</category>
+      <type>Melee</type>
+      <conceal>-2</conceal>
+      <accuracy>Physical</accuracy>
+      <reach>1</reach>
+      <damage>({STR}+3)P</damage>
+      <ap>-2</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>0</avail>
+      <cost>0</cost>
+      <hide />
+      <source>4e</source>
+      <page>1</page>
+      <cyberware>True</cyberware>
+      <spec>Cyber Implants</spec>
+      <useskill>Unarmed Combat</useskill>
+    </weapon>
+    <weapon>
+      <id>50ed0e98-1239-481e-b38e-3103d7b3a508</id>
+      <name>Quills (Bio-Weapon)</name>
+      <category>Unarmed</category>
+      <type>Melee</type>
+      <conceal>-2</conceal>
+      <accuracy>Physical</accuracy>
+      <reach>0</reach>
+      <damage>({STR}+1)P</damage>
+      <ap>+1</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>0</avail>
+      <cost>0</cost>
+      <hide />
+      <source>4e</source>
+      <page>1</page>
+      <spec>Natural Weapons</spec>
+      <useskill>Unarmed Combat</useskill>
+    </weapon>
+    <weapon>
+      <id>f53dbb68-0bd0-4328-b553-2a2e20892577</id>
+      <name>Eye/Oral Dart</name>
+      <category>Exotic Ranged Weapons</category>
+      <type>Ranged</type>
+      <conceal>2</conceal>
+      <accuracy>5</accuracy>
+      <reach>0</reach>
+      <damage>2P</damage>
+      <ap>-</ap>
+      <mode>SS</mode>
+      <rc>0</rc>
+      <ammo>5(m)</ammo>
+      <avail>0</avail>
+      <cost>0</cost>
+      <source>4e</source>
+      <page>0</page>
+      <hide />
+      <range>Tasers</range>
+      <accessories>
+        <accessory>
+          <name>Smartgun System, Internal</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Barrel</mount>
+      </accessorymounts>
+    </weapon>
+    <weapon>
+      <id>3304b37f-8558-47cd-8a9a-71b94aed853c</id>
+      <name>Oral Gun</name>
+      <category>Exotic Ranged Weapons</category>
+      <type>Ranged</type>
+      <conceal>2</conceal>
+      <accuracy>5</accuracy>
+      <reach>0</reach>
+      <damage>4P</damage>
+      <ap>-</ap>
+      <mode>SS</mode>
+      <rc>0</rc>
+      <ammo>4(m)</ammo>
+      <avail>0</avail>
+      <cost>0</cost>
+      <source>4e</source>
+      <page>0</page>
+      <hide />
+      <range>Holdouts</range>
+      <accessories>
+        <accessory>
+          <name>Smartgun System, Internal</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Barrel</mount>
+      </accessorymounts>
+    </weapon>
+    <weapon>
+      <id>0402484b-47f4-4635-9e3c-ba5d59f7c568</id>
+      <name>Fingertip Dartgun</name>
+      <category>Exotic Ranged Weapons</category>
+      <type>Ranged</type>
+      <conceal>2</conceal>
+      <accuracy>5</accuracy>
+      <reach>0</reach>
+      <damage>3P</damage>
+      <ap>-</ap>
+      <mode>SA/FA</mode>
+      <rc>0</rc>
+      <ammo>5(m)</ammo>
+      <avail>0</avail>
+      <cost>0</cost>
+      <source>4e</source>
+      <page>0</page>
+      <range>Tasers</range>
+      <hide />
+      <accessories>
+        <accessory>
+          <name>Smartgun System, Internal</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Barrel</mount>
+      </accessorymounts>
+    </weapon>
+    <weapon>
+      <id>82d8a3d8-dab8-4ac2-9004-ed25c7b3bae5</id>
+      <name>Squirtgun</name>
+      <category>Exotic Ranged Weapons</category>
+      <type>Ranged</type>
+      <conceal>2</conceal>
+      <accuracy>3</accuracy>
+      <reach>0</reach>
+      <damage>As Chemical</damage>
+      <ap>-</ap>
+      <mode>SA</mode>
+      <rc>0</rc>
+      <ammo>10(m)/15(c)</ammo>
+      <avail>0</avail>
+      <cost>0</cost>
+      <source>4e</source>
+      <page>0</page>
+      <hide />
+      <range>Light Pistols</range>
+      <accessories>
+        <accessory>
+          <name>Smartgun System, Internal</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Barrel</mount>
+      </accessorymounts>
+    </weapon>
+    <weapon>
+      <id>7be9cecc-b890-4530-8174-1d27597cd1c0</id>
+      <name>Taser</name>
+      <category>Tasers</category>
+      <type>Ranged</type>
+      <conceal>2</conceal>
+      <accuracy>5</accuracy>
+      <reach>0</reach>
+      <damage>6S(e)</damage>
+      <ap>-5</ap>
+      <mode>SA</mode>
+      <rc>0</rc>
+      <ammo>4(m)</ammo>
+      <avail>0</avail>
+      <cost>0</cost>
+      <source>4e</source>
+      <page>0</page>
+      <range>Tasers</range>
+      <hide />
+      <accessories>
+        <accessory>
+          <name>Smartgun System, Internal</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Barrel</mount>
+      </accessorymounts>
+    </weapon>
+    <!-- New 4e Holdouts-->
+    <weapon>
+      <id>80d0a92c-f84c-4b8d-b842-dad54389c477</id>
+      <name>Cavalier Scout</name>
+      <category>Holdouts</category>
+      <type>Ranged</type>
+      <conceal>-4</conceal>
+      <accuracy>4</accuracy>
+      <reach>0</reach>
+      <damage>6P</damage>
+      <ap>-</ap>
+      <mode>SA</mode>
+      <rc>0</rc>
+      <ammo>7(c)</ammo>
+      <avail>7R</avail>
+      <cost>375</cost>
+      <source>4e</source>
+      <page>0</page>
+    </weapon>
+    <weapon>
+      <id>7be8832b-6939-48d7-8824-d655b2cb1c54</id>
+      <name>Morrissey Elan</name>
+      <category>Holdouts</category>
+      <type>Ranged</type>
+      <conceal>-4</conceal>
+      <accuracy>4</accuracy>
+      <reach>0</reach>
+      <damage>5P</damage>
+      <ap>-</ap>
+      <mode>SA</mode>
+      <rc>0</rc>
+      <ammo>5(c)</ammo>
+      <avail>7R</avail>
+      <cost>450</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessories>
+        <accessory>
+          <name>Ceramic/Plasteel Components</name>
+          <rating>6</rating>
+        </accessory>
+      </accessories>
+    </weapon>
+    <!-- 4e Light Pistols-->
+    <weapon>
+      <id>e01da70e-bd63-4954-8988-866095b202cf</id>
+      <name>Beretta 200ST</name>
+      <category>Light Pistols</category>
+      <type>Ranged</type>
+      <conceal>-2</conceal>
+      <accuracy>4</accuracy>
+      <reach>0</reach>
+      <damage>6P</damage>
+      <ap>-</ap>
+      <mode>SA/BF</mode>
+      <rc>0</rc>
+      <ammo>21(c)</ammo>
+      <avail>7R</avail>
+      <cost>210</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessories>
+        <accessory>
+          <name>Stock</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+      </accessorymounts>
+      <spec>Semi-Automatics</spec>
+    </weapon>
+    <weapon>
+      <id>e592b790-2d8f-4a87-9ef3-c2b477c0d5de</id>
+      <name>Ceska vz120</name>
+      <category>Light Pistols</category>
+      <type>Ranged</type>
+      <conceal>-2</conceal>
+      <accuracy>6</accuracy>
+      <reach>0</reach>
+      <damage>6P</damage>
+      <ap>-</ap>
+      <mode>SA</mode>
+      <rc>0</rc>
+      <ammo>18(c)</ammo>
+      <avail>4R</avail>
+      <cost>350</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessorymounts>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+      </accessorymounts>
+      <spec>Semi-Automatics</spec>
+    </weapon>
+    <weapon>
+      <id>4edebfca-dad1-44dc-aa59-98492f6ef3d7</id>
+      <name>Colt Asp</name>
+      <category>Light Pistols</category>
+      <type>Ranged</type>
+      <conceal>-2</conceal>
+      <accuracy>7</accuracy>
+      <reach>0</reach>
+      <damage>7P</damage>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>0</rc>
+      <ammo>6(cy)</ammo>
+      <avail>3R</avail>
+      <cost>400</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessorymounts>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+      </accessorymounts>
+      <spec>Semi-Automatics</spec>
+      <spec2>Revolvers</spec2>
+    </weapon>
+    <weapon>
+      <id>8fdc714a-7525-4f82-8376-c0353fff52df</id>
+      <name>Walther PB-120</name>
+      <category>Light Pistols</category>
+      <type>Ranged</type>
+      <conceal>-2</conceal>
+      <accuracy>6</accuracy>
+      <reach>0</reach>
+      <damage>6P</damage>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>0</rc>
+      <ammo>10(c)</ammo>
+      <avail>9R</avail>
+      <cost>350</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessorymounts>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+      </accessorymounts>
+      <spec>Semi-Automatics</spec>
+    </weapon>
+    <!-- 4e Machine Pistols-->
+    <weapon>
+      <id>b0aa12a1-1883-4446-a163-41ce1aeca00d</id>
+      <name>FN 5-7C</name>
+      <category>Machine Pistols</category>
+      <type>Ranged</type>
+      <conceal>0</conceal>
+      <accuracy>6</accuracy>
+      <reach>0</reach>
+      <damage>6P</damage>
+      <ap>-</ap>
+      <mode>SA/BF</mode>
+      <rc>1</rc>
+      <ammo>20(c)</ammo>
+      <avail>8R</avail>
+      <cost>600</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessorymounts>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+      </accessorymounts>
+      <spec>Semi-Automatics</spec>
+    </weapon>
+    <!-- 4e Heavy Pistols-->
+    <weapon>
+      <id>eaaba741-6c65-4977-9921-fd10ce512f56</id>
+      <name>Eichiro Hatamoto II</name>
+      <category>Heavy Pistols</category>
+      <type>Ranged</type>
+      <conceal>0</conceal>
+      <accuracy>4</accuracy>
+      <reach>0</reach>
+      <damage>11P</damage>
+      <ap>-1</ap>
+      <mode>SS</mode>
+      <rc>0</rc>
+      <ammo>1(m)</ammo>
+      <avail>10R</avail>
+      <cost>1150</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessorymounts>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+      </accessorymounts>
+      <ammocategory>Shotguns</ammocategory>
+    </weapon>
+    <weapon>
+      <id>8870c5bf-8c69-432c-9b6b-b2b246f6c787</id>
+      <name>Nitama NeMax</name>
+      <category>Heavy Pistols</category>
+      <type>Ranged</type>
+      <conceal>0</conceal>
+      <accuracy>5</accuracy>
+      <reach>0</reach>
+      <damage>7P</damage>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>0</rc>
+      <ammo>10(c)</ammo>
+      <avail>16</avail>
+      <cost>1700</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessories>
+        <accessory>
+          <name>Smartgun System, Internal</name>
+        </accessory>
+        <accessory>
+          <name>Safe Target System, Base</name>
+        </accessory>
+        <accessory>
+          <name>Advanced Safety System, Basic</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+      </accessorymounts>
+      <spec>Semi-Automatics</spec>
+    </weapon>
+    <weapon>
+      <id>ee34e0de-c401-4d95-affe-8233dc03a224</id>
+      <name>Walther Secura</name>
+      <category>Heavy Pistols</category>
+      <type>Ranged</type>
+      <conceal>0</conceal>
+      <accuracy>5</accuracy>
+      <reach>0</reach>
+      <damage>8P</damage>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>0</rc>
+      <ammo>12(c)</ammo>
+      <avail>5R</avail>
+      <cost>300</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessorymounts>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+      </accessorymounts>
+      <spec>Semi-Automatics</spec>
+    </weapon>
+    <weapon>
+      <id>521db5e6-b6ef-4ffc-a605-2ac4505dfdd4</id>
+      <name>Walther Secura Kompakt</name>
+      <category>Heavy Pistols</category>
+      <type>Ranged</type>
+      <conceal>-1</conceal>
+      <accuracy>5</accuracy>
+      <reach>0</reach>
+      <damage>8P</damage>
+      <ap>-1</ap>
+      <mode>SA</mode>
+      <rc>0</rc>
+      <ammo>9(c)</ammo>
+      <avail>7R</avail>
+      <cost>400</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessorymounts>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+      </accessorymounts>
+      <spec>Semi-Automatics</spec>
+    </weapon>
+    <!-- 4e SMGs -->
+    <weapon>
+      <id>ff538dde-464b-4fd9-ab0c-5896634fa1c1</id>
+      <name>Beretta Model 70</name>
+      <category>Submachine Guns</category>
+      <type>Ranged</type>
+      <conceal>2</conceal>
+      <accuracy>5</accuracy>
+      <reach>0</reach>
+      <damage>8P</damage>
+      <ap>-</ap>
+      <mode>BF/FA</mode>
+      <rc>0</rc>
+      <ammo>35(c)</ammo>
+      <avail>5R</avail>
+      <cost>650</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessories>
+        <accessory>
+          <name>Sound Suppressor</name>
+        </accessory>
+        <accessory>
+          <name>Laser Sight</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+      </accessorymounts>
+    </weapon>
+    <weapon>
+      <id>3e056447-2ae0-4df0-9db1-d124cafbe4c9</id>
+      <name>Ingram Warrior-10</name>
+      <category>Submachine Guns</category>
+      <type>Ranged</type>
+      <conceal>2</conceal>
+      <accuracy>4</accuracy>
+      <reach>0</reach>
+      <damage>8P</damage>
+      <ap>-</ap>
+      <mode>SA/BF</mode>
+      <rc>0</rc>
+      <ammo>30(c)</ammo>
+      <avail>4R</avail>
+      <cost>480</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessorymounts>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+      </accessorymounts>
+    </weapon>
+    <weapon>
+      <id>3ae13f1b-6aeb-4d23-97d5-6e516b198ffd</id>
+      <name>Sandler TMP</name>
+      <category>Submachine Guns</category>
+      <type>Ranged</type>
+      <conceal>2</conceal>
+      <accuracy>4</accuracy>
+      <reach>0</reach>
+      <damage>7P</damage>
+      <ap>-</ap>
+      <mode>BF/FA</mode>
+      <rc>0</rc>
+      <ammo>20(c)</ammo>
+      <avail>4R</avail>
+      <cost>420</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessories>
+        <accessory>
+          <name>Folding Stock</name>
+        </accessory>
+        <accessory>
+          <name>Laser Sight</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+      </accessorymounts>
+    </weapon>
+    <!-- 4e Carbines-->
+    <weapon>
+      <id>42251c8e-7dba-4f2f-ae06-e3b72c041b7e</id>
+      <name>Colt M24A3 Water Carbine</name>
+      <category>Carbines</category>
+      <type>Ranged</type>
+      <conceal>+4</conceal>
+      <accuracy>7</accuracy>
+      <reach>0</reach>
+      <damage>7P</damage>
+      <ap>-</ap>
+      <mode>SA/BF</mode>
+      <rc>0</rc>
+      <ammo>30(c)</ammo>
+      <avail>10F</avail>
+      <cost>1200</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessorymounts>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+        <mount>Barrel</mount>
+        <mount>Under</mount>
+        <mount>Top</mount>
+      </accessorymounts>
+    </weapon>
+    <!-- 4e Assault Rifles-->
+    <weapon>
+      <id>dc3d3eb0-e203-48d9-b960-b2d5ad844b5a</id>
+      <name>Heckler and Koch G12a3z</name>
+      <category>Assault Rifles</category>
+      <type>Ranged</type>
+      <conceal>6</conceal>
+      <accuracy>5</accuracy>
+      <reach>0</reach>
+      <damage>10P</damage>
+      <ap>-2</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>0</rc>
+      <ammo>32(c)</ammo>
+      <avail>9F</avail>
+      <cost>3250</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessories>
+        <accessory>
+          <name>Laser Sight</name>
+        </accessory>
+        <accessory>
+          <name>Gas-Vent 2 System</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+        <mount>Under</mount>
+      </accessorymounts>
+    </weapon>
+    <weapon>
+      <id>e8388c10-7779-4b4b-a37f-4095affb6db8</id>
+      <name>Sernopal vz/88v</name>
+      <category>Assault Rifles</category>
+      <type>Ranged</type>
+      <conceal>6</conceal>
+      <accuracy>5</accuracy>
+      <reach>0</reach>
+      <damage>11P</damage>
+      <ap>-2</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>0</rc>
+      <ammo>35(c)</ammo>
+      <avail>8F</avail>
+      <cost>3400</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessories>
+        <accessory>
+          <name>Laser Sight</name>
+        </accessory>
+        <accessory>
+          <name>Gas-Vent 2 System</name>
+        </accessory>
+        <accessory>
+          <name>Folding Stock</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+        <mount>Under</mount>
+      </accessorymounts>
+    </weapon>
+    <weapon>
+      <id>dcecf72a-4456-4cc4-8a38-a3bd3eebf8f7</id>
+      <name>Steyr AUG-CSL</name>
+      <category>Assault Rifles</category>
+      <type>Ranged</type>
+      <conceal>6</conceal>
+      <accuracy>5</accuracy>
+      <reach>0</reach>
+      <damage>10P</damage>
+      <ap>-2</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>0</rc>
+      <ammo>40(c)</ammo>
+      <avail>13F</avail>
+      <cost>8000</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessories>
+        <accessory>
+          <name>Laser Sight</name>
+        </accessory>
+        <accessory>
+          <name>Gas-Vent 1 System</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+        <mount>Under</mount>
+      </accessorymounts>
+      <addweapon>Steyr AUG-CSL SMG</addweapon>
+      <addweapon>Steyr AUG-CSL LMG</addweapon>
+      <addweapon>Steyr AUG-CSL Sniper</addweapon>
+    </weapon>
+    <weapon>
+      <id>ba74acce-b4a5-4164-a0c2-f9a814621f71</id>
+      <name>Steyr AUG-CSL SMG</name>
+      <category>Submachine Guns</category>
+      <type>Ranged</type>
+      <conceal>6</conceal>
+      <accuracy>4</accuracy>
+      <reach>0</reach>
+      <damage>7P</damage>
+      <ap>0</ap>
+      <mode>SA/BF/FA</mode>
+      <rc>1</rc>
+      <ammo>25(c)</ammo>
+      <avail>0</avail>
+      <cost>0</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessories>
+        <accessory>
+          <name>Laser Sight</name>
+        </accessory>
+        <accessory>
+          <name>Gas-Vent 1 System</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+        <mount>Under</mount>
+      </accessorymounts>
+      <hide />
+      <range>Submachine Guns</range>
+      <spec>Submachine Guns</spec>
+      <useskill>Automatics</useskill>
+      <ammocategory>Assault Rifles</ammocategory>
+    </weapon>
+    <weapon>
+      <id>0427180b-4ec4-4d8b-a065-90723a76a7a4</id>
+      <name>Steyr AUG-CSL LMG</name>
+      <category>Light Machine Guns</category>
+      <type>Ranged</type>
+      <conceal>6</conceal>
+      <accuracy>5</accuracy>
+      <reach>0</reach>
+      <damage>9P</damage>
+      <ap>-2</ap>
+      <mode>BF/FA</mode>
+      <rc>0</rc>
+      <ammo>50(c)</ammo>
+      <avail>0</avail>
+      <cost>0</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessories>
+        <accessory>
+          <name>Laser Sight</name>
+        </accessory>
+        <accessory>
+          <name>Gas-Vent 1 System</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+        <mount>Under</mount>
+      </accessorymounts>
+      <hide />
+      <range>Light Machine Guns</range>
+      <spec>Machine Guns</spec>
+      <useskill>Heavy Weapons</useskill>
+      <ammocategory>Assault Rifles</ammocategory>
+    </weapon>
+    <weapon>
+      <id>6797323e-7299-4962-b8ba-89f857d3de97</id>
+      <name>Steyr AUG-CSL Sniper</name>
+      <category>Sniper Rifles</category>
+      <type>Ranged</type>
+      <conceal>6</conceal>
+      <accuracy>6</accuracy>
+      <reach>0</reach>
+      <damage>11P</damage>
+      <ap>-3</ap>
+      <mode>SA</mode>
+      <rc>0</rc>
+      <ammo>20(c)</ammo>
+      <avail>0</avail>
+      <cost>0</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessories>
+        <accessory>
+          <name>Laser Sight</name>
+        </accessory>
+        <accessory>
+          <name>Gas-Vent 1 System</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+        <mount>Under</mount>
+      </accessorymounts>
+      <hide />
+      <range>Sniper Rifles</range>
+      <spec>Sniper Rifles</spec>
+      <useskill>Longarms</useskill>
+      <ammocategory>Assault Rifles</ammocategory>
+    </weapon>
+
+    <!-- 4e Sporting Rifles -->
+    <weapon>
+      <id>7c4522f9-9929-4ee1-9fd4-2c3284ecbdff</id>
+      <name>Remington 750</name>
+      <category>Sporting Rifles</category>
+      <type>Ranged</type>
+      <conceal>8</conceal>
+      <accuracy>7</accuracy>
+      <reach>0</reach>
+      <damage>11P</damage>
+      <ap>-2</ap>
+      <mode>SS</mode>
+      <rc>0</rc>
+      <ammo>5(m)</ammo>
+      <avail>4R</avail>
+      <cost>2000</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessories>
+        <accessory>
+          <name>Imaging Scope</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+      </accessorymounts>
+    </weapon>
+    <!-- 4e LMGs -->
+    <weapon>
+      <id>ebb714e6-3f59-4751-baaf-87d40c550115</id>
+      <name>Ares MP-LMG</name>
+      <category>Light Machine Guns</category>
+      <type>Ranged</type>
+      <conceal>10</conceal>
+      <accuracy>5</accuracy>
+      <reach>0</reach>
+      <damage>10P</damage>
+      <ap>-2</ap>
+      <mode>BF/FA</mode>
+      <rc>0</rc>
+      <ammo>50(c)</ammo>
+      <avail>12F</avail>
+      <cost>3000</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessories>
+        <accessory>
+          <name>Gas-Vent 2 System</name>
+        </accessory>
+        <accessory>
+          <name>Laser Sight</name>
+        </accessory>
+        <accessory>
+          <name>Hip Pad Bracing System</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+        <mount>Under</mount>
+      </accessorymounts>
+      <spec>Machine Guns</spec>
+    </weapon>
+
+    <!-- 4e Missile Launchers -->
+    <weapon>
+      <id>15dc328c-fa34-4179-92ee-702b1bf5bf78</id>
+      <name>Arbelast II MAW Rocket Launcher</name>
+      <category>Missile Launchers</category>
+      <type>Ranged</type>
+      <conceal>10</conceal>
+      <accuracy>5</accuracy>
+      <reach>0</reach>
+      <damage>Rocket</damage>
+      <ap>Rocket</ap>
+      <mode>SS</mode>
+      <rc>0</rc>
+      <ammo>1</ammo>
+      <avail>14F</avail>
+      <cost>1400</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessorymounts>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+        <mount>Top</mount>
+        <mount>Under</mount>
+      </accessorymounts>
+    </weapon>
+    <weapon>
+      <id>affac900-5d75-459e-99fd-92d40a18194d</id>
+      <name>Great Dragon ATGM Launcher</name>
+      <category>Missile Launchers</category>
+      <type>Ranged</type>
+      <conceal>10</conceal>
+      <accuracy>5</accuracy>
+      <reach>0</reach>
+      <damage>Missile</damage>
+      <ap>Missile</ap>
+      <mode>SS</mode>
+      <rc>0</rc>
+      <ammo>1 (ml)</ammo>
+      <avail>17F</avail>
+      <cost>3000</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessories>
+        <accessory>
+          <name>Imaging Scope</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+        <mount>Top</mount>
+        <mount>Under</mount>
+      </accessorymounts>
+    </weapon>
+    <weapon>
+      <id>db72a958-62cd-410b-9b49-92a755f4c663</id>
+      <name>Missile: Great Dragon</name>
+      <category>Gear</category>
+      <type>Ranged</type>
+      <conceal>10</conceal>
+      <accuracy>0</accuracy>
+      <reach>0</reach>
+      <damage>24P (-4/m)</damage>
+      <ap>-4//-10</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>22F</avail>
+      <cost>2800</cost>
+      <source>4e</source>
+      <page>0</page>
+    </weapon>
+
+    <!-- 4e Melee Weapons -->
+    <weapon>
+      <id>64db4586-c8c2-4fac-beda-fc2e6c9d19a5</id>
+      <name>Katar</name>
+      <category>Blades</category>
+      <type>Melee</type>
+      <conceal>4</conceal>
+      <accuracy>6</accuracy>
+      <reach>0</reach>
+      <damage>({STR}+2)P</damage>
+      <ap>-4</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>9R</avail>
+      <cost>750</cost>
+      <source>4e</source>
+      <page>0</page>
+      <spec>Knives</spec>
+    </weapon>
+    <weapon>
+      <id>2018fb54-d22a-4857-b618-2427f7b25ac9</id>
+      <name>AZ-150 Stun Baton</name>
+      <category>Clubs</category>
+      <type>Melee</type>
+      <conceal>6</conceal>
+      <accuracy>4</accuracy>
+      <reach>2</reach>
+      <damage>11S(e)</damage>
+      <ap>-5</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>10</ammo>
+      <avail>8R</avail>
+      <cost>1500</cost>
+      <source>4e</source>
+      <page>0</page>
+      <requireammo>False</requireammo>
+      <spec>Electrical-Stun</spec>
+    </weapon>
+    <weapon>
+      <id>ac4e96f8-e3fa-4fec-9db1-15229bec122f</id>
+      <name>Jupiter Taser Club</name>
+      <category>Clubs</category>
+      <type>Melee</type>
+      <conceal>2</conceal>
+      <accuracy>4</accuracy>
+      <reach>1</reach>
+      <damage>9S(e)</damage>
+      <ap>-5</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>10</ammo>
+      <avail>8R</avail>
+      <cost>1200</cost>
+      <source>4e</source>
+      <page>0</page>
+      <requireammo>False</requireammo>
+      <spec>Batons</spec>
+      <spec2>Electrical-Stun</spec2>
+      <addweapon>Jupiter Taser Club Taser</addweapon>
+    </weapon>
+    <weapon>
+      <id>c37cb759-505a-4ac6-a57a-fb15c7cceac8</id>
+      <name>Jupiter Taser Club Taser</name>
+      <category>Tasers</category>
+      <type>Ranged</type>
+      <conceal>2</conceal>
+      <accuracy>5</accuracy>
+      <reach>0</reach>
+      <damage>9S(e)</damage>
+      <ap>-5</ap>
+      <mode>SS</mode>
+      <rc>0</rc>
+      <ammo>1</ammo>
+      <avail>0</avail>
+      <cost>0</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessorymounts>
+        <mount>Top</mount>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+      </accessorymounts>
+      <hide />
+      <range>Tasers</range>
+      <spec>Tasers</spec>
+      <useskill>Pistols</useskill>
+      <ammocategory>Tasers</ammocategory>
+    </weapon>
+    <weapon>
+      <id>4affe41f-82b1-4c45-a5b0-780df327eb9e</id>
+      <name>Sai</name>
+      <category>Exotic Melee Weapons</category>
+      <type>Melee</type>
+      <conceal>-2</conceal>
+      <accuracy>5</accuracy>
+      <reach>0</reach>
+      <damage>({STR}+1)P or S</damage>
+      <ap>-2</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>4</avail>
+      <cost>75</cost>
+      <source>4e</source>
+      <page>0</page>
+	  <useskill>Blades</useskill>
+    </weapon>
+    <weapon>
+      <id>2e192f7d-a938-4945-8a5d-d23b703764d0</id>
+      <name>Kusarigama</name>
+      <category>Exotic Melee Weapons</category>
+      <type>Melee</type>
+      <conceal>4</conceal>
+      <accuracy>-</accuracy>
+      <reach>-</reach>
+      <damage>-</damage>
+      <ap>-</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>8F</avail>
+      <cost>150</cost>
+      <source>4e</source>
+      <page>0</page>
+      <addweapon>Kusarigama Sickle</addweapon>
+      <addweapon>Kusarigama Weighted Chain</addweapon>
+	  <useskill>Flexile Melee</useskill>
+    </weapon>
+    <weapon>
+      <id>2be05107-751e-437f-a5b3-e48eab7965a2</id>
+      <name>Kusarigama Sickle</name>
+      <category>Exotic Melee Weapons</category>
+      <type>Melee</type>
+      <conceal>4</conceal>
+      <accuracy>6</accuracy>
+      <reach>1</reach>
+      <damage>({STR}+2)P</damage>
+      <ap>-1</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>0</avail>
+      <cost>0</cost>
+      <source>4e</source>
+      <page>0</page>
+      <hide />
+	  <useskill>Flexile Melee</useskill>
+    </weapon>
+    <weapon>
+      <id>066f0176-8815-4cc7-b85a-9adb22c6e4ef</id>
+      <name>Kusarigama Weighted Chain</name>
+      <category>Exotic Melee Weapons</category>
+      <type>Melee</type>
+      <conceal>3</conceal>
+      <accuracy>5</accuracy>
+      <reach>2</reach>
+      <damage>({STR}+1)P</damage>
+      <ap>-</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>0</avail>
+      <cost>0</cost>
+      <source>4e</source>
+      <page>0</page>
+      <hide />
+	  <useskill>Flexile Melee</useskill>
+    </weapon>
+    <!-- 4e Improvised weapons (cause I'm a god)-->
+    <weapon>
+      <id>bceeee51-2ed4-4645-b81a-42a68a07efd2</id>
+      <name>Potted Plant</name>
+      <category>Gear</category>
+      <type>Ranged</type>
+      <conceal>2</conceal>
+      <accuracy>Physical</accuracy>
+      <reach>0</reach>
+      <damage>({STR}+1)P</damage>
+      <ap>-</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>0</avail>
+      <cost>5</cost>
+      <source>4e</source>
+      <page>0</page>
+      <range>Potted Plant/Bowling Ball</range>
+      <useskill>Throwing Weapons</useskill>
+    </weapon>
+    <weapon>
+      <id>0a87c6ab-c06b-4bb0-b9d5-bd31c8f4bd3a</id>
+      <name>Bowling Ball</name>
+      <category>Gear</category>
+      <type>Ranged</type>
+      <conceal>2</conceal>
+      <accuracy>Physical</accuracy>
+      <reach>0</reach>
+      <damage>({STR}+2)P</damage>
+      <ap>-</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>0</avail>
+      <cost>20</cost>
+      <source>4e</source>
+      <page>0</page>
+      <range>Potted Plant/Bowling Ball</range>
+      <useskill>Throwing Weapons</useskill>
+    </weapon>
+    <weapon>
+      <id>9c8ed6b1-2f33-4951-b3d9-491c6fb65337</id>
+      <name>Baseball/Billiard Ball</name>
+      <category>Gear</category>
+      <type>Ranged</type>
+      <conceal>0</conceal>
+      <accuracy>Physical</accuracy>
+      <reach>0</reach>
+      <damage>({STR})P</damage>
+      <ap>-</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>0</avail>
+      <cost>15</cost>
+      <source>4e</source>
+      <page>0</page>
+      <range>Standard Grenade</range>
+      <useskill>Throwing Weapons</useskill>
+    </weapon>
+    <weapon>
+      <id>68b9e68b-bcf4-45d0-abf1-9f8f455599a0</id>
+      <name>Brick/Paving Stone</name>
+      <category>Gear</category>
+      <type>Ranged</type>
+      <conceal>2</conceal>
+      <accuracy>Physical</accuracy>
+      <reach>0</reach>
+      <damage>({STR}+1)P</damage>
+      <ap>-</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>0</avail>
+      <cost>5</cost>
+      <source>4e</source>
+      <page>0</page>
+      <range>Brick/Paving Stone</range>
+      <useskill>Throwing Weapons</useskill>
+    </weapon>
+    <weapon>
+      <id>e9bb1e2b-03a8-4be1-8489-bed3aeb12eb1</id>
+      <name>Chair (Throwing)</name>
+      <category>Gear</category>
+      <type>Ranged</type>
+      <conceal>8</conceal>
+      <accuracy>Physical</accuracy>
+      <reach>0</reach>
+      <damage>({STR})S</damage>
+      <ap>-</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>0</avail>
+      <cost>15</cost>
+      <source>4e</source>
+      <page>0</page>
+      <range>Chair</range>
+      <useskill>Throwing Weapons</useskill>
+    </weapon>
+
+    <!-- Adds the new biospike needed for R4 density -->
+    <weapon>
+      <id>dc13033e-29b9-47ad-91b6-be590ed970d5</id>
+      <name>Bone Spike IV</name>
+      <category>Bio-Weapon</category>
+      <type>Melee</type>
+      <conceal>-10</conceal>
+      <accuracy>Physical</accuracy>
+      <reach>0</reach>
+      <damage>{STR}+5P</damage>
+      <ap>0</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>0</avail>
+      <cost>0</cost>
+      <source>HT</source>
+      <page>185</page>
+      <cyberware>True</cyberware>
+      <hide />
+      <spec>Natural Weapons</spec>
+      <useskill>Unarmed Combat</useskill>
+    </weapon>
+
+    <!-- New grenades from 6th Edition -->
+    <weapon>
+      <id>2468661c-2a8d-456e-970c-5d8b9f1dd077</id>
+      <name>Grenade: Corrosive</name>
+      <category>Gear</category>
+      <type>Ranged</type>
+      <conceal>0</conceal>
+      <accuracy>Physical</accuracy>
+      <reach>0</reach>
+      <damage>8P(a) (-2/m)</damage>
+      <ap>-4</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>11F</avail>
+      <cost>200</cost>
+      <source>6e</source>
+      <page>1</page>
+      <range>Standard Grenade</range>
+      <spec>Non-Aerodynamic</spec>
+      <useskill>Throwing Weapons</useskill>
+    </weapon>
+    <weapon>
+      <id>5432d97b-28b0-47df-be9d-aa6aaa4bccee</id>
+      <name>Grenade: Cryo</name>
+      <category>Gear</category>
+      <type>Ranged</type>
+      <conceal>0</conceal>
+      <accuracy>Physical</accuracy>
+      <reach>0</reach>
+      <damage>12P(c) (-1/m)</damage>
+      <ap>-3</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>11F</avail>
+      <cost>200</cost>
+      <source>6e</source>
+      <page>1</page>
+      <range>Standard Grenade</range>
+      <spec>Non-Aerodynamic</spec>
+      <useskill>Throwing Weapons</useskill>
+    </weapon>
+    <weapon>
+      <id>1446f3d8-14be-49c3-afbd-85fc79e75af9</id>
+      <name>Grenade: Zapper</name>
+      <category>Gear</category>
+      <type>Ranged</type>
+      <conceal>0</conceal>
+      <accuracy>Physical</accuracy>
+      <reach>0</reach>
+      <damage>10S(a)</damage>
+      <ap>-5</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>8R</avail>
+      <cost>200</cost>
+      <source>6e</source>
+      <page>1</page>
+      <range>Standard Grenade</range>
+      <spec>Non-Aerodynamic</spec>
+      <useskill>Throwing Weapons</useskill>
+    </weapon>
+    <weapon>
+      <id>b505acc8-962e-4dad-a714-8fd3bc62dfc5</id>
+      <name>Grenade: Corrosive, Aerodynamic</name>
+      <category>Gear</category>
+      <type>Ranged</type>
+      <conceal>0</conceal>
+      <accuracy>Physical</accuracy>
+      <reach>0</reach>
+      <damage>14P(a) (-3/m)</damage>
+      <ap>-4</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>11F</avail>
+      <cost>200</cost>
+      <source>6e</source>
+      <page>1</page>
+      <range>Aerodynamic Grenade</range>
+      <spec>Aerodynamic</spec>
+      <useskill>Throwing Weapons</useskill>
+    </weapon>
+    <weapon>
+      <id>32eb10e1-888f-4b53-9080-708c5deb934d</id>
+      <name>Grenade: Cryo, Aerodynamic</name>
+      <category>Gear</category>
+      <type>Ranged</type>
+      <conceal>0</conceal>
+      <accuracy>Physical</accuracy>
+      <reach>0</reach>
+      <damage>16P(c) (-2/m)</damage>
+      <ap>-3</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>11F</avail>
+      <cost>200</cost>
+      <source>6e</source>
+      <page>1</page>
+      <range>Aerodynamic Grenade</range>
+      <spec>Aerodynamic</spec>
+      <useskill>Throwing Weapons</useskill>
+    </weapon>
+    <weapon>
+      <id>484b5b68-f580-4eb5-82aa-ee714bba6a14</id>
+      <name>Grenade: Zapper, Aerodynamic</name>
+      <category>Gear</category>
+      <type>Ranged</type>
+      <conceal>0</conceal>
+      <accuracy>Physical</accuracy>
+      <reach>0</reach>
+      <damage>8P(a) (-1/m)</damage>
+      <ap>-5</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>8R</avail>
+      <cost>200</cost>
+      <source>6e</source>
+      <page>1</page>
+      <range>Aerodynamic Grenade</range>
+      <spec>Aerodynamic</spec>
+      <useskill>Throwing Weapons</useskill>
+    </weapon>
+    <weapon>
+      <id>3257a5dd-9e15-4548-a422-af08437474b7</id>
+      <name>Minigrenade: Corrosive</name>
+      <category>Gear</category>
+      <type>Ranged</type>
+      <conceal>-2</conceal>
+      <accuracy>0</accuracy>
+      <reach>0</reach>
+      <damage>8P(a) (-2/m)</damage>
+      <ap>-4</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>11F</avail>
+      <cost>200</cost>
+      <source>6e</source>
+      <page>1</page>
+      <range>Grenade Launchers</range>
+      <spec>Grenade Launcher</spec>
+      <useskill>Heavy Weapons</useskill>
+    </weapon>
+
+    <weapon>
+      <id>4ef621af-4b43-42f7-952c-b1bff3d533da</id>
+      <name>Minigrenade: Molotov Cocktail</name>
+      <category>Gear</category>
+      <type>Ranged</type>
+      <conceal>0</conceal>
+      <accuracy>Physical</accuracy>
+      <reach>0</reach>
+      <damage>8P (-4/m)</damage>
+      <ap>-6</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>6F</avail>
+      <cost>15</cost>
+      <source>NF</source>
+      <page>172</page>
+      <range>Grenade Launchers</range>
+      <spec>Grenade Launcher</spec>
+      <useskill>Heavy Weapons</useskill>
+    </weapon>
+
+    <weapon>
+      <id>e54b4d0f-fd20-4b51-9693-a534063eccae</id>
+      <name>Minigrenade: Halloweener Molotov Cocktail</name>
+      <category>Gear</category>
+      <type>Ranged</type>
+      <conceal>0</conceal>
+      <accuracy>Physical</accuracy>
+      <reach>0</reach>
+      <damage>9P (-3/m)</damage>
+      <ap>-6</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>4F</avail>
+      <cost>50</cost>
+      <source>TSG</source>
+      <page>29</page>
+      <range>Grenade Launchers</range>
+      <spec>Grenade Launcher</spec>
+      <useskill>Heavy Weapons</useskill>
+    </weapon>
+
+    <weapon>
+      <id>e70c1ebe-0846-4e35-be7e-3bca8b1c6eba</id>
+      <name>Minigrenade: Fragmentation</name>
+      <category>Gear</category>
+      <type>Ranged</type>
+      <conceal>-2</conceal>
+      <accuracy>0</accuracy>
+      <reach>0</reach>
+      <damage>12(c) (-1/m)</damage>
+      <ap>-3</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>11F</avail>
+      <cost>200</cost>
+      <source>6e</source>
+      <page>1</page>
+      <range>Grenade Launchers</range>
+      <spec>Grenade Launcher</spec>
+      <useskill>Heavy Weapons</useskill>
+    </weapon>
+    <weapon>
+      <id>cfdee21d-e94b-49d7-b8e8-96dc070e254b</id>
+      <name>Minigrenade: Zapper</name>
+      <category>Gear</category>
+      <type>Ranged</type>
+      <conceal>-2</conceal>
+      <accuracy>0</accuracy>
+      <reach>0</reach>
+      <damage>8S(e) (-1/m)</damage>
+      <ap>-5</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>8R</avail>
+      <cost>200</cost>
+      <source>6e</source>
+      <page>1</page>
+      <range>Grenade Launchers</range>
+      <spec>Grenade Launcher</spec>
+      <useskill>Heavy Weapons</useskill>
+    </weapon>
+
+    <!-- 6th Edition Cyberweapons-->
+    <weapon>
+      <id>5c60484b-253d-49b4-9cfe-03d84feb7018</id>
+      <name>Cyberlimb Hardening</name>
+      <category>Cyberweapon</category>
+      <type>Melee</type>
+      <conceal>0</conceal>
+      <accuracy>Physical</accuracy>
+      <reach>0</reach>
+      <damage>({STR}+3)P</damage>
+      <ap>-</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>0</avail>
+      <cost>0</cost>
+      <source>6e</source>
+      <page>0</page>
+      <cyberware>True</cyberware>
+      <hide />
+      <spec>Cyber Implants</spec>
+      <useskill>Unarmed Combat</useskill>
+    </weapon>
+
+    <weapon>
+      <id>051dae7c-07bb-42de-a173-95f38b94edc7</id>
+      <name>Crab Claw</name>
+      <category>Cyberweapon</category>
+      <type>Melee</type>
+      <conceal>0</conceal>
+      <accuracy>Physical</accuracy>
+      <reach>0</reach>
+      <damage>({STR}+2)P</damage>
+      <ap>-2</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>0</avail>
+      <cost>0</cost>
+      <source>6e</source>
+      <page>0</page>
+      <allowaccessory>False</allowaccessory>
+      <cyberware>True</cyberware>
+      <hide />
+      <spec>Cyber Implants</spec>
+      <useskill>Unarmed Combat</useskill>
+    </weapon>
+
+    <weapon>
+      <id>a10b3299-31b3-4fbe-a845-5555ee851280</id>
+      <name>Tesla Coil</name>
+      <category>Exotic Ranged Weapon</category>
+      <type>Ranged</type>
+      <conceal>0</conceal>
+      <accuracy>4</accuracy>
+      <reach>0</reach>
+      <damage>10S(e)</damage>
+      <ap>-5</ap>
+      <mode>SS</mode>
+      <rc>0</rc>
+      <ammo>10(c)</ammo>
+	  <useskill>Directed Energy</useskill>
+      <avail>18R</avail>
+      <cost>0</cost>
+      <source>6e</source>
+      <page>0</page>
+      <allowaccessory>False</allowaccessory>
+      <cyberware>True</cyberware>
+      <hide />
+      <useskill>Exotic Ranged Weapon</useskill>
+      <range>Tasers</range>
+      <weapontype>energy</weapontype>
+    </weapon>
+
+    <!-- 6th Edition Weapons -->
+    <weapon>
+      <id>13e8a7a1-b95a-4d23-8045-ef3d10525f5c</id>
+      <name>Ares Predator VI</name>
+      <category>Heavy Pistols</category>
+      <type>Ranged</type>
+      <conceal>0</conceal>
+      <accuracy>5</accuracy>
+      <reach>0</reach>
+      <damage>8P</damage>
+      <ap>-1</ap>
+      <mode>SA/BF</mode>
+      <rc>0</rc>
+      <ammo>10(c)</ammo>
+      <avail>7R</avail>
+      <cost>950</cost>
+      <source>6e</source>
+      <page>0</page>
+      <accessories>
+        <accessory>
+          <name>Smartgun System, Internal</name>
+        </accessory>
+        <accessory>
+          <name>Ammo Skip</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+        <mount>Side</mount>
+        <mount>Stock</mount>
+      </accessorymounts>
+      <spec>Semi-Automatics</spec>
+    </weapon>
+	<weapon>
+      <id>0cfc1fa6-7f33-435f-8c0f-499c315f8c0c</id>
+      <name>Shock Module</name>
+      <category>Blades</category>
+      <type>Melee</type>
+      <conceal>4</conceal>
+      <accuracy>6</accuracy>
+      <reach>0</reach>
+      <damage>9S(e)</damage>
+      <ap>-5</ap>
+      <mode>0</mode>
+      <rc>0</rc>
+      <ammo>0</ammo>
+      <avail>9R</avail>
+      <cost>750</cost>
+      <source>4e</source>
+      <page>0</page>
+      <spec>Electrical-Stun</spec>
+	  <hide />
+    </weapon>
+
+    <!-- Drone mount weapons -->
+    <weapon>
+      <id>0eed90ee-6d5b-40d9-a4ae-d17c2095239d</id>
+      <name>Single-Shot Grenade Launcher</name>
+      <category>Mini-Drone Weapons</category>
+      <type>Ranged</type>
+      <conceal>0</conceal>
+      <accuracy>4</accuracy>
+      <reach>0</reach>
+      <damage>Grenade</damage>
+      <ap>-</ap>
+      <mode>SS</mode>
+      <RC>0</RC>
+      <ammo>1(m)</ammo>
+      <avail>8F</avail>
+      <cost>1200</cost>
+      <source>MPR</source>
+      <page>0</page>
+      <sizecategory>Light Pistols</sizecategory>
+    </weapon>
+
+    <weapon>
+      <id>25c730d7-1518-479e-8175-428ee36f1402</id>
+      <name>Single-Shot Pistol</name>
+      <category>Micro-Drone Weapons</category>
+      <type>Ranged</type>
+      <conceal>0</conceal>
+      <accuracy>6</accuracy>
+      <reach>0</reach>
+      <damage>8P</damage>
+      <ap>-1</ap>
+      <mode>SS</mode>
+      <rc>0</rc>
+      <ammo>1(m)</ammo>
+      <avail>5R</avail>
+      <cost>250</cost>
+      <source>MPR</source>
+      <page>0</page>
+      <range>Heavy Pistols</range>
+      <sizecategory>Light Pistols</sizecategory>
+    </weapon>
+
+    <weapon>
+      <id>05bd8fbe-4ffc-4169-a252-cf3300c3e65e</id>
+      <name>Single-Shot Dart</name>
+      <category>Micro-Drone Weapons</category>
+      <type>Ranged</type>
+      <conceal>0</conceal>
+      <accuracy>5</accuracy>
+      <reach>0</reach>
+      <damage>As Drug/Toxin</damage>
+      <ap>0</ap>
+      <mode>SS</mode>
+      <rc>0</rc>
+      <ammo>1(m)</ammo>
+      <avail>4R</avail>
+      <cost>150</cost>
+      <source>MPR</source>
+      <page>0</page>
+      <range>Heavy Pistols</range>
+      <sizecategory>Light Pistols</sizecategory>
+      <useskill>Exotic Ranged Weapon</useskill>
+      <weapontype>dartgun</weapontype>
+    </weapon>
+  </weapons>
+
+  <!-- Minor changes to certain weapon accessories for various reasons -->
+  <accessories>
+    <accessory>
+      <name>Shock Pad</name>
+      <mount>Stock</mount>
+    </accessory>
+    <accessory>
+      <name>Underbarrel Weight</name>
+      <notes>Only adds +1 RC when using the weapon in Full Auto</notes>
+    </accessory>
+    <accessory>
+      <name>Overclocked</name>
+      <damage>-1</damage>
+    </accessory>
+    <accessory>
+      <name>Extended Clip</name>
+      <forbidden amendoperation="replace">
+        <weapondetails>
+          <OR>
+            <name>Ares Crusader II</name>
+            <name>Ceska Black Scorpion</name>
+            <name>PPSK-4 Collapsible Machine Pistol</name>
+            <name>Steyr TMP</name>
+            <name>Walther PB-120</name>
+            <name>Glock-Swarovski Eagle Eye</name>
+            <name>Walther P118</name>
+          </OR>
+        </weapondetails>
+      </forbidden>
+    </accessory>
+    <accessory>
+      <name>Extended Clip (Large Ammo Machine Pistols)</name>
+      <required amendoperation="replace">
+        <weapondetails>
+          <OR>
+            <name>Ares Crusader II</name>
+            <name>Ceska Black Scorpion</name>
+            <name>PPSK-4 Collapsible Machine Pistol</name>
+            <name>Steyr TMP</name>
+            <name>Walther P118</name>
+          </OR>
+        </weapondetails>
+      </required>
+    </accessory>
+    <accessory>
+      <name>Stock Removal</name>
+      <forbidden amendoperation="replace">
+        <oneof>
+          <accessory>Sawed Off/Shortbarrel</accessory>
+          <accessory>Sawed Off/Shortbarrel and Stock Removal</accessory>
+        </oneof>
+        <weapondetails>
+          <OR>
+            <name>Glock MP Custodes (MPK)</name>
+          </OR>
+        </weapondetails>
+      </forbidden>
+    </accessory>
+    <accessory>
+      <name>Silencer/Suppressor</name>
+      <forbidden amendoperation="replace">
+        <weapondetails>
+          <OR>
+            <ammo operation="contains">(cy)</ammo>
+            <category>Shotguns</category>
+            <name>PSK-3 Collapsible Heavy Pistol</name>
+            <spec>Revolvers</spec>
+            <spec>Shotguns</spec>
+            <spec2>Revolvers</spec2>
+            <spec2>Shotguns</spec2>
+          </OR>
+        </weapondetails>
+      </forbidden>
+    </accessory>
+    <!-- Removes all the german accessories -->
+    <accessory xpathfilter="contains(source,'SOTG')">
+      <hide />
+    </accessory>
+
+    <!-- Makes Extreme Environment have select text -->
+    <accessory>
+      <name>Extreme Environment Modification</name>
+      <bonus>
+        <selecttext />
+      </bonus>
+    </accessory>
+  </accessories>
+
+  <accessories amendoperation="append">
+    <!-- 4th Edition Accessories for the 4th Edition weapons (Also german stuff now) TODO separate german stuff back out-->
+    <accessory>
+      <id>90796c00-08dd-4fd6-8815-8ef137c91ddb</id>
+      <name>Belt-Feed, 50-round</name>
+      <mount />
+      <avail>0</avail>
+      <cost>0</cost>
+      <source>4e</source>
+      <page>0</page>
+      <ammoreplace>50(belt)</ammoreplace>
+      <ammoslots>1</ammoslots>
+      <rating>0</rating>
+      <required>
+        <weapondetails>
+          <name>Steyr AUG-CSL LMG</name>
+        </weapondetails>
+      </required>
+    </accessory>
+
+    <accessory>
+      <id>e3fbf35f-4b07-422c-9f5c-7de925b47dc4</id>
+      <name>Clip, 15-round</name>
+      <mount />
+      <avail>9R</avail>
+      <cost>12</cost>
+      <source>4e</source>
+      <page>0</page>
+      <ammobonus>50</ammobonus>
+      <ammoslots>1</ammoslots>
+      <rating>0</rating>
+      <required>
+        <weapondetails>
+          <name>Walther PB-120</name>
+        </weapondetails>
+      </required>
+    </accessory>
+
+    <accessory>
+      <id>c7b01cc8-90f5-48ec-b7d3-20d65afa3093</id>
+      <name>Extended Clip (Walther PB-120)</name>
+      <mount />
+      <avail>6R</avail>
+      <cost>35</cost>
+      <source>HT</source>
+      <page>180</page>
+      <ammobonus>50</ammobonus>
+      <conceal>2</conceal>
+      <rating>1</rating>
+      <required>
+        <weapondetails>
+          <name>Walther PB-120</name>
+        </weapondetails>
+      </required>
+    </accessory>
+
+    <accessory>
+      <id>c80b36bf-72d0-442e-80d4-91346c4a884c</id>
+      <name>Extended Clip (Glock-Swarovski Eagle Eye)</name>
+      <mount />
+      <avail>6R</avail>
+      <cost>35</cost>
+      <source>HT</source>
+      <page>180</page>
+      <ammobonus>50</ammobonus>
+      <conceal>2</conceal>
+      <rating>1</rating>
+      <required>
+        <weapondetails>
+          <name>Glock-Swarovski Eagle Eye</name>
+        </weapondetails>
+      </required>
+    </accessory>
+
+    <accessory>
+      <id>6b75c8f3-5484-41a2-b9c4-b8275710be88</id>
+      <name>Walther PB-120 15-Round Spare Clip</name>
+      <mount />
+      <avail>9R</avail>
+      <cost>12</cost>
+      <source>4e</source>
+      <page>0</page>
+      <ammoslots>1</ammoslots>
+      <rating>0</rating>
+      <required>
+        <weapondetails>
+          <name>Walther PB-120</name>
+        </weapondetails>
+      </required>
+    </accessory>
+
+    <accessory>
+      <id>2eacc796-1402-491e-b0fb-ab4865563a75</id>
+      <name>Walther Secura Smartgun System</name>
+      <mount />
+      <avail>0</avail>
+      <cost>150</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accuracy>2</accuracy>
+      <forbidden>
+        <oneof>
+          <accessory>Ceramic/Plasteel Components</accessory>
+          <accessory>Collapsible Traditional Bow</accessory>
+          <accessory>Vintage</accessory>
+        </oneof>
+        <weapondetails>
+          <type>Melee</type>
+        </weapondetails>
+      </forbidden>
+      <gears>
+        <usegear>
+          <name>Laser Range Finder</name>
+          <category>Sensor Functions</category>
+        </usegear>
+        <usegear>
+          <name>Camera, Micro</name>
+          <category>Vision Devices</category>
+        </usegear>
+      </gears>
+      <rating>0</rating>
+      <required>
+        <weapondetails>
+          <name>Walther Secura</name>
+        </weapondetails>
+      </required>
+    </accessory>
+
+    <accessory>
+      <id>747c0929-c738-4127-90b9-d8a784a52b7e</id>
+      <name>Walther Secura Kompakt Smartgun System</name>
+      <mount />
+      <avail>0</avail>
+      <cost>200</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accuracy>2</accuracy>
+      <forbidden>
+        <oneof>
+          <accessory>Ceramic/Plasteel Components</accessory>
+          <accessory>Collapsible Traditional Bow</accessory>
+          <accessory>Vintage</accessory>
+        </oneof>
+        <weapondetails>
+          <type>Melee</type>
+        </weapondetails>
+      </forbidden>
+      <gears>
+        <usegear>
+          <name>Laser Range Finder</name>
+          <category>Sensor Functions</category>
+        </usegear>
+        <usegear>
+          <name>Camera, Micro</name>
+          <category>Vision Devices</category>
+        </usegear>
+      </gears>
+      <rating>0</rating>
+      <required>
+        <weapondetails>
+          <name>Walther Secura Kompakt</name>
+        </weapondetails>
+      </required>
+    </accessory>
+
+    <accessory>
+      <id>e001ba0a-b31f-4a82-84eb-45fd752a7676</id>
+      <name>Stock Removal (Glock MP Custodes)</name>
+      <mount>Stock</mount>
+      <avail>2</avail>
+      <cost>-50</cost>
+      <source>HT</source>
+      <page>182</page>
+      <conceal>-2</conceal>
+      <rc>-1</rc>
+      <forbidden>
+        <oneof>
+          <accessory>Sawed Off/Shortbarrel</accessory>
+          <accessory>Sawed Off/Shortbarrel and Stock Removal</accessory>
+        </oneof>
+      </forbidden>
+      <rating>0</rating>
+      <required>
+        <weapondetails>
+          <OR>
+            <name>Glock MP Custodes (MPK)</name>
+          </OR>
+        </weapondetails>
+      </required>
+    </accessory>
+
+    <accessory>
+      <id>17ea1a04-a805-404b-9d20-c278d89b62d0</id>
+      <name>Briefcase Gun Shielding</name>
+      <mount />
+      <avail>0</avail>
+      <cost>1500</cost>
+      <source>SAG</source>
+      <page>0</page>
+      <rating>0</rating>
+      <required>
+        <weapondetails>
+          <OR>
+            <name>Glock MP Custodes (MPV)</name>
+            <name>Ares Executioner</name>
+          </OR>
+        </weapondetails>
+      </required>
+    </accessory>
+
+    <accessory>
+      <id>be3ba823-0787-4dad-af58-b7b48c699755</id>
+      <name>Ammo Skip (Pistol)</name>
+      <mount />
+      <avail>8R</avail>
+      <cost>250</cost>
+      <source>HT</source>
+      <page>180</page>
+      <forbidden>
+        <oneof>
+          <accessory>Vintage</accessory>
+        </oneof>
+      </forbidden>
+      <rating>0</rating>
+      <required>
+        <oneof>
+          <accessory>Drum Magazine, 24-round</accessory>
+          <accessory>Drum Magazine, 32-round</accessory>
+          <weapondetails>
+            <AND>
+              <OR>
+                <ammo operation="contains">(cy)</ammo>
+                <ammo operation="contains">(d)</ammo>
+              </OR>
+              <OR>
+                <category>Heavy Pistols</category>
+                <category>Light Pistols</category>
+                <category>Holdouts</category>
+              </OR>
+            </AND>
+          </weapondetails>
+        </oneof>
+      </required>
+    </accessory>
+
+    <accessory>
+      <id>13be9882-4bb0-469a-a136-234fb6fae350</id>
+      <name>Ares Predator VI Spare Clip</name>
+      <mount />
+      <avail>9R</avail>
+      <cost>30</cost>
+      <source>6e</source>
+      <page>0</page>
+      <ammoslots>1</ammoslots>
+      <rating>0</rating>
+      <required>
+        <weapondetails>
+          <name>Ares Predator VI</name>
+        </weapondetails>
+      </required>
+    </accessory>
+  </accessories>
+
+  <!-- Accomodating 6th Edition Weapons-->
+  <accessories>
+    <accessory>
+      <name>External Power Source</name>
+      <required>
+        <weapondetails>
+          <OR amendoperation="append">
+            <name>Tesla Coil</name>
+          </OR>
+        </weapondetails>
+      </required>
+    </accessory>
+
+
+  </accessories>
+</chummer>

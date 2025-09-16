@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file is part of Chummer5a.
+
+    Chummer5a is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Chummer5a is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
+
+    You can obtain the full source code for Chummer5a at
+    https://github.com/chummer5a/chummer5a
+-->
+<chummer xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/XMLSchema echoes.xsd">
+  <echoes>
+    <!-- Region Shadowrun 5-->
+    <echo>
+      <name>Attack Upgrade</name>
+      <bonus>
+        <livingpersona>
+          <attack>2</attack>
+        </livingpersona>
+      </bonus>
+    </echo>
+    <echo>
+      <name>Data Processing Upgrade</name>
+      <bonus>
+        <livingpersona>
+          <dataprocessing>2</dataprocessing>
+        </livingpersona>
+      </bonus>
+    </echo>
+    <echo>
+      <name>Firewall Upgrade</name>
+      <bonus>
+        <livingpersona>
+          <firewall>2</firewall>
+        </livingpersona>
+      </bonus>
+    </echo>
+    <echo>
+      <name>Sleaze Upgrade</name>
+      <bonus>
+        <livingpersona>
+          <sleaze>2</sleaze>
+        </livingpersona>
+      </bonus>
+    </echo>
+  </echoes>
+  
+  <!-- Adds the dual attribute echoes-->
+  <echoes amendoperation="append">
+    <echo>
+      <id>99c737c2-664e-4180-b1b3-cc0e394762c5</id>
+      <name>Attack/Sleaze Upgrade</name>
+      <source>SR5</source>
+      <page>258</page>
+      <bonus>
+        <livingpersona>
+          <attack>1</attack>
+          <sleaze>1</sleaze>
+        </livingpersona>
+      </bonus>
+      <limit>False</limit>
+    </echo>
+    <echo>
+      <id>5c47b857-77cc-4311-86ce-8d6fbf67db6d</id>
+      <name>Attack/Data Processing Upgrade</name>
+      <source>SR5</source>
+      <page>258</page>
+      <bonus>
+        <livingpersona>
+          <attack>1</attack>
+          <dataprocessing>1</dataprocessing>
+        </livingpersona>
+      </bonus>
+      <limit>False</limit>
+    </echo>
+    <echo>
+      <id>3c1885b0-7763-4ae1-a124-4ece78179417</id>
+      <name>Attack/Firewall Upgrade</name>
+      <source>SR5</source>
+      <page>258</page>
+      <bonus>
+        <livingpersona>
+          <attack>1</attack>
+          <firewall>1</firewall>
+        </livingpersona>
+      </bonus>
+      <limit>False</limit>
+    </echo>
+    <echo>
+      <id>5cf9f5e9-84fd-46d5-b84f-ad057f6fcfb8</id>
+      <name>Sleaze/Data Processing Upgrade</name>
+      <source>SR5</source>
+      <page>258</page>
+      <bonus>
+        <livingpersona>
+          <sleaze>1</sleaze>
+          <dataprocessing>1</dataprocessing>
+        </livingpersona>
+      </bonus>
+      <limit>False</limit>
+    </echo>
+    <echo>
+      <id>30d64b0c-dc34-4992-b23f-567892095d3b</id>
+      <name>Sleaze/Firewall Upgrade</name>
+      <source>SR5</source>
+      <page>258</page>
+      <bonus>
+        <livingpersona>
+          <sleaze>1</sleaze>
+          <firewall>1</firewall>
+        </livingpersona>
+      </bonus>
+      <limit>False</limit>
+    </echo>
+    <echo>
+      <id>0fe3fbd4-5594-4aa3-a6b0-98fa24727014</id>
+      <name>Data Processing/Firewall Upgrade</name>
+      <source>SR5</source>
+      <page>258</page>
+      <bonus>
+        <livingpersona>
+          <dataprocessing>1</dataprocessing>
+          <firewall>1</firewall>
+        </livingpersona>
+      </bonus>
+      <limit>False</limit>
+    </echo>
+  </echoes>
+  <!-- Add 6e echoes -->
+  <echoes amendoperation="append">
+    <echo>
+      <id>36e744fa-033a-44d1-b333-20c0d0dfca9c</id>
+      <name>Syntax Error</name>
+      <source>6e</source>
+      <page>0</page>
+    </echo>
+  </echoes>
+</chummer>

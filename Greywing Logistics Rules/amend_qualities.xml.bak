@@ -1,0 +1,6755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file is part of Chummer5a.
+
+Chummer5a is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Chummer5a is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Chummer5a.  If not, see <http://www.gnu.org/licenses />.
+
+  You can obtain the full source code for Chummer5a at
+  https://github.com/chummer5a/chummer5a
+-->
+<chummer xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema qualities.xsd">
+
+  <!-- Quality Tweaks -->
+  <qualities>
+	<!-- Spirit Hunter Karma change-->
+	<quality>
+	  <name>Spirit Hunter I</name>
+	  <karma>10</karma>
+	</quality>
+	<quality>
+	  <name>Spirit Hunter II</name>
+	  <karma>10</karma>
+	</quality>
+	<quality>
+	  <name>Spirit Hunter III</name>
+	  <karma>10</karma>
+	</quality>
+    <!-- Lets non-magicians take Witness My Hate-->
+    <quality>
+      <name>Witness My Hate</name>
+      <required>
+        <oneof amendoperation="replace">
+          <magenabled />
+        </oneof>
+      </required>
+    </quality>
+
+    <!-- Make Outdoorsman not show up in a funky way-->
+	<quality>
+		<name>Focused Concentration</name>
+		<karma>3</karma>
+	</quality>
+    <quality>
+      <name>Outdoorsman</name>
+      <bonus amendoperation="replace">
+        <specificskill>
+          <name>Perception</name>
+          <bonus>-1</bonus>
+          <condition>Urban</condition>
+        </specificskill>
+        <specificskill>
+          <name>Survival</name>
+          <bonus>-1</bonus>
+          <condition>Urban</condition>
+        </specificskill>
+      </bonus>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>    
+
+    <!-- Make City Slicker not show up in a funky way -->
+    <quality>
+      <name>City Slicker</name>
+      <bonus amendoperation="replace">
+        <skillgroup>
+          <name>Outdoors</name>
+          <bonus>1</bonus>
+          <condition>Urban</condition>
+        </skillgroup>
+        <specificskill>
+          <name>Perception</name>
+          <bonus>-1</bonus>
+          <condition>Not Urban</condition>
+        </specificskill>
+        <specificskill>
+          <name>Survival</name>
+          <bonus>-1</bonus>
+          <condition>Not Urban</condition>
+        </specificskill>
+      </bonus>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>    
+
+    <!-- Community Connection for non orks-->
+    <quality>
+      <name>Community Connection</name>
+      <required amendoperation="replace"></required>
+    </quality>
+  </qualities>
+
+  <!-- AI Adjustments -->
+  <qualities>
+    <quality>
+      <name>Acrobatic Defender</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Agile Defender</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Black Forest Native</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Catlike</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Changeling (Class I SURGE)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Changeling (Class III SURGE)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Cyber-Singularity Seeker</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Delicate Fingers</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Double Jointed</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Elemental Focus</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Exceptional Attribute</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Hawk Eye</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Lightning Reflexes</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Magic Resistance</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Natural Athlete</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Night Vision</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Otaku to Technomancer</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Perceptive Defender</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Phenotypic Variation - Cosmetic Alteration</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Phenotypic Variation - Genetic Optimization (Agility)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Phenotypic Variation - Genetic Optimization (Body)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Phenotypic Variation - Genetic Optimization (Charisma)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Phenotypic Variation - Genetic Optimization (Intuition)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Phenotypic Variation - Genetic Optimization (Logic)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Phenotypic Variation - Genetic Optimization (Reaction)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Phenotypic Variation - Genetic Optimization (Strength)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Phenotypic Variation - Genetic Optimization (Willpower)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Phenotypic Variation - Genewipe</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Phenotypic Variation - Masque</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Phenotypic Variation - Metaposeur</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Phenotypic Variation - Print Removal</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Phenotypic Variation - Reprint</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Phenotypic Variation - Shuffle</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Radiation Sponge</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Rad-Tolerant</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Redline</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>    
+    <quality>
+      <name>Resistance to Pathogens</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Resistance to Pathogens and Toxins</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Resistance to Toxins</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Spirit Champion</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Too Pretty To Hit</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Tough as Nails (Stun)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Tough as Nails (Physical)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Toughness</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Uncanny Healer</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Aged</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Albinism</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Assensing Rejection</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Asthma</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Astral Beacon</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>AVRse</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Blighted (6 Months)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Blighted (12 Months)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Blighted (24 Months)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Blind</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Computer Illiterate</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Elevated Stress</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Elf Poser</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Faceless</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Family Curse</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Faraday Himself</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Glass Jaw</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Harrowed</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Illiterate</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Illness</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+          <quality>Illness 2 </quality>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Incomplete Deprogramming</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Infirm</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Information Auctioneer</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Insomnia (Basic)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Insomnia (Full)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Lightweight</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Night Blindness</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Paraplegic</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Pie Iesu Domine. Dona Eis Requiem.</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Quasimodo</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Reduced Sense (Smell)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Reduced Sense (Taste)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Reduced Sense (Touch)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Reduced Sense (Hearing)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Reduced Sense (Sight)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Scorched</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Sensitive System</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Sensory Overload Syndrome</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Simsense Vertigo</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Spirit Bane</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Superhuman Psychosis</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>TLE-X</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Unsteady Hands</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Weak Immune System</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Thousand Yard Stare</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Uneducated</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Allergy (Uncommon, Mild)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Allergy (Uncommon, Moderate)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Allergy (Uncommon, Severe)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Allergy (Uncommon, Extreme)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Deaf</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Allergy (Common, Mild)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Allergy (Common, Moderate)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Allergy (Common, Extreme)</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+    </quality>
+
+    <!--These are here because I couldn't find a way to add multiple qualities with selectquality. The space at the end of the name is necessary to make them unique from normal Dimmer Bulb/Illness.-->
+    <quality amendoperation="addnode">
+      <id>23f79a71-a120-437f-85bb-62cc62b2a615</id>
+      <name>Dimmer Bulb 2 </name>
+      <karma>-10</karma>
+      <category>Negative</category>
+      <hide />
+      <bonus>
+        <skillattribute>
+          <name>LOG</name>
+          <bonus>-2</bonus>
+        </skillattribute>
+        <skillattribute>
+          <name>INT</name>
+          <bonus>-2</bonus>
+        </skillattribute>
+        <judgeintentionsoffense>-2</judgeintentionsoffense>
+        <memory>-2</memory>
+        <mentalmanipulationresist>-2</mentalmanipulationresist>
+        <manaillusionresist>-2</manaillusionresist>
+        <physicalillusionresist>-2</physicalillusionresist>
+        <decreaselogresist>-2</decreaselogresist>
+        <decreaseintresist>-2</decreaseintresist>
+        <detectionspellresist>-2</detectionspellresist>
+        <physiologicaladdictionfirsttime>-2</physiologicaladdictionfirsttime>
+        <physiologicaladdictionalreadyaddicted>-2</physiologicaladdictionalreadyaddicted>
+        <dodge>-2</dodge>
+        <surprise>-2</surprise>
+      </bonus>
+      <forbidden>
+        <quality>Dimmer Bulb</quality>
+      </forbidden>
+      <source>RF</source>
+      <page>154</page>
+    </quality>
+
+    <quality amendoperation="addnode">
+      <id>45747092-3fa7-4c49-80ba-35b7faf9bbbc</id>
+      <name>Illness 2 </name>
+      <karma>-10</karma>
+      <category>Negative</category>
+      <hide />
+      <bonus />
+      <forbidden>
+        <quality>Illness</quality>
+      </forbidden>
+      <source>BB</source>
+      <page>12</page>
+    </quality>
+
+    <!-- Prototype Transhuman Changes and Required hidden qualities -->
+    <quality>
+      <name>Prototype Transhuman</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+      <bonus amendoperation="replace">
+        <prototypetranshuman>1</prototypetranshuman>
+        <selectquality>
+          <quality>Wanted (National, Full)</quality> 
+          <quality>Allergy (Common, Mild)</quality>
+          <quality>Astral Beacon</quality>
+          <quality>Insomnia (Basic)</quality>
+          <quality>Allergy (Uncommon, Moderate)</quality>
+          <quality>Antipathy</quality>
+          <quality>Blighted (12 Months)</quality>
+          <quality>Blind</quality>
+          <quality>Deaf</quality>
+          <quality>Incomplete Deprogramming</quality>
+          <quality>Low Pain Tolerance</quality>
+          <quality>Paraplegic</quality>
+          <quality>Phobia (Common, Moderate)</quality>
+          <quality>Poor Self Control (Combat Monster)</quality>
+          <quality>Illness 2 </quality>
+          <quality>Dimmer Bulb 2 </quality>
+        </selectquality>
+      </bonus>
+    </quality>
+
+    <!-- Hidden Banned Qualities -->
+    <quality>
+      <name>Neoteny</name>
+      <hide />
+    </quality>
+
+    <quality>
+      <name>Information Auctioneer</name>
+      <hide />
+    </quality>
+	
+	<quality>
+      <name>First Impression</name>
+      <hide />
+    </quality>
+
+    <!-- Other Adjustments -->
+    <quality>
+      <name>SINner (National)</name>
+      <bonus>
+        <lifestylecost>30</lifestylecost>
+      </bonus>
+    </quality>
+    <quality>
+      <name>SINner (Criminal)</name>
+      <bonus>
+        <lifestylecost>30</lifestylecost>
+      </bonus>
+    </quality>
+    <quality>
+      <name>SINner (Corporate Limited)</name>
+      <bonus>
+        <lifestylecost>40</lifestylecost>
+      </bonus>
+    </quality>
+    <quality>
+      <name>SINner (Corporate)</name>
+      <bonus>
+        <lifestylecost>20</lifestylecost>
+      </bonus>
+    </quality>
+    <quality>
+      <name>Code of Honor</name>
+      <forbidden amendoperation="addnode">
+        <oneof>
+          <quality>Superhuman Psychosis</quality>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Will to Live</name>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+          <quality>Will to Die</quality>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Brand Loyalty (Manufacturer)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Brand Loyalty (Product)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Aware</name>
+      <bonus>
+        <specificskill amendoperation="addnode">
+          <name>Assensing</name>
+          <bonus>2</bonus>
+        </specificskill>
+      </bonus>
+    </quality>
+
+    <quality>
+      <name>Spike Resistance</name>
+      <karma amendoperation="replace">5</karma>
+    </quality>
+
+    <quality>
+      <name>Dimmer Bulb</name>
+      <forbidden amendoperation="append">
+        <quality>Dimmer Bulb 2 </quality>
+      </forbidden>
+    </quality>
+    <!-- Fixes the Busted Cyberware quality so it can be taken more than once -->
+    <quality>
+      <name>Busted Cyberware</name>
+      <limit>99</limit>
+    </quality>
+    <!--Region Bullets and Bandages Negative Qualities -->
+    <quality>
+      <name>Pregnant</name>
+      <hide />
+    </quality>
+    <!-- End Region-->
+    <!--Region Sail Away, Sweet Sister Positive Qualities -->
+    <!--    <quality>
+      <name>College Education</name>
+      <hide />
+      </quality>
+      <quality>
+      <name>Inspired</name>
+      <hide />
+    </quality> -->
+    <!-- End Region-->
+    <!-- Region Run and Gun-->
+    <quality>
+      <name>One Trick Pony</name>
+      <doublecareer>False</doublecareer>
+    </quality>
+    <!-- Region End-->
+    <!--Region Run Faster -->
+    <quality>
+      <name>Wanted</name>
+      <hide />
+    </quality>
+    <!--Region Run Faster Positive Qualities -->
+    <quality>
+      <name>Borrowed Time</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Changeling (Class II SURGE)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Friends in High Places</name>
+      <hide />
+    </quality>
+    <!-- Prevents Erased and RoF being allowed together-->
+    <quality>
+      <name>Erased</name>
+      <forbidden>
+        <oneof>
+          <quality>Records on File</quality>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Code of Honor: Avenging Angel</name>
+      <forbidden amendoperation="addnode">
+        <oneof>
+          <quality>Superhuman Psychosis</quality>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Oblivious I</name>
+      <bonus amendoperation="append">
+        <specificskill>
+          <name>Assensing</name>
+          <bonus>-2</bonus>
+        </specificskill>
+      </bonus>
+    </quality>
+    <quality>
+      <name>Oblivious II</name>
+      <bonus amendoperation="append">
+        <specificskill>
+          <name>Assensing</name>
+          <bonus>-2</bonus>
+        </specificskill>
+      </bonus>
+    </quality>
+    <quality>
+      <name>Linguist</name>
+      <bonus amendoperation="replace">
+        <skillcategorykarmacost>
+          <name>Language</name>
+          <val>-1</val>
+          <min>3</min>
+          <condition>career</condition>
+        </skillcategorykarmacost>
+        <skillcategorypointcostmultiplier>
+          <name>Language</name>
+          <val>50</val>
+        </skillcategorypointcostmultiplier>
+      </bonus>
+    </quality>
+    <quality amendoperation="replace">
+      <id>a68a897e-412f-4659-a637-4848f39a9c90</id>
+      <name>Black Market Pipeline</name>
+      <karma>10</karma>
+      <category>Positive</category>
+      <bonus>
+        <blackmarketdiscount />
+        <selectcontact />
+      </bonus>
+      <source>RF</source>
+      <page>145</page>
+    </quality>
+
+    <!--Prevents triple stacking with exatt and genop-->
+    <quality>
+      <name>Metagenic Improvement (Body)</name>
+      <karma>15</karma>
+      <forbidden amendoperation="append">
+        <oneof>
+          <quality>Phenotypic Variation - Genetic Optimization (Body)</quality>
+          <bioware>Genetic Optimization (Body)</bioware>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Metagenic Improvement (Agility)</name>
+      <karma>15</karma>
+      <forbidden amendoperation="append">
+        <oneof>
+          <quality>Phenotypic Variation - Genetic Optimization (Agility)</quality>
+          <bioware>Genetic Optimization (Agility)</bioware>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Metagenic Improvement (Reaction)</name>
+      <karma>15</karma>
+      <forbidden amendoperation="append">
+        <oneof>
+          <quality>Phenotypic Variation - Genetic Optimization (Reaction)</quality>
+          <bioware>Genetic Optimization (Reaction)</bioware>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Metagenic Improvement (Strength)</name>
+      <karma>15</karma>
+      <forbidden amendoperation="append">
+        <oneof>
+          <quality>Phenotypic Variation - Genetic Optimization (Strength)</quality>
+          <bioware>Genetic Optimization (Strength)</bioware>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Metagenic Improvement (Charisma)</name>
+      <karma>15</karma>
+      <forbidden amendoperation="append">
+        <oneof>
+          <quality>Phenotypic Variation - Genetic Optimization (Charisma)</quality>
+          <bioware>Genetic Optimization (Charisma)</bioware>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Metagenic Improvement (Intuition)</name>
+      <karma>15</karma>
+      <forbidden amendoperation="append">
+        <oneof>
+          <quality>Phenotypic Variation - Genetic Optimization (Intuition)</quality>
+          <bioware>Genetic Optimization (Intuition)</bioware>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Metagenic Improvement (Logic)</name>
+      <karma>15</karma>
+      <forbidden amendoperation="append">
+        <oneof>
+          <quality>Phenotypic Variation - Genetic Optimization (Logic)</quality>
+          <bioware>Genetic Optimization (Logic)</bioware>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Metagenic Improvement (Willpower)</name>
+      <karma>15</karma>
+      <forbidden amendoperation="append">
+        <oneof>
+          <quality>Phenotypic Variation - Genetic Optimization (Willpower)</quality>
+          <bioware>Genetic Optimization (Willpower)</bioware>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Biocompatibility (Cyberware)</name>
+      <forbidden amendoperation="replace">
+        <oneof>
+          <quality>Biocompatibility (Bioware)</quality>
+          <quality>Ronin (Cyberware)</quality>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Biocompatibility (Bioware)</name>
+      <forbidden amendoperation="replace">
+        <oneof>
+          <quality>Biocompatibility (Cyberware)</quality>
+          <quality>Ronin (Bioware)</quality>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Proboscis</name>
+      <addweapon>Proboscis</addweapon>
+    </quality>
+    <!-- End Region-->
+    <!--Region Run Faster Negative Qualities -->
+    <!--    <quality>
+      <name>Amnesia (Surface Loss)</name>
+      <hide />
+    </quality> -->
+    <quality>
+      <name>Amnesia (Neural Deletion)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Amnesia (Surface Loss)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Carrier (HMHVV Strain II)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Carrier (HMHVV Strain III)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>In Debt</name>
+      <hide />
+    </quality>
+    <!-- End Region -->
+    <!-- Region Run Faster Infected Qualities -->
+    <quality>
+      <name>Infected: Mutaqua</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Infected: Nosferatu</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Infected: Banshee</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Infected: Wendigo</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Infected: Bandersnatch</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Infected: Dzoo-Noo-Qua</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Infected: Fomoraig</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Infected: Ghoul (Dwarf)</name>
+      <bonus amendoperation="append">
+        <lifestylecost>30</lifestylecost>
+      </bonus>
+    </quality>
+    <quality>
+      <name>Infected: Ghoul (Dwarf)</name>
+      <bonus>
+        <selectattributes amendoperation="replace">
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <min>1</min>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <min>1</min>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <min>1</min>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <min>1</min>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>0</val>
+          <min>-1</min>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>0</val>
+          <min>-1</min>
+        </specificattribute>
+      </bonus>
+    </quality>
+    <quality>
+      <name>Infected: Ghoul (Elf)</name>
+      <bonus amendoperation="append">
+        <lifestylecost>30</lifestylecost>
+      </bonus>
+    </quality>
+    <quality>
+      <name>Infected: Ghoul (Elf)</name>
+      <bonus>
+        <selectattributes amendoperation="replace">
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <min>1</min>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <min>1</min>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <min>1</min>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <min>1</min>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>0</val>
+          <min>-1</min>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>0</val>
+          <min>-1</min>
+        </specificattribute>
+      </bonus>
+    </quality>
+    <quality>
+      <name>Infected: Ghoul (Human)</name>
+      <bonus amendoperation="append">
+        <lifestylecost>30</lifestylecost>
+      </bonus>
+    </quality>
+    <quality>
+      <name>Infected: Ghoul (Human)</name>
+      <bonus>
+        <selectattributes amendoperation="replace">
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <min>1</min>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <min>1</min>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <min>1</min>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <min>1</min>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>0</val>
+          <min>-1</min>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>0</val>
+          <min>-1</min>
+        </specificattribute>
+      </bonus>
+    </quality>
+    <quality>
+      <name>Infected: Ghoul (Ork)</name>
+      <bonus amendoperation="append">
+        <lifestylecost>30</lifestylecost>
+      </bonus>
+    </quality>
+    <quality>
+      <name>Infected: Ghoul (Ork)</name>
+      <bonus>
+        <selectattributes amendoperation="replace">
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <min>1</min>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <min>1</min>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <min>1</min>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <min>1</min>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>0</val>
+          <min>-1</min>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>0</val>
+          <min>-1</min>
+        </specificattribute>
+      </bonus>
+    </quality>
+    <quality>
+      <name>Infected: Sasquath)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Infected: Ghoul (Troll)</name>
+      <bonus amendoperation="append">
+        <lifestylecost>30</lifestylecost>
+      </bonus>
+    </quality>
+    <quality>
+      <name>Infected: Ghoul (Troll)</name>
+      <bonus>
+        <replaceattributes amendoperation="replace">
+          <replaceattribute>
+            <name>BOD</name>
+            <min>5</min>
+            <max>14</max>
+            <aug>18</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>AGI</name>
+            <min>1</min>
+            <max>5</max>
+            <aug>9</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>REA</name>
+            <min>1</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>STR</name>
+            <min>5</min>
+            <max>13</max>
+            <aug>17</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>WIL</name>
+            <min>1</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>LOG</name>
+            <min>1</min>
+            <max>4</max>
+            <aug>8</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>INT</name>
+            <min>1</min>
+            <max>6</max>
+            <aug>10</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>CHA</name>
+            <min>1</min>
+            <max>4</max>
+            <aug>8</aug>
+          </replaceattribute>
+        </replaceattributes>
+        <selectattributes amendoperation="replace">
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <min>1</min>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <min>1</min>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <min>1</min>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <min>1</min>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>0</val>
+          <min>-1</min>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>0</val>
+          <min>-1</min>
+        </specificattribute>
+      </bonus>
+    </quality>
+    <quality>
+      <name>Infected: Gnawer</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Infected: Goblin</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Infected: Grendel</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Infected: Harvester</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Infected: Loup-Garou</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Infected: Vampire (Human)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Infected: Vampire (Non-Human)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Infected: Sukuyan (Human)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Infected: Sukuyan (Non-Human)</name>
+      <hide />
+    </quality>
+    <!-- End Region -->
+    <!-- Region Chrome Flesh -->
+    <quality>
+      <name>Superhuman Psychosis</name>
+      <forbidden amendoperation="addnode">
+        <oneof>
+          <quality>Code of Honor</quality>
+          <quality>Code of Honor: Avenging Angel</quality>
+          <quality>Code of Honor: Black Hat</quality>
+          <quality>Code of Honor: Like a Boss</quality>
+        </oneof>
+      </forbidden>
+    </quality>
+    <!--Region Chrome Flesh Positive Qualities -->
+    <quality>
+      <name>Better to be Feared Than Loved</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Revels in Murder</name>
+      <hide />
+    </quality>
+    <!-- End Region -->
+    <!--Region Chrome Flesh Negative Qualities -->
+    <quality>
+      <name>Blank Slate</name>
+      <hide />
+    </quality>
+    <!--    <quality>
+      <name>Cyber-snob</name>
+      <hide />
+    </quality> -->
+    <quality>
+      <name>Dead Emotion</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>One of Them</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>So Jacked Up</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Tough and Targeted</name>
+      <hide />
+    </quality>
+    <!-- End Region -->
+    <!-- End Region -->
+    <!-- Region Hard Targets -->
+    <!-- Region Hard Targets Negative Qualities-->
+    <!-- End Region -->
+    <!-- End Region -->
+    <!-- Region Rigger 5.0-->
+    <!-- Region Negative Qualities -->
+    <!-- End Region -->
+    <!-- End Region -->
+    <!-- Region Howling Shadows -->
+    <quality>
+      <name>Latent Dracomorphosis</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Dracoform (Eastern Drake)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Dracoform (Western Drake)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Dracoform (Feathered Drake)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Dracoform (Sea Drake)</name>
+      <hide />
+    </quality>
+    <!-- End Region -->
+    <!-- Region Cutting Aces -->
+    <quality>
+      <name>Master Debater</name>
+      <bonus amendoperation="replace">
+        <swapskillattribute>
+          <attribute>LOG</attribute>
+          <limittoskill>Negotiation</limittoskill>
+        </swapskillattribute>
+      </bonus>
+    </quality>
+    <!-- Region Negative Qualities -->
+    <!-- End Region -->
+    <!-- End Region -->
+    <!-- Region Forbidden Arcana -->
+    <!--<quality>
+      <name>Hedge Witch/Wizard</name>
+      <bonus amendoperation="append">
+      <limitspellcategory>Rituals</limitspellcategory>
+      </bonus>
+    </quality>-->
+    <quality>
+      <name>Apprentice</name>
+      <bonus amendoperation="replace">
+        <freespells>3</freespells>
+        <enableattribute>
+          <name>MAG</name>
+        </enableattribute>
+        <enabletab>
+          <name>magician</name>
+        </enabletab>
+        <allowspellcategory>Rituals</allowspellcategory>
+        <limitspellcategory exclude="Rituals" />
+        <limitspiritcategory />
+        <unlockskills>Sorcery</unlockskills>
+        <unlockskills>Conjuring</unlockskills>
+        <addqualities>
+          <addquality forced="True">Mentor Spirit</addquality>
+        </addqualities>
+      </bonus>
+    </quality>
+    <quality>
+      <name>Mentor's Mask</name>
+      <hide />
+    </quality>
+    <!-- Region Mastery Qualities -->
+    <quality>
+      <name>Astral Bouncer</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Barehanded Adept</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Blood Necromancer</name> <!-- Player Only -->
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Breath</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Eye (One Eye)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Eye (Two Eyes)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Liver)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Kidneys)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Stomach)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Intestines)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Liver, Kidneys)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Liver, Stomach)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Liver, Intestines)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Kidneys, Stomach)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Kidneys, Intestines)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Stomach, Intestines)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Liver, Kidneys, Stomach)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Liver, Kidneys, Intestines)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Liver, Stomach, Intestines)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Kidneys, Stomach, Intestines)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Gut (Liver, Kidneys, Stomach, Intestines)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Jaw</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Limb (Arm)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Limb (Leg)</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystal Spine</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystalline Blade</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystalline Claws</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystalline Diver</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystalline Grace</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystalline Reflexes</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystalline Shards</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Crystalline Vision</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Dark Ally</name> <!-- Player Only -->
+      <hide />
+    </quality>
+    <quality>
+      <name>Elemental Master</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Human Lifespan</name> <!-- Not in Player Rules -->
+      <hide />
+    </quality>
+    <quality>
+      <name>Mystic Foreman</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Shock Mage</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Stalwart Ally</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Taboo Transformer</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Worship Leader</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Chosen Follower</name>
+      <hide />
+    </quality>
+
+    <!--<quality>
+      <name>Revenant Adept</name>
+      <forbidden>
+      <oneof>
+      <quality>Mystic Adept</quality>
+      </oneof>
+      </forbidden>
+    </quality>-->
+    <quality>
+      <name>Sprawl Tamer</name>
+      <required amendoperation="remove">
+      </required>
+    </quality>
+    <!-- End Region -->
+    <!-- End Region -->
+    <!--Region Dark Terrors -->
+    <quality>
+      <name>Wildcard Chimera</name>
+      <hide />
+    </quality>
+    <!-- Region Street Lethal -->
+    <quality>
+      <name>Stay Out of My Way</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>This Is Your Last Chance</name>
+      <hide />
+    </quality>
+    <!-- End Region -->
+    <!-- Region Kill Code -->
+    <quality>
+      <name>One With the Matrix I</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>One With the Matrix II</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>One With the Matrix III</name>
+      <doublecareer>False</doublecareer>
+    </quality>
+    <quality>
+      <name>Echo Chamber</name>
+      <karma>7</karma>
+      <category>Positive</category>
+    </quality>
+    <quality>
+      <name>Brilliant Heuristics</name>
+      <required amendoperation="remove">
+      </required>
+    </quality>
+    <quality>
+      <name>Code of Honor: Black Hat</name>
+      <required amendoperation="remove">
+      </required>
+      <forbidden amendoperation="addnode">
+        <oneof>
+          <quality>Superhuman Psychosis</quality>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Data Hog</name>
+      <required amendoperation="remove">
+      </required>
+    </quality>
+    <quality>
+      <name>Escaped Custody</name>
+      <required amendoperation="remove">
+      </required>
+    </quality>
+    <quality>
+      <name>Fractal Punch</name>
+      <required amendoperation="remove">
+      </required>
+    </quality>
+    <quality>
+      <name>Hold the Door</name>
+      <required amendoperation="remove">
+      </required>
+    </quality>
+    <quality>
+      <name>Lone Wolf</name>
+      <required amendoperation="remove">
+      </required>
+    </quality>
+    <quality>
+      <name>On the Wagon</name>
+      <required amendoperation="remove">
+      </required>
+    </quality>
+    <quality>
+      <name>Team Player</name>
+      <required amendoperation="remove">
+      </required>
+    </quality>
+    <quality>
+      <name>Trust Data, Not Lore</name>
+      <required amendoperation="remove">
+      </required>
+    </quality>
+    <quality>
+      <name>Trust Lore, Not Data</name>
+      <required amendoperation="remove">
+      </required>
+    </quality>
+    <quality>
+      <name>Unique Avatar</name>
+      <required amendoperation="remove">
+      </required>
+    </quality>
+    <quality>
+      <name>Wired User</name>
+      <required amendoperation="remove">
+      </required>
+    </quality>
+    <!-- Removes the Dissonant streans -->
+    <quality xpathfilter="contains(name,'Dissonant')">
+      <hide />
+    </quality>
+    <!--AI quality changes and bans -->
+    <quality>
+      <name>Munge</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Exceptional Entity</name>
+      <karma>14</karma>
+      <bonus amendoperation="replace">
+        <selectattributes>
+          <selectattribute>
+            <excludeattribute>EDG</excludeattribute>
+            <max>1</max>
+          </selectattribute>
+        </selectattributes>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Lucky</quality>
+        </oneof>
+      </forbidden>
+    </quality>
+    <quality>
+      <name>Improved Restoration</name>
+      <karma>7</karma>
+    </quality>
+    <quality>
+      <name>Low Profile</name>
+      <karma>15</karma>
+    </quality>
+    <quality>
+      <name>Redundancy</name>
+      <hide />
+    </quality>
+    <!-- End Region -->
+    <!-- Region Data Trails -->
+    <!-- Changes all the AI qualities to the new AI-->
+    <quality xpathfilter="contains(source, 'DT')">
+      <required>
+        <oneof xpathfilter="contains(metatype, 'A.I.')">
+          <metatype>AI</metatype>
+        </oneof>
+      </required>
+    </quality>
+    <quality>
+      <name>Fragmentation</name>
+      <karma>-15</karma>
+      <limit>6</limit>
+	  <bonus amendoperation="replace">
+        <essencemax>-1</essencemax>
+		<skillcategory>
+          <name>Social Active</name>
+          <bonus>-1</bonus>
+        </skillcategory>
+      </bonus>
+    </quality>
+    <!-- End Region -->
+    <!-- Region Better Than Bad -->
+    <quality>
+      <name>Dead SIN</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Quadriplegic</name>
+      <hide />
+    </quality>
+    <!-- End Region -->
+    <!-- Region No Future -->
+    <quality>
+      <name>Stolen Gear</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Massive Network</name>
+      <hide />
+    </quality>
+    <quality>
+      <name>Networker</name>
+      <hide />
+    </quality>
+    <!-- End Region -->
+
+    <!-- Region Sail Away Sweet Sister -->
+    <quality>
+      <name>College Education</name>
+      <id>4e2ddf3d-802f-4206-85ce-81f1defa528f</id>
+      <hide />
+    </quality>
+    <!-- End Region -->
+
+    <!-- Adds Armorer requirement to Spec Mod -->
+    <quality>
+      <name>Special Modifications</name>
+      <limit>100</limit>
+      <bonus>
+        <specialmodificationlimit>100</specialmodificationlimit>
+      </bonus>
+      <required amendoperation="addnode">
+        <allof>
+          <skill>
+            <name>Armorer</name>
+            <val>4</val>
+          </skill>
+        </allof>
+      </required>
+    </quality>
+    <!-- End Region -->
+
+    <!-- Removes the Free Inspect Spirit qualities -->
+    <quality xpathfilter="contains(name,'Free Insect')">
+      <hide />
+    </quality>
+
+    <!-- Changes the Consummate Professional quality to 50 karma per SC -->
+    <quality>
+      <name>Consummate Professional</name>
+      <bonus>
+        <streetcredmultiplier>25</streetcredmultiplier>
+      </bonus>
+    </quality>
+
+    <!-- Makes items of power require Arcana instead of Artificing -->
+    <quality>
+      <name>Items of Power</name>
+      <bonus />
+      <required amendoperation="replace">
+        <allof>
+          <attribute>
+            <name>MAG</name>
+            <total>1</total>
+          </attribute>
+        </allof>
+        <oneof>
+          <skill>
+            <name>Arcana</name>
+            <val>6</val>
+          </skill>
+        </oneof>
+      </required>
+    </quality>
+
+    <quality>
+      <name>Infirm</name>
+      <firstlevelbonus  amendoperation="remove">
+        <attributemaxclamp>AGI</attributemaxclamp>
+        <attributemaxclamp>BOD</attributemaxclamp>
+        <attributemaxclamp>REA</attributemaxclamp>
+        <attributemaxclamp>STR</attributemaxclamp>
+      </firstlevelbonus>
+    </quality>
+
+    <!-- Things hidden from the State of the Art ADL -->
+    <quality xpathfilter="contains(source,'SAG')">
+      <hide />
+    </quality>
+
+    <!-- Things hidden from Datapulse -->
+    <quality xpathfilter="contains(source,'SOTG')">
+      <hide />
+    </quality>
+  </qualities>
+
+  <qualities amendoperation="append">
+    <!-- Adds Natural Weapons qualities -->
+    <quality>
+      <id>5caec3b1-21d0-4df7-98a7-7ca24f12e8b3</id>
+      <name>Tusks</name>
+      <karma>0</karma>
+      <category>Positive</category>
+      <naturalweapons>
+        <naturalweapon>
+          <id>0f884cd7-f4d2-4e63-8538-0cffdb03e4f6</id>
+          <name>Tusks</name>
+          <category>Bio-Weapon</category>
+          <type>Melee</type>
+          <conceal>0</conceal>
+          <accuracy>4</accuracy>
+          <reach>0</reach>
+          <damage>(STR)P</damage>
+          <ap>-1</ap>
+          <mode>0</mode>
+          <rc>0</rc>
+          <ammo>0</ammo>
+          <avail>0</avail>
+          <cost>0</cost>
+          <source>CF</source>
+          <page>121</page>
+          <allowaccessory>False</allowaccessory>
+          <hide />
+          <useskill>Unarmed Combat</useskill>
+          <spec>Natural Weapons</spec>
+        </naturalweapon>
+      </naturalweapons>
+      <hide />
+      <source>CF</source>
+      <page>121</page>
+    </quality>
+
+    <quality>
+      <id>e8709d36-7d1d-4b0c-b6a0-fbf2186b49e4</id>
+      <name>Wing Claw</name>
+      <karma>0</karma>
+      <category>Positive</category>
+      <naturalweapons>
+        <naturalweapon>
+          <id>9b36eea3-e6dc-4964-9a2a-1369197a59af</id>
+          <name>Wing Claw</name>
+          <category>Bio-Weapon</category>
+          <type>Melee</type>
+          <conceal>0</conceal>
+          <accuracy>Physical</accuracy>
+          <reach>1</reach>
+          <damage>(STR+1)P</damage>
+          <ap>-1</ap>
+          <mode>0</mode>
+          <rc>0</rc>
+          <ammo>0</ammo>
+          <avail>0</avail>
+          <cost>0</cost>
+          <source>6e</source>
+          <page>0</page>
+          <allowaccessory>False</allowaccessory>
+          <hide />
+          <useskill>Unarmed Combat</useskill>
+          <spec>Natural Weapons</spec>
+        </naturalweapon>
+      </naturalweapons>
+      <hide />
+      <source>6e</source>
+      <page>0</page>
+    </quality>
+
+    <!-- New versions of Mentor's Mask specifically for Adepts and Mages -->
+    <quality>
+      <id>2d39303c-ed6a-4fa1-baf8-466ddd8eeba2</id>
+      <name>Mentor's Mask (Adept)</name>
+      <karma>0</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <bonus>
+        <adeptpowerpoints>1</adeptpowerpoints>
+      </bonus>
+      <required>
+        <oneof>
+          <quality>Mentor Spirit</quality>
+        </oneof>
+        <oneof>
+          <quality>Adept</quality>
+          <quality>Mystic Adept</quality>
+        </oneof>
+      </required>
+      <source>FA</source>
+      <page>182</page>
+    </quality>
+
+    <quality>
+      <id>fe088544-1c20-46ab-8ef8-810c3596f761</id>
+      <name>Mentor's Mask (Mage)</name>
+      <karma>0</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <bonus>
+        <drainvalue>-1</drainvalue>
+      </bonus>
+      <required>
+        <oneof>
+          <quality>Mentor Spirit</quality>
+        </oneof>
+        <oneof>
+          <quality>Aspected Magician</quality>
+          <quality>Aware</quality>
+          <quality>Enchanter</quality>
+          <quality>Explorer</quality>
+          <quality>Apprentice</quality>
+          <quality>Magician</quality>
+          <quality>Mystic Adept</quality>
+        </oneof>
+      </required>
+      <source>FA</source>
+      <page>182</page>
+    </quality>
+
+    <!--Chrome Company quality for various things. Currently changes Street Cred-->
+    <quality>
+      <id>ac531ef1-b75a-47f3-91ef-8e40e55dbcdd</id>
+      <name>Chrome Company</name>
+      <karma>0</karma>
+      <category>Positive</category>
+      <bonus>
+        <streetcredmultiplier>15</streetcredmultiplier>
+      </bonus>
+      <source>MPR</source>
+      <page>1</page>
+    </quality>
+
+    <!-- Mundane-Only qualities from Way of the Samurai -->
+    <quality>
+      <id>3fd7eb94-fd90-4f1b-9493-dbaf983789ff</id>
+      <name>Bodyguard</name>
+      <karma>10</karma>
+      <category>Positive</category>
+      <bonus>
+        <specificskill>
+          <name>Perception</name>
+          <bonus>2</bonus>
+        </specificskill>
+        <selecttext />
+      </bonus>
+      <forbidden>
+        <oneof>
+          <magenabled />
+          <resenabled />
+        </oneof>
+      </forbidden>
+      <required>
+        <allof>
+          <skill>
+            <name>Perception</name>
+            <val>3</val>
+          </skill>
+          <skill>
+            <name>Pistols</name>
+            <val>3</val>
+          </skill>
+        </allof>
+      </required>
+      <source>4e</source>
+      <page>1</page>
+    </quality>
+
+    <quality>
+      <id>9b5ffaae-8edf-4ff6-abd2-174aae0ad02e</id>
+      <name>Merc</name>
+      <karma>10</karma>
+      <category>Positive</category>
+      <bonus>
+        <blackmarketdiscount />
+        <selectcontact />
+      </bonus>
+      <forbidden>
+        <oneof>
+          <magenabled />
+          <resenabled />
+        </oneof>
+      </forbidden>
+      <notes>+3 die pool modifier when negotiating to sell/fence through this contact. Only suffer -1 on Ranged Combat Tests when Running. Increase Defense Test bonus from cover by +1.</notes>
+      <source>4e</source>
+      <page>1</page>
+    </quality>
+
+    <quality>
+      <id>6d000cd6-2eb7-4d80-b34c-2893732295ef</id>
+      <name>Panzer</name>
+      <karma>10</karma>
+      <category>Positive</category>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <forbidden>
+        <oneof>
+          <metatype>AI</metatype>
+          <magenabled />
+          <resenabled />
+        </oneof>
+      </forbidden>
+      <required>
+        <allof>
+          <ess>-2.99</ess>
+        </allof>
+      </required>
+      <source>4e</source>
+      <page>1</page>
+    </quality>
+
+    <quality>
+      <id>ab3d820e-2b29-463b-862b-e6d32d2d1c45</id>
+      <name>Razorboy</name>
+      <karma>10</karma>
+      <category>Positive</category>
+      <limit>2</limit>
+      <firstlevelbonus>
+        <selecttext />
+        <skillcategory>
+          <name>Street</name>
+          <bonus>1</bonus>
+          <applytorating>False</applytorating>
+        </skillcategory>
+      </firstlevelbonus>
+      <forbidden>
+        <oneof>
+          <metatype>AI</metatype>
+          <magenabled />
+          <resenabled />
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+      <required>
+        <allof>
+          <ess>-2.99</ess>
+        </allof>
+      </required>
+      <source>4e</source>
+      <page>1</page>
+    </quality>
+
+    <quality>
+      <id>586549c8-cfca-446a-a91d-f5b2e6a587c9</id>
+      <name>Ronin (Bioware)</name>
+      <karma>10</karma>
+      <category>Positive</category>
+      <limit>2</limit>
+      <firstlevelbonus>
+        <selecttext />
+        <biowareessmultiplier>90</biowareessmultiplier>
+      </firstlevelbonus>
+      <forbidden>
+        <oneof>
+          <magenabled />
+          <resenabled />
+          <metatype>AI</metatype>
+          <quality>Ronin (Cyberware)</quality>
+          <quality>Biocompatibility (Bioware)</quality>
+          <quality>Ronin (Geneware)</quality>
+        </oneof>
+      </forbidden>
+      <required>
+        <allof>
+          <ess>-2.99</ess>
+        </allof>
+      </required>
+      <source>4e</source>
+      <page>1</page>
+    </quality>
+
+    <quality>
+      <id>72952764-eb25-469f-b4ef-6a5cd93de078</id>
+      <name>Ronin (Cyberware)</name>
+      <karma>10</karma>
+      <category>Positive</category>
+      <limit>2</limit>
+      <firstlevelbonus>
+        <selecttext />
+        <cyberwareessmultiplier>90</cyberwareessmultiplier>
+      </firstlevelbonus>
+      <forbidden>
+        <oneof>
+          <magenabled />
+          <resenabled />
+          <metatype>AI</metatype>
+          <quality>Ronin (Bioware)</quality>
+          <quality>Ronin (Geneware)</quality>
+          <quality>Biocompatibility (Cyberware)</quality>
+        </oneof>
+      </forbidden>
+      <required>
+        <allof>
+          <ess>-2.99</ess>
+        </allof>
+      </required>
+      <source>4e</source>
+      <page>1</page>
+    </quality>
+
+    <quality>
+      <id>45cb5920-473e-43f7-99a5-ecf9ad2b484a</id>
+      <name>Ronin (Geneware)</name>
+      <karma>10</karma>
+      <category>Positive</category>
+      <limit>2</limit>
+      <firstlevelbonus>
+        <selecttext />
+        <genetechessmultiplier>90</genetechessmultiplier>
+      </firstlevelbonus>
+      <forbidden>
+        <oneof>
+          <magenabled />
+          <resenabled />
+          <metatype>AI</metatype>
+          <quality>Ronin (Bioware)</quality>
+          <quality>Ronin (Cyberware)</quality>
+          <quality>Biocompatibility (Geneware)</quality>
+        </oneof>
+      </forbidden>
+      <required>
+        <allof>
+          <ess>-2.99</ess>
+        </allof>
+      </required>
+      <source>4e</source>
+      <page>1</page>
+    </quality>
+
+    <quality>
+      <id>c8138db1-d7cf-4bc1-a630-3f1977f43f3b</id>
+      <name>Trickshot</name>
+      <karma>10</karma>
+      <category>Positive</category>
+      <bonus>
+        <specificskill>
+          <name>Sneaking</name>
+          <bonus>1</bonus>
+        </specificskill>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <metatype>AI</metatype>
+          <magenabled />
+          <resenabled />
+        </oneof>
+      </forbidden>
+      <required>
+        <allof>
+          <ess>-2.99</ess>
+        </allof>
+      </required>
+      <notes>Do not halve WIL when determining the number of Take Aim actions you may take.</notes>
+      <source>4e</source>
+      <page>1</page>
+    </quality>
+
+    <quality>
+      <id>b358d41e-e281-4b6b-b5a9-cf2187ec7320</id>
+      <name>Street Ninja</name>
+      <karma>10</karma>
+      <category>Positive</category>
+      <limit>2</limit>
+      <bonus>
+        <specificskill>
+          <name>Sneaking</name>
+          <bonus>1</bonus>
+        </specificskill>
+        <selecttext />
+      </bonus>
+      <required>
+        <allof>
+          <skill>
+            <name>Sneaking</name>
+            <val>4</val>
+          </skill>
+          <ess>-2.99</ess>
+        </allof>
+      </required>
+      <forbidden>
+        <oneof>
+          <magenabled />
+          <resenabled />
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+      <notes>Cut Called Shot Penalties in half when attacking a Surprised target with melee or thrown weapons.</notes>
+      <source>4e</source>
+      <page>1</page>
+    </quality>
+
+    <!-- Qualities from Augmentations-->
+    <quality>
+      <id>43d4b6a5-0d43-4a95-b8bb-e6c35dfaad79</id>
+      <name>Biosystem Overstress</name>
+      <karma>-10</karma>
+      <category>Negative</category>
+      <forbidden>
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+      <notes>Characters with this quality double the normal interval for Healing Tests and half the base period before Fatigue sets in.</notes>
+      <source>4e</source>
+      <page>1</page>
+    </quality>
+
+    <quality>
+      <id>9216db93-fe80-4065-ae1a-e75fa6ab2027</id>
+      <name>Buggy 'Ware</name>
+      <karma>-5</karma>
+      <category>Negative</category>
+      <limit>4</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <notes>Reduce the number of 1’s needed to get a glitch by one per rating with selected ware.</notes>
+      <source>4e</source>
+      <page>1</page>
+    </quality>
+
+    <quality>
+      <id>4aa4f9c7-b660-46c8-84d4-dad0192677e2</id>
+      <name>Mystery Mod Noise</name>
+      <karma>-5</karma>
+      <category>Negative</category>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+      <notes>+2 dice pool modifier to any Hearing Perception Tests made against the character, and a +1 when muted by heavy clothing.</notes>
+      <source>4e</source>
+      <page>1</page>
+    </quality>
+
+    <quality>
+      <id>98d0689a-616b-4ca6-92dd-c67341e5881c</id>
+      <name>Assensing Rejection</name>
+      <karma>-10</karma>
+      <category>Negative</category>
+      <bonus>
+        <specificskill>
+          <name>Astral Combat</name>
+          <bonus>-2</bonus>
+        </specificskill>
+      </bonus>
+      <forbidden amendoperation="append">
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+      <notes>Does not get the information from Assensing tests.</notes>
+      <source>4e</source>
+      <page>1</page>
+    </quality>
+
+    <quality>
+      <id>55a945b6-a1ff-4f37-b6c3-aef8d849d5ef</id>
+      <name>Chronic Dissociation Syndrome</name>
+      <karma>-10</karma>
+      <category>Negative</category>
+      <notes>-3 to all Willpower tests except Spell and Damage Resistance. Addiction tests do take -3.</notes>
+      <source>4e</source>
+      <page>1</page>
+    </quality>
+
+    <quality>
+      <id>c0f5f05b-cb38-466a-b674-16a122f4dc1a</id>
+      <name>Emotion Leak</name>
+      <karma>-10</karma>
+      <category>Negative</category>
+      <notes>-2 to all social tests when in person.</notes>
+      <source>4e</source>
+      <page>1</page>
+    </quality>
+
+    <quality>
+      <id>4dad89c8-6ff5-4ce5-b9d6-1004705802eb</id>
+      <name>Hallucinations</name>
+      <karma>-20</karma>
+      <category>Negative</category>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>4e</source>
+      <page>1</page>
+    </quality>
+
+    <quality>
+      <id>75e1eb34-3b31-480b-9629-15796c6666d8</id>
+      <name>Obsessive-Compulsive Disorder</name>
+      <karma>-10</karma>
+      <category>Negative</category>
+      <notes>-4 to Perception tests when not using Observe in Detail.</notes>
+      <source>4e</source>
+      <page>1</page>
+    </quality>
+
+    <quality>
+      <id>22f4af0c-4734-4ef4-a2c5-c83b8c4cc103</id>
+      <name>Will to Die</name>
+      <karma>-3</karma>
+      <category>Negative</category>
+      <limit>3</limit>
+      <bonus>
+        <conditionmonitor>
+          <overflow>-1</overflow>
+        </conditionmonitor>
+      </bonus>
+      <firstlevelbonus>
+        <physicalcmrecovery>-2</physicalcmrecovery>
+        <stuncmrecovery>-2</stuncmrecovery>
+      </firstlevelbonus>
+      <forbidden>
+        <oneof>
+          <metatype>AI</metatype>
+          <quality>Will to Live</quality>
+        </oneof>
+      </forbidden>
+      <source>4e</source>
+      <page>1</page>
+    </quality>
+
+    <!-- Adding 5th Edition Qualities as Metagenic Qualities -->
+    <quality>
+      <id>6c73f283-755e-4b30-9cda-4d52af1bed91</id>
+      <name>Metagenic Allergy (Uncommon, Mild)</name>
+      <karma>-5</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>SR5</source>
+      <page>78</page>
+    </quality>
+    <quality>
+      <id>90a3cb25-99b2-4cc3-80d2-59ec3dfe7e16</id>
+      <name>Metagenic Allergy (Uncommon, Moderate)</name>
+      <karma>-10</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>SR5</source>
+      <page>78</page>
+    </quality>
+    <quality>
+      <id>82419c50-b89a-45fa-b533-cf4abc0249d8</id>
+      <name>Metagenic Allergy (Uncommon, Severe)</name>
+      <karma>-15</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>SR5</source>
+      <page>78</page>
+    </quality>
+    <quality>
+      <id>fcec00e5-9a54-4cac-808e-2cfb648ef755</id>
+      <name>Metagenic Allergy (Uncommon, Extreme)</name>
+      <karma>-20</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>SR5</source>
+      <page>78</page>
+    </quality>
+    <quality>
+      <id>92045c70-9c02-4f3a-ae2e-5b0430a463aa</id>
+      <name>Metagenic Allergy (Common, Mild)</name>
+      <karma>-10</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>SR5</source>
+      <page>78</page>
+    </quality>
+    <quality>
+      <id>38b1c178-8777-4519-a195-71b5baa8b7a9</id>
+      <name>Metagenic Allergy (Common, Moderate)</name>
+      <karma>-15</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>SR5</source>
+      <page>78</page>
+    </quality>
+    <quality>
+      <id>e07d8ee2-b0cc-45fc-8aa7-cacfb81eaf8c</id>
+      <name>Metagenic Allergy (Common, Severe)</name>
+      <karma>-20</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>SR5</source>
+      <page>78</page>
+    </quality>
+    <quality>
+      <id>b7d4def0-79c2-497e-9b8b-3a323b17d4f4</id>
+      <name>Metagenic Allergy (Common, Extreme)</name>
+      <karma>-25</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>SR5</source>
+      <page>78</page>
+    </quality>
+    <quality>
+      <id>b57913fc-8cc5-4b25-982d-49f9eaa8a9c2</id>
+      <name>Asthma (Metagenic)</name>
+      <karma>-8</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <source>RF</source>
+      <page>152</page>
+    </quality>
+    <quality>
+      <id>b1dc9022-0a8c-4077-9292-82c2b26e2458</id>
+      <name>Antipathy (Metagenic)</name>
+      <karma>-8</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <source>CF</source>
+      <page>57</page>
+    </quality>
+    <quality>
+      <id>5de0a89f-207f-45b5-813a-656c34a59a38</id>
+      <name>Impassive (Metagenic)</name>
+      <karma>-7</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus>
+        <limitmodifier>
+          <limit>Social</limit>
+          <value>-1</value>
+          <condition>LimitCondition_ExcludeIntimidation</condition>
+        </limitmodifier>
+      </bonus>
+      <source>HT</source>
+      <page>191</page>
+    </quality>
+    <quality>
+      <id>a1cc0e3d-4274-4c35-8ca7-4af953da9ea9</id>
+      <name>Bi-Polar (Metagenic)</name>
+      <karma>-7</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <source>RF</source>
+      <page>152</page>
+    </quality>
+    <quality>
+      <id>50974712-89f7-4b6b-a0d1-9d1328d5a399</id>
+      <name>Blind (Metagenic)</name>
+      <karma>-15</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <costdiscount>
+        <required>
+          <oneof>
+            <power>Astral Perception</power>
+            <quality>Aware</quality>
+            <quality>Magician</quality>
+            <quality>Aspected Magician</quality>
+            <quality>Enchanter</quality>
+            <quality>Explorer</quality>
+            <quality>Apprentice</quality>
+            <quality>Infected: Mutaqua</quality>
+            <quality>Infected: Nosferatu</quality>
+            <quality>Infected: Wendigo</quality>
+          </oneof>
+        </required>
+        <value>-10</value>
+      </costdiscount>
+      <bonus />
+      <forbidden>
+        <oneof>
+          <quality>Reduced Sense (Sight)</quality>
+        </oneof>
+      </forbidden>
+      <source>RF</source>
+      <page>153</page>
+    </quality>
+    <quality>
+      <id>6a94ae5b-a810-4f3e-87c9-23c3102ec268</id>
+      <name>Deaf (Metagenic)</name>
+      <karma>-15</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <forbidden>
+        <oneof>
+          <quality>Reduced Sense (Hearing)</quality>
+        </oneof>
+      </forbidden>
+      <source>RF</source>
+      <page>154</page>
+    </quality>
+    <quality>
+      <id>e6c5daff-ecd6-4940-9236-feb545c2aae0</id>
+      <name>Metagenic Dependent (Nuisance)</name>
+      <karma>-3</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus>
+        <lifestylecost>10</lifestylecost>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Metagenic Dependent (Inconvenience)</quality>
+          <quality>Metagenic Dependent (Demanding)</quality>
+        </oneof>
+      </forbidden>
+      <source>SR5</source>
+      <page>80</page>
+    </quality>
+    <quality>
+      <id>5eae873d-b206-4e4e-a31f-fd1c9e85e025</id>
+      <name>Metagenic Dependent (Inconvenience)</name>
+      <karma>-6</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus>
+        <lifestylecost>20</lifestylecost>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Metagenic Dependent (Nuisance)</quality>
+          <quality>Metagenic Dependent (Demanding)</quality>
+        </oneof>
+      </forbidden>
+      <source>SR5</source>
+      <page>80</page>
+    </quality>
+    <quality>
+      <id>455ccdb9-a7de-4c4f-a559-64f4bf7de219</id>
+      <name>Metagenic Dependent (Demanding)</name>
+      <karma>-9</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus>
+        <lifestylecost>30</lifestylecost>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Metagenic Dependent (Nuisance)</quality>
+          <quality>Metagenic Dependent (Inconvenience)</quality>
+        </oneof>
+      </forbidden>
+      <source>SR5</source>
+      <page>80</page>
+    </quality>
+    <quality>
+      <id>2fa9b6a9-9337-48f5-9b72-04eae0de3a22</id>
+      <name>Faraday Himself (Metagenic)</name>
+      <karma>-7</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <source>DT</source>
+      <page>48</page>
+    </quality>
+    <quality>
+      <id>a0fa27c0-d435-4943-ab46-171955c1980e</id>
+      <name>Infirm (Metagenic)</name>
+      <karma>-5</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <limit>5</limit>
+      <bonus>
+        <specificattribute>
+          <name>BOD</name>
+          <max>-1</max>
+        </specificattribute>
+        <specificattribute>
+          <name>AGI</name>
+          <max>-1</max>
+        </specificattribute>
+        <specificattribute>
+          <name>REA</name>
+          <max>-1</max>
+        </specificattribute>
+        <specificattribute>
+          <name>STR</name>
+          <max>-1</max>
+        </specificattribute>
+      </bonus>
+      <source>RF</source>
+      <page>156</page>
+    </quality>
+    <quality>
+      <id>144cabfa-44a3-4235-aa66-08891ddd26aa</id>
+      <name>Metagenic Insomnia (Basic)</name>
+      <karma>-10</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <forbidden>
+        <oneof>
+          <quality>Insomnia (Full)</quality>
+        </oneof>
+      </forbidden>
+      <source>SR5</source>
+      <page>81</page>
+    </quality>
+    <quality>
+      <id>16debbe6-72f4-436d-9fff-6860a9499424</id>
+      <name>Metagenic Insomnia (Full)</name>
+      <karma>-15</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <forbidden>
+        <oneof>
+          <quality>Insomnia (Basic)</quality>
+        </oneof>
+      </forbidden>
+      <source>SR5</source>
+      <page>81</page>
+    </quality>
+    <quality>
+      <id>7ec8a5ae-66ae-4c22-9be2-421cc279b22a</id>
+      <name>Low Pain Tolerance (Metagenic)</name>
+      <karma>-9</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus>
+        <conditionmonitor>
+          <threshold>-1</threshold>
+        </conditionmonitor>
+      </bonus>
+      <source>SR5</source>
+      <page>82</page>
+    </quality>
+    <quality>
+      <id>99c0831d-9fef-4b85-b9f0-080e9960ae5b</id>
+      <name>Motion Sickness (Metagenic)</name>
+      <karma>-4</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <source>R5</source>
+      <page>33</page>
+    </quality>
+    <quality>
+      <id>670363ba-d2f0-4119-9d96-15cc24e67d2a</id>
+      <name>Quasimodo (Metagenic)</name>
+      <karma>-5</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus>
+        <skillcategory>
+          <name>Social Active</name>
+          <bonus>-3</bonus>
+          <exclude>Intimidation</exclude>
+        </skillcategory>
+        <specificskill>
+          <name>Intimidation</name>
+          <bonus>2</bonus>
+        </specificskill>
+      </bonus>
+      <source>CF</source>
+      <page>59</page>
+    </quality>
+    <quality>
+      <id>e440875d-6c91-4440-83ec-5ccf65bed5f2</id>
+      <name>Metagenic Reduced Sense (Smell)</name>
+      <karma>-2</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <source>RF</source>
+      <page>159</page>
+    </quality>
+    <quality>
+      <id>e756a13b-9da5-4388-bad1-7580adfbf65a</id>
+      <name>Metagenic Reduced Sense (Taste)</name>
+      <karma>-2</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <source>RF</source>
+      <page>159</page>
+    </quality>
+    <quality>
+      <id>d83deb9c-556e-497c-9ba2-cf681aa9a69f</id>
+      <name>Metagenic Reduced Sense (Touch)</name>
+      <karma>-10</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <source>RF</source>
+      <page>159</page>
+    </quality>
+    <quality>
+      <id>57508b90-43c8-4c8b-8bb7-b67c42bb443c</id>
+      <name>Metagenic Reduced Sense (Hearing)</name>
+      <karma>-5</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <forbidden>
+        <oneof>
+          <quality>Deaf</quality>
+        </oneof>
+      </forbidden>
+      <source>RF</source>
+      <page>159</page>
+    </quality>
+    <quality>
+      <id>566e2cf3-2fe7-4ca4-93a1-7864a45e2db1</id>
+      <name>Metagenic Reduced Sense (Sight)</name>
+      <karma>-5</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <forbidden>
+        <oneof>
+          <quality>Blind</quality>
+        </oneof>
+      </forbidden>
+      <source>RF</source>
+      <page>159</page>
+    </quality>
+    <quality>
+      <id>2decee53-20dc-4c9b-b325-907dcf92c95c</id>
+      <name>Metagenic Reduced Sense (Astral Sight)</name>
+      <karma>-5</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <required>
+        <oneof>
+          <quality>Magician</quality>
+          <quality>Aware</quality>
+          <quality>Aspected Magician</quality>
+          <quality>Enchanter</quality>
+          <quality>Explorer</quality>
+          <quality>Mystic Adept</quality>
+          <quality>Apprentice</quality>
+          <quality>Infected: Mutaqua</quality>
+          <quality>Infected: Nosferatu</quality>
+          <quality>Infected: Wendigo</quality>
+        </oneof>
+      </required>
+      <source>RF</source>
+      <page>159</page>
+    </quality>
+    <quality>
+      <id>97c68f38-4574-4984-bfd6-455e775e9a34</id>
+      <name>AVRse (Metagenic)</name>
+      <karma>-9</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <source>KC</source>
+      <page>76</page>
+    </quality>
+    <quality>
+      <id>21559ef2-b134-4cec-8481-c1007fb1a297</id>
+      <name>Spirit Pariah (Metagenic)</name>
+      <karma>-14</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <source>SG</source>
+      <page>199</page>
+    </quality>
+    <quality>
+      <id>a57336b0-be08-4081-b039-b06c9a5b736b</id>
+      <name>Albinism I (Metagenic)</name>
+      <karma>-4</karma>
+      <category>Negative</category>
+      <bonus />
+      <metagenic>True</metagenic>
+      <forbidden>
+        <oneof>
+          <quality>Albinism II</quality>
+          <quality>Albinism II (Metagenic)</quality>
+        </oneof>
+      </forbidden>
+      <source>RF</source>
+      <page>151</page>
+    </quality>
+    <quality>
+      <id>2cece0d4-0781-4ff4-b9a4-ea839d1f7b3b</id>
+      <name>Albinism II (Metagenic)</name>
+      <karma>-8</karma>
+      <category>Negative</category>
+      <bonus />
+      <metagenic>True</metagenic>
+      <forbidden>
+        <oneof>
+          <cyberwarecontains>Cybereyes</cyberwarecontains>
+          <quality>Albinism I</quality>
+          <quality>Albinism I (Metagenic)</quality>
+        </oneof>
+      </forbidden>
+      <source>RF</source>
+      <page>151</page>
+    </quality>
+    <quality>
+      <id>4d917b58-6638-4da6-8c61-d190ad9e17bc</id>
+      <name>Astral Beacon (Metagenic)</name>
+      <karma>-10</karma>
+      <category>Negative</category>
+      <bonus />
+      <metagenic>True</metagenic>
+      <forbidden>
+        <oneof>
+          <quality>Astral Chameleon</quality>
+          <quality>Astral Beacon</quality>
+        </oneof>
+      </forbidden>
+      <required>
+        <oneof>
+          <metatype>Centaur</metatype>
+          <metatype>Naga</metatype>
+          <metatype>Pixie</metatype>
+          <metatype>Sasquatch</metatype>
+          <quality>Adept</quality>
+          <quality>Aware</quality>
+          <quality>Aspected Magician</quality>
+          <quality>Enchanter</quality>
+          <quality>Explorer</quality>
+          <quality>Apprentice</quality>
+          <quality>Magician</quality>
+          <quality>Mystic Adept</quality>
+          <quality>Infected: Mutaqua</quality>
+          <quality>Infected: Nosferatu</quality>
+          <quality>Infected: Wendigo</quality>
+        </oneof>
+      </required>
+      <source>SR5</source>
+      <page>78</page>
+    </quality>	  
+    <!--Region Run Faster Wanted House Rule -->
+    <quality>
+      <id>fdf3fde3-71e0-475a-af49-78aae2edbe6d</id>
+      <name>Wanted (Local, Minimal)</name>
+      <karma>-8</karma>
+      <category>Negative</category>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>MPR</source>
+      <page>1</page>
+    </quality>
+    <quality>
+      <id>70dfdd98-8937-4bc5-842d-85a58a147ca1</id>
+      <name>Wanted (Local, Limited)</name>
+      <karma>-12</karma>
+      <category>Negative</category>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>MPR</source>
+      <page>1</page>
+    </quality>
+    <quality>
+      <id>9522bc00-078e-465d-9019-b649b29b8c9f</id>
+      <name>Wanted (Local, Full)</name>
+      <karma>-16</karma>
+      <category>Negative</category>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>MPR</source>
+      <page>1</page>
+    </quality>
+    <quality>
+      <id>bf8cd148-6da1-4c14-8507-9a6d083ad467</id>
+      <name>Wanted (National, Minimal)</name>
+      <karma>-12</karma>
+      <category>Negative</category>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>MPR</source>
+      <page>1</page>
+    </quality>
+    <quality>
+      <id>847e5ca8-9f39-45d7-a0cb-f1a83d387df8</id>
+      <name>Wanted (National, Limited)</name>
+      <karma>-16</karma>
+      <category>Negative</category>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>MPR</source>
+      <page>1</page>
+    </quality>
+    <quality>
+      <id>70acb85c-d561-4bff-8538-a98da4184b52</id>
+      <name>Wanted (National, Full)</name>
+      <karma>-20</karma>
+      <category>Negative</category>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>MPR</source>
+      <page>1</page>
+    </quality>
+    <quality>
+      <id>7b8021d5-7bf4-44a1-8244-f9951f57c30b</id>
+      <name>Wanted (Underworld, Minimal)</name>
+      <karma>-12</karma>
+      <category>Negative</category>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>MPR</source>
+      <page>1</page>
+    </quality>
+    <quality>
+      <id>d71aad6b-85a5-48ef-8e3e-770a90a2326b</id>
+      <name>Wanted (Underworld, Limited)</name>
+      <karma>-16</karma>
+      <category>Negative</category>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>MPR</source>
+      <page>1</page>
+    </quality>
+    <quality>
+      <id>8db5c7ef-409b-4c15-bb0a-b3369628566a</id>
+      <name>Wanted (Underworld, Full)</name>
+      <karma>-20</karma>
+      <category>Negative</category>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>MPR</source>
+      <page>1</page>
+    </quality> 
+    <quality>
+      <id>5be9c2f3-0103-4048-90d5-45b5e45217d2</id>
+      <name>Wanted (Global, Minimal)</name>
+      <karma>-16</karma>
+      <category>Negative</category>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>MPR</source>
+      <page>1</page>
+    </quality>
+    <quality>
+      <id>9cf1ad37-4c4c-4c1b-982f-0f39d15757df</id>
+      <name>Wanted (Global, Limited)</name>
+      <karma>-20</karma>
+      <category>Negative</category>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>MPR</source>
+      <page>1</page>
+    </quality>
+    <quality>
+      <id>34199eab-1f76-45df-89a6-ac7ab0dd37cb</id>
+      <name>Wanted (Global, Full)</name>
+      <karma>-24</karma>
+      <category>Negative</category>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>MPR</source>
+      <page>1</page>
+    </quality> 
+
+    <!-- Adds the new Connoisseur quality for interest skills -->
+    <quality>
+      <id>93c098a1-aa4c-4266-ba9b-9f6cb1e06a39</id>
+      <name>Connoisseur</name>
+      <karma>4</karma>
+      <category>Positive</category>
+      <bonus>
+        <skillcategorykarmacost>
+          <name>Interest</name>
+          <val>-1</val>
+          <min>3</min>
+          <condition>career</condition>
+        </skillcategorykarmacost>
+        <skillcategorypointcostmultiplier>
+          <name>Interest</name>
+          <val>50</val>
+        </skillcategorypointcostmultiplier>
+      </bonus>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+
+    <!-- Adds the new Specialized Hardware mundane quality -->
+    <quality>
+      <id>22121628-fa6b-46ce-b2d2-e62934e42488</id>
+      <name>Specialized Hardware</name>
+      <karma>5</karma>
+      <category>Positive</category>
+      <limit>100</limit>
+      <forbidden>
+        <oneof>
+          <magenabled />
+          <resenabled />
+        </oneof>
+      </forbidden>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+
+    <!-- New Quality, mostly for ghouls, that gives blindness -->
+    <quality>
+      <id>a4005a94-b30c-4182-91ac-07ed742316fe</id>
+      <name>Reduced Sense (Blind)</name>
+      <karma>-10</karma>
+      <category>Negative</category>
+      <bonus>
+        <specificskill>
+          <name>Perception</name>
+          <bonus>-2</bonus>
+        </specificskill>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Blind</quality>
+          <quality>Reduced Sense (Sight)</quality>
+        </oneof>
+      </forbidden>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+	
+	<quality>
+      <id>393236a6-002c-4fa6-a8d3-81eeb7ef6482</id>
+      <name>Tip of My Tongue</name>
+      <karma>-3</karma>
+	  <limit>3</limit>
+      <category>Negative</category>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+
+    <!-- Qualities to fix AI to work properly as per CC -->
+    <quality>
+      <id>b2c7e0ba-4fc4-4f34-a38c-2999c57a5d5b</id>
+      <name>AI Attribute Adjustment</name>
+      <karma>0</karma>
+      <category>Positive</category>
+      <limit>8</limit>
+      <bonus>
+        <selectattributes>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <attribute>CHA</attribute>
+            <attribute>LOG</attribute>
+            <min>1</min>
+          </selectattribute>
+        </selectattributes>
+      </bonus>
+      <required>
+        <oneof>
+          <metatype>A.I.</metatype>
+        </oneof>
+      </required>
+      <source>6e</source>
+      <page>0</page>
+    </quality>
+
+    <quality>
+      <id>d38e07d7-8857-4ee0-99b1-d2d9e43a59a2</id>
+      <name>Dedicated Alchemist</name>
+      <karma>10</karma>
+      <category>Positive</category>
+      <canbuywithspellpoints>True</canbuywithspellpoints>
+      <costdiscount>
+        <required>
+          <oneof>
+            <quality>Apprentice</quality>
+            <quality>Aspected Magician</quality>
+            <quality>Aware</quality>
+            <quality>Enchanter</quality>
+            <quality>Explorer</quality>
+          </oneof>
+        </required>
+        <value>-5</value>
+      </costdiscount>
+      <doublecareer>False</doublecareer>
+      <bonus>
+        <freespells skill="Alchemy" />
+        <newspellkarmacost type="Preparations">-1</newspellkarmacost>
+      </bonus>
+      <required>
+        <allof>
+          <attribute>
+            <name>MAG</name>
+            <total>1</total>
+          </attribute>
+        </allof>
+        <oneof>
+          <skill>
+            <name>Alchemy</name>
+            <val>1</val>
+          </skill>
+        </oneof>
+      </required>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+
+    <!-- Adds a new non-surge Thermal Sensitivity quality for the Thermosense Organs ware-->
+    <quality>
+      <id>e1aca839-abb2-4c5f-ac7f-63e2d0c2b4f6</id>
+      <name>Thermal Sensitivity (Bioware)</name>
+      <karma>0</karma>
+      <category>Positive</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <hide />
+      <source>RF</source>
+      <page>118</page>
+    </quality>
+    <!-- Adds the Retirement Reward quality for use when characters are created with the 50000 NuYen bonus from character retirement -->
+    <quality>
+      <id>374a7e1d-c4a3-41d8-857e-47ce0f07f03c</id>
+      <name>Retirement Reward</name>
+      <karma>0</karma>
+      <category>Positive</category>
+      <limit>100</limit>
+      <chargenonly />
+      <bonus>
+        <nuyenamt>50000</nuyenamt>
+      </bonus>
+      <notes>An extra 50,000¥ for your character, chosen as a Voluntary Retirement reward by voluntarily retiring a character that met the requirements and selected the extra NuYen reward. Please see Player Rules for details. This quality is safe to remove after exiting chargen.</notes>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+
+    <!-- 6th Edition Qualities -->
+    <quality>
+      <id>96cc26b0-07a4-4404-96e0-33d1149b432a</id>
+      <name>Glass Jaw</name>
+      <karma>-4</karma>
+      <category>Negative</category>
+      <limit>99</limit>
+      <bonus>
+        <conditionmonitor>
+          <stun>-1</stun>
+        </conditionmonitor>
+      </bonus>
+      <source>6e</source>
+      <page>0</page>
+    </quality>
+    <quality>
+      <id>f6744898-271b-4d31-864f-64f277dd8001</id>
+      <name>Killer</name>
+      <karma>-4</karma>
+      <category>Negative</category>
+      <bonus />
+      <source>SR5</source>
+      <page>0</page>
+    </quality>
+    <quality>
+      <id>c4cd8f5f-6687-4cb9-ac57-4a594dbcb50f</id>
+      <name>Mode Lock</name>
+      <karma>-7</karma>
+      <category>Negative</category>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>6e</source>
+      <page>0</page>
+    </quality>
+    <quality>
+      <id>a7197765-89e0-45a3-91cc-8efc6cd44d9b</id>
+      <name>Non-Lethal</name>
+      <karma>-4</karma>
+      <category>Negative</category>
+      <bonus />
+      <source>6e</source>
+      <page>0</page>
+    </quality>
+    <quality>
+      <id>d7419a4b-b315-48eb-a373-03e00337aa8b</id> 
+      <name>Reverberant Perception</name>
+      <karma>7</karma>
+      <category>Positive</category>
+      <required>
+        <oneof>
+          <quality>Reverberant</quality>
+        </oneof>
+      </required>
+      <source>6e</source>
+      <page>0</page>
+    </quality>
+    <quality>
+      <id>f4bb037b-ce27-4014-8362-5eaf3d677858</id>
+      <name>Firearm Diplomacy</name>
+      <karma>-5</karma>
+      <category>Negative</category>  
+      <source>6e</source>
+      <page>0</page>
+    </quality>
+
+    <quality>
+      <id>34cff895-b63b-4d1b-beea-8db12c42ad9f</id>
+      <name>Young Cannibal</name>
+      <karma>-4</karma>
+      <category>Negative</category>
+      <source>6e</source>
+      <page>0</page>
+    </quality>
+
+    <quality>
+      <id>1d1e3493-0775-46b1-8b35-6efcb3b5bb2c</id> 
+      <name>Uncontrolled Metastasis</name>
+      <karma>-10</karma>
+      <category>Negative</category>
+      <rating>2</rating>
+      <source>6e</source>
+      <page>0</page>
+    </quality>
+
+    <!-- 6th Edition Metagenic Qualities-->
+    <quality>
+      <id>8576d03c-eeaf-41a4-bd3d-74a1514b2be1</id>
+      <name>Mad Eyes</name>
+      <karma>-4</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <source>6e</source>
+      <page>0</page>
+    </quality>
+    <quality>
+      <id>7c74de66-433d-4cb4-9003-71a60378736a</id>
+      <name>Reflective Eyes</name>
+      <karma>-4</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <source>6e</source>
+      <page>0</page>
+    </quality>
+    <quality>
+      <id>42644fa6-9ad1-4a3d-8137-97902d49da6c</id>
+      <name>Hairless</name>
+      <karma>-4</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus />
+      <source>6e</source>
+      <page>0</page>
+    </quality>
+    <quality>
+      <id>6ce8d067-8107-4771-b71d-25f98c31b9bc</id>
+      <name>Neuralgia</name>
+      <karma>-8</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <bonus>
+        <physicalcmrecovery>-2</physicalcmrecovery>
+        <stuncmrecovery>-2</stuncmrecovery>
+      </bonus>
+      <source>6e</source>
+      <page>0</page>
+      <notes>Double first Wound Modifier</notes>
+    </quality>
+    <quality>
+      <id>2b8439ef-057b-42da-8b9a-45a35679caa7</id>
+      <name>Broad Feet</name>
+      <karma>-4</karma>
+      <category>Negative</category>
+      <metagenic>True</metagenic>
+      <source>6e</source>
+      <page>0</page>
+    </quality>
+    <quality>
+      <id>f3918f85-8ef1-4233-a83d-ed761c92bca5</id>
+      <name>Blood Magic Resistance</name>
+      <karma>3</karma>
+      <category>Positive</category>
+      <forbidden>
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </forbidden>
+      <notes>Game Effect: +2 dice pool modifier to resist any Blood magic effect.</notes>
+      <source>6e</source>
+      <page>1</page>
+    </quality>
+    <quality>
+      <id>4f8e0140-2827-44dc-92e7-980ff0cdcae3</id>
+      <name>Achilles’ Heel</name>
+      <karma>-12</karma>
+      <category>Negative</category>
+      <notes>Choose one: Data Spike, Resonance Spike, Resonance Entities, or IC. Whenever you suffer Matrix damage from the specified source, you may not reduce the it with a damage resistance test. If you are a technomancer, your registered (and ally) sprites share your vulnerability. You may only choose this quality once</notes>
+      <source>6e</source>
+      <page>1</page>
+    </quality>
+    <quality>
+      <id>d1fc5243-8bac-4c20-bf88-226edfbd5009</id>
+      <name>Bull In A Ceramics Store</name>
+      <karma>-8</karma>
+      <category>Negative</category>
+      <notes>You may only spend Edge on Matrix actions and complex forms that have the potential of causing Matrix damage.</notes>
+      <source>6e</source>
+      <page>1</page>
+    </quality>
+    <quality>
+      <id>a08e6b06-2f65-4771-ab6c-fc1b4e8ac4dd</id>
+      <name>Like An Artiste</name>
+      <karma>-4</karma>
+      <category>Negative</category>
+      <notes>You cannot spend Edge on any test that has the possibility of inflicting Matrix damage</notes>
+      <source>6e</source>
+      <page>1</page>
+    </quality>
+    <quality>
+      <id>59205ddf-ac74-40cd-bfa8-bd2c062d6f65</id>
+      <name>Defective Attribute</name>
+      <karma>-7</karma>
+      <category>Negative</category>
+      <notes>Choose a Matrix attribute: Attack, Sleaze, Data Processing, or Firewall. No matter what device you use, even if you have a living persona, that Matrix attribute can never be boosted in any way. (cyberprograms, complex forms, echoes, or sprite powers, specialized hardware, etc.). You may not take this quality more than once</notes>
+      <source>6e</source>
+      <page>1</page>
+    </quality>
+    <quality>
+      <id>43b02fec-d48b-4e67-937d-4e56ad4bc0bc</id>
+      <name>Resonance Burn</name>
+      <karma>-13</karma>
+      <category>Negative</category>
+      <required>
+        <oneof>
+          <quality>Technomancer</quality>
+        </oneof>
+      </required>
+      <notes>Whenever you suffer fading damage, it is always Physical damage</notes>
+      <source>6e</source>
+      <page>1</page>
+    </quality>
+
+    <quality>
+      <hide />
+      <id>177cbd89-63e5-486e-80fb-261588969b8f</id>
+      <name>Functional Wings (Valkyrie)</name>
+      <karma>15</karma>
+      <category>Positive</category>
+      <metagenic>True</metagenic>
+      <bonus>
+        <movementreplace>
+          <category>Fly</category>
+          <speed>walk</speed>
+          <val>1</val>
+        </movementreplace> 
+        <movementreplace>
+          <category>Fly</category>
+          <speed>run</speed>
+          <val>4</val>
+        </movementreplace> 
+        <movementreplace>
+          <category>Fly</category>
+          <speed>sprint</speed>
+          <val>300</val>
+        </movementreplace> 
+      </bonus>
+      <forbidden>
+        <oneof>
+          <bioware>Skeletal Pneumaticity</bioware>
+        </oneof>
+      </forbidden>
+      <source>6e</source>
+      <page>0</page>
+    </quality>
+
+    <quality>
+      <id>e430ca8a-89a9-4196-8008-ad466a0ba01a</id>
+      <name>Functional Wings</name>
+      <karma>15</karma>
+      <category>Positive</category>
+      <metagenic>True</metagenic>
+      <bonus>
+        <movementreplace>
+          <category>Fly</category>
+          <speed>walk</speed>
+          <val>1</val>
+        </movementreplace> 
+        <movementreplace>
+          <category>Fly</category>
+          <speed>run</speed>
+          <val>4</val>
+        </movementreplace> 
+        <movementreplace>
+          <category>Fly</category>
+          <speed>sprint</speed>
+          <val>300</val>
+        </movementreplace> 
+        <specificattribute>
+          <name>BOD</name> 
+          <min>-1</min>
+          <max>-1</max>
+        </specificattribute>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Functional Wings (Valkyrie)</quality>
+          <bioware>Skeletal Pneumaticity</bioware>
+        </oneof>
+      </forbidden>
+      <source>6e</source>
+      <page>0</page>
+    </quality>
+    <!-- Test Geneware Biocomp-->
+    <quality>
+      <id>bbfcfb1e-9119-4786-bb34-79ee465e10fc</id>
+      <name>Biocompatibility (Geneware)</name>
+      <karma>5</karma>
+      <category>Positive</category>
+      <bonus>
+        <genetechessmultiplier>90</genetechessmultiplier>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Biocompatibility (Bioware)</quality>
+          <quality>Biocompatibility (Cyberware)</quality>
+          <quality>Ronin (Geneware)</quality>
+        </oneof>
+      </forbidden>
+      <source>CF</source>
+      <page>54</page>
+    </quality>
+
+    <!-- Harrowed quality from 4e -->
+    <quality>
+      <id>971ba5a2-4855-471a-a467-4bc80058880c</id>
+      <name>Harrowed</name>
+      <karma>-10</karma>
+      <category>Negative</category>
+      <source>4e</source>
+      <page>0</page>
+    </quality>
+    <!-- Gossipmonger Quality from the Social Search proposal-->
+    <quality>
+      <id>8a976bb7-983b-46dd-b580-0545ff546691</id>
+      <name>Gossipmonger</name>
+      <karma>5</karma>
+      <category>Positive</category>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+
+    <!-- Pure homebrew qualities -->
+    <quality>
+      <id>e6dc258d-9c8d-4761-952c-ac0b7bfd0495</id>
+      <name>Direction Impaired</name>
+      <karma>-5</karma>
+      <category>Negative</category>
+      <bonus>
+        <specificskill>
+          <name>Navigation</name>
+          <bonus>-2</bonus>
+        </specificskill>
+      </bonus>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+
+    <quality>
+      <id>de3c4987-5727-47ee-bcd5-edc3f79b1d9d</id>
+      <name>Clinical Depression</name>
+      <karma>-10</karma>
+      <category>Negative</category>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+
+    <quality>
+      <id>83b34f3b-c6e9-49ae-bca3-7a37896b8988</id>
+      <name>Impulsive</name>
+      <karma>-4</karma>
+      <limit>3</limit>
+      <category>Negative</category>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+	<quality>
+      <id>eb66052a-d2cc-4834-8f7c-f3f652d9732d</id>
+      <name>Overbearing Mentor</name>
+      <karma>-2</karma>
+      <category>Negative</category>
+      <limit>3</limit>
+      <category>Negative</category>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+  </qualities>
+  <qualities amendoperation="append">
+
+    <!-- AI Qualities from the presumed 6e translations -->
+    <quality>
+      <id>ac6a28b8-78aa-46e6-b615-172dd2b2709b</id>
+      <name>Cascading Failure</name>
+      <karma>-9</karma>
+      <category>Negative</category>
+      <source>6e</source>
+      <page>0</page>
+      <required>
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </required>
+    </quality>
+    <quality>
+      <id>0cd20e54-e422-444a-acbe-d9f1120adcfb</id>
+      <name>Doomscrolling</name>
+      <karma>-4</karma>
+      <category>Negative</category>
+      <source>6e</source>
+      <page>0</page>
+      <required>
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </required>
+    </quality>
+    <quality>
+      <id>bbef6e38-d928-480e-b5bb-85fa8c578a12</id>
+      <name>Invalid Inferences</name>
+      <karma>-4</karma>
+      <category>Negative</category>
+      <source>6e</source>
+      <page>0</page>
+      <bonus>
+        <skillcategorykarmacost>
+          <name>Professional</name>
+          <val>+1</val>
+          <min>0</min>
+          <condition>career</condition>
+        </skillcategorykarmacost>
+        <skillcategorykarmacost>
+          <name>Academic</name>
+          <val>+1</val>
+          <min>0</min>
+          <condition>career</condition>
+        </skillcategorykarmacost>
+        <skillcategorykarmacost>
+          <name>Interest</name>
+          <val>+1</val>
+          <min>0</min>
+          <condition>career</condition>
+        </skillcategorykarmacost>
+        <skillcategorykarmacost>
+          <name>Street</name>
+          <val>+1</val>
+          <min>0</min>
+          <condition>career</condition>
+        </skillcategorykarmacost>
+      </bonus>
+      <required>
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </required>
+    </quality>
+    <quality>
+      <id>310c3da7-2898-40e1-9cba-a23b7bdb26c2</id>
+      <name>Out Of Memory Exception</name>
+      <karma>-3</karma>
+      <category>Negative</category>
+      <source>6e</source>
+      <page>0</page>
+      <required>
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </required>
+    </quality>
+    <quality>
+      <id>9d33cf1e-73cc-4f24-bc63-9980f63cc011</id>
+      <name>Shadows of the Matrix</name>
+      <karma>9</karma>
+      <category>Positive</category>
+      <source>6e</source>
+      <page>0</page>
+      <required>
+        <oneof>
+          <metatype>AI</metatype>
+        </oneof>
+      </required>
+    </quality>
+    <quality>
+      <id>5f872e44-ab46-418d-a422-e38937be1156</id>
+      <name>Redundancy (Core)</name>
+      <karma>4</karma>
+      <category>Positive</category>
+      <includeinlimit>
+        <name>Redundancy (LP)</name>
+      </includeinlimit>
+      <limit>3</limit>
+      <limitwithinclusions>3</limitwithinclusions>
+      <bonus>
+        <conditionmonitor>
+          <physical>1</physical>
+        </conditionmonitor>
+      </bonus>
+      <source>6e</source>
+      <page>0</page>
+    </quality>
+    <quality>
+      <id>cb73b4b8-56da-49c7-a2aa-369c575d7943</id>
+      <name>Redundancy (LP)</name>
+      <karma>4</karma>
+      <category>Positive</category>
+      <includeinlimit>
+        <name>Redundancy (Core)</name>
+      </includeinlimit>
+      <limit>3</limit>
+      <limitwithinclusions>3</limitwithinclusions>
+      <bonus>
+        <conditionmonitor>
+          <stun>1</stun>
+        </conditionmonitor>
+      </bonus>
+      <required>
+        <oneof>
+          <quality>Technomancer</quality>
+        </oneof>
+      </required>
+      <source>6e</source>
+      <page>0</page>
+    </quality>
+  </qualities>
+
+  <qualities amendoperation="append">
+    <quality>
+      <id>7d0fd493-7bea-4202-bb58-e4abc0ef3370</id>
+      <name>Earner</name>
+      <category>Positive</category>
+      <karma>5</karma>
+      <bonus>
+        <addcontact>
+          <forcedloyalty>3</forcedloyalty>
+          <forcegroup />
+          <free />
+          <group />
+        </addcontact>
+      </bonus>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+
+    <quality>
+      <id>0493ad57-6ef1-4d5f-8447-81223500fd03</id>
+      <name>Outta Time</name>
+      <category>Negative</category>
+      <karma>-5</karma>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+
+    <quality>
+      <id>936d9aa3-d034-4d42-b5b5-4dfa7abe7530</id> 
+      <name>Negative Rep I</name>
+      <category>Negative</category>
+      <karma>-2</karma>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+
+    <quality>
+      <id>8854347d-0dc4-48c4-bd46-8165a9657116</id> 
+      <name>Negative Rep II</name>
+      <category>Negative</category>
+      <karma>-4</karma>
+      <limit>False</limit>
+      <bonus>
+        <selecttext />
+      </bonus>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+  </qualities>
+
+  <!--Shifter Quality-->
+  <qualities amendoperation="append">
+    <quality>
+      <id>9c856d01-44c1-4dc9-992b-1bac1ac1d2c1</id>
+      <name>Shapeshifter Reject</name>
+      <category>Positive</category>
+      <karma>0</karma>
+      <required>
+        <oneof>
+          <metatypecategory>Shapeshifter</metatypecategory>
+        </oneof>
+      </required>
+      <source>MPR</source> 
+      <page>0</page>
+    </quality>
+  <!--Ghoul Metavariant Change-->
+  <quality>
+      <id>4c25045f-6949-472d-be0a-00ed545ab34c</id>
+      <name>Infected: Ghoul (Gnome)</name>
+      <karma>29</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <naturalweapons>
+        <naturalweapon>
+          <name>Infected Claws</name>
+          <reach>0</reach>
+          <damage>({STR}+2)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+        <naturalweapon>
+          <name>Infected Bite</name>
+          <reach>-1</reach>
+          <damage>({STR}+1)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+      </naturalweapons>
+      <bonus useselected="False">
+        <armor>1</armor>
+        <critterpowers>
+          <power>Dual Natured</power>
+          <power select="Hearing">Enhanced Senses</power>
+          <power select="Smell">Enhanced Senses</power>
+          <power select="Sunlight, Moderate">Allergy</power>
+          <power select="Metahuman Flesh">Dietary Requirement</power>
+        </critterpowers>
+        <enableattribute>
+          <name>MAG</name>
+        </enableattribute>
+        <enabletab>
+          <name>critter</name>
+        </enabletab>
+        <essencepenalty>-1</essencepenalty>
+        <limitcritterpowercategory>Infected</limitcritterpowercategory>
+        <replaceattributes>
+          <replaceattribute>
+            <name>BOD</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>AGI</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>REA</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>STR</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>WIL</name>
+            <min>4</min>
+            <max>9</max>
+            <aug>13</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>LOG</name>
+            <min>1</min>
+            <max>6</max>
+            <aug>10</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>INT</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>CHA</name>
+            <min>1</min>
+            <max>4</max>
+            <aug>8</aug>
+          </replaceattribute>
+        </replaceattributes>
+        <selectattributes>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>-1</val>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>-1</val>
+        </specificattribute>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Magic Resistance</quality>
+          <resenabled />
+          <depenabled />
+          <quality>Latent Dracomorphosis</quality>
+        </oneof>
+      </forbidden>
+      <required>
+	    <allof>
+		  <metatype>Dwarf</metatype>
+		  <metavariant>Gnome</metavariant>
+		</allof>
+	  </required>
+      <source>RF</source>
+      <page>138</page>
+    </quality>
+	<quality>
+      <id>c561e1b0-2d00-4552-8636-e18ea30d7fb8</id>
+      <name>Infected: Ghoul (Hanuman)</name>
+      <karma>29</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <naturalweapons>
+        <naturalweapon>
+          <name>Infected Claws</name>
+          <reach>0</reach>
+          <damage>({STR}+2)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+        <naturalweapon>
+          <name>Infected Bite</name>
+          <reach>-1</reach>
+          <damage>({STR}+1)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+      </naturalweapons>
+      <bonus useselected="False">
+        <armor>1</armor>
+        <critterpowers>
+          <power>Dual Natured</power>
+          <power select="Hearing">Enhanced Senses</power>
+          <power select="Smell">Enhanced Senses</power>
+          <power select="Sunlight, Moderate">Allergy</power>
+          <power select="Metahuman Flesh">Dietary Requirement</power>
+        </critterpowers>
+        <enableattribute>
+          <name>MAG</name>
+        </enableattribute>
+        <enabletab>
+          <name>critter</name>
+        </enabletab>
+        <essencepenalty>-1</essencepenalty>
+        <limitcritterpowercategory>Infected</limitcritterpowercategory>
+        <replaceattributes>
+          <replaceattribute>
+            <name>BOD</name>
+            <min>5</min>
+            <max>10</max>
+            <aug>14</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>AGI</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>REA</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>STR</name>
+            <min>5</min>
+            <max>10</max>
+            <aug>14</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>WIL</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>LOG</name>
+            <min>1</min>
+            <max>4</max>
+            <aug>8</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>INT</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>CHA</name>
+            <min>1</min>
+            <max>3</max>
+            <aug>7</aug>
+          </replaceattribute>
+        </replaceattributes>
+        <selectattributes>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>-1</val>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>-1</val>
+        </specificattribute>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Magic Resistance</quality>
+          <resenabled />
+          <depenabled />
+          <quality>Latent Dracomorphosis</quality>
+        </oneof>
+      </forbidden>
+      <required>
+	    <allof>
+		  <metatype>Dwarf</metatype>
+		  <metavariant>Hanuman</metavariant>
+		</allof>
+	  </required>
+      <source>RF</source>
+      <page>138</page>
+    </quality>
+	<quality>
+      <id>cb0d1899-2df0-4a74-8907-c665242b0910</id>
+      <name>Infected: Ghoul (Koborokuru)</name>
+      <karma>29</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <naturalweapons>
+        <naturalweapon>
+          <name>Infected Claws</name>
+          <reach>0</reach>
+          <damage>({STR}+2)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+        <naturalweapon>
+          <name>Infected Bite</name>
+          <reach>-1</reach>
+          <damage>({STR}+1)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+      </naturalweapons>
+      <bonus useselected="False">
+        <armor>1</armor>
+        <critterpowers>
+          <power>Dual Natured</power>
+          <power select="Hearing">Enhanced Senses</power>
+          <power select="Smell">Enhanced Senses</power>
+          <power select="Sunlight, Moderate">Allergy</power>
+          <power select="Metahuman Flesh">Dietary Requirement</power>
+        </critterpowers>
+        <enableattribute>
+          <name>MAG</name>
+        </enableattribute>
+        <enabletab>
+          <name>critter</name>
+        </enabletab>
+        <essencepenalty>-1</essencepenalty>
+        <limitcritterpowercategory>Infected</limitcritterpowercategory>
+        <replaceattributes>
+          <replaceattribute>
+            <name>BOD</name>
+            <min>6</min>
+            <max>11</max>
+            <aug>15</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>AGI</name>
+            <min>1</min>
+            <max>6</max>
+            <aug>10</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>REA</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>STR</name>
+            <min>5</min>
+            <max>10</max>
+            <aug>14</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>WIL</name>
+            <min>4</min>
+            <max>9</max>
+            <aug>13</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>LOG</name>
+            <min>1</min>
+            <max>5</max>
+            <aug>9</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>INT</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>CHA</name>
+            <min>1</min>
+            <max>4</max>
+            <aug>8</aug>
+          </replaceattribute>
+        </replaceattributes>
+        <selectattributes>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>-1</val>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>-1</val>
+        </specificattribute>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Magic Resistance</quality>
+          <resenabled />
+          <depenabled />
+          <quality>Latent Dracomorphosis</quality>
+        </oneof>
+      </forbidden>
+      <required>
+	    <allof>
+		  <metatype>Dwarf</metatype>
+		  <metavariant>Koborokuru</metavariant>
+		</allof>
+	  </required>
+      <source>RF</source>
+      <page>138</page>
+    </quality>
+	<quality>
+      <id>ec6b2d74-d477-4b90-af73-618a6c4f130d</id>
+      <name>Infected: Ghoul (Menehune)</name>
+      <karma>29</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <naturalweapons>
+        <naturalweapon>
+          <name>Infected Claws</name>
+          <reach>0</reach>
+          <damage>({STR}+2)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+        <naturalweapon>
+          <name>Infected Bite</name>
+          <reach>-1</reach>
+          <damage>({STR}+1)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+      </naturalweapons>
+      <bonus useselected="False">
+        <armor>1</armor>
+        <critterpowers>
+          <power>Dual Natured</power>
+          <power select="Hearing">Enhanced Senses</power>
+          <power select="Smell">Enhanced Senses</power>
+          <power select="Sunlight, Moderate">Allergy</power>
+          <power select="Metahuman Flesh">Dietary Requirement</power>
+        </critterpowers>
+        <enableattribute>
+          <name>MAG</name>
+        </enableattribute>
+        <enabletab>
+          <name>critter</name>
+        </enabletab>
+        <essencepenalty>-1</essencepenalty>
+        <limitcritterpowercategory>Infected</limitcritterpowercategory>
+        <replaceattributes>
+          <replaceattribute>
+            <name>BOD</name>
+            <min>6</min>
+            <max>11</max>
+            <aug>15</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>AGI</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>REA</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>STR</name>
+            <min>5</min>
+            <max>10</max>
+            <aug>14</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>WIL</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>LOG</name>
+            <min>1</min>
+            <max>5</max>
+            <aug>9</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>INT</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>CHA</name>
+            <min>1</min>
+            <max>4</max>
+            <aug>8</aug>
+          </replaceattribute>
+        </replaceattributes>
+        <selectattributes>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>-1</val>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>-1</val>
+        </specificattribute>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Magic Resistance</quality>
+          <resenabled />
+          <depenabled />
+          <quality>Latent Dracomorphosis</quality>
+        </oneof>
+      </forbidden>
+      <required>
+	    <allof>
+		  <metatype>Dwarf</metatype>
+		  <metavariant>Menehune</metavariant>
+		</allof>
+	  </required>
+      <source>RF</source>
+      <page>138</page>
+    </quality>
+	<quality>
+      <id>d0fbbde7-fb82-459c-b4a5-8660f6f3fef0</id>
+      <name>Infected: Ghoul (Dryad)</name>
+      <karma>29</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <naturalweapons>
+        <naturalweapon>
+          <name>Infected Claws</name>
+          <reach>0</reach>
+          <damage>({STR}+2)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+        <naturalweapon>
+          <name>Infected Bite</name>
+          <reach>-1</reach>
+          <damage>({STR}+1)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+      </naturalweapons>
+      <bonus useselected="False">
+        <armor>1</armor>
+        <critterpowers>
+          <power>Dual Natured</power>
+          <power select="Hearing">Enhanced Senses</power>
+          <power select="Smell">Enhanced Senses</power>
+          <power select="Sunlight, Moderate">Allergy</power>
+          <power select="Metahuman Flesh">Dietary Requirement</power>
+        </critterpowers>
+        <enableattribute>
+          <name>MAG</name>
+        </enableattribute>
+        <enabletab>
+          <name>critter</name>
+        </enabletab>
+        <essencepenalty>-1</essencepenalty>
+        <limitcritterpowercategory>Infected</limitcritterpowercategory>
+        <replaceattributes>
+          <replaceattribute>
+            <name>BOD</name>
+            <min>5</min>
+            <max>10</max>
+            <aug>14</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>AGI</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>REA</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>STR</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>WIL</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>LOG</name>
+            <min>1</min>
+            <max>5</max>
+            <aug>9</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>INT</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>CHA</name>
+            <min>1</min>
+            <max>6</max>
+            <aug>10</aug>
+          </replaceattribute>
+        </replaceattributes>
+        <selectattributes>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>-1</val>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>-1</val>
+        </specificattribute>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Magic Resistance</quality>
+          <resenabled />
+          <depenabled />
+          <quality>Latent Dracomorphosis</quality>
+        </oneof>
+      </forbidden>
+      <required>
+	    <allof>
+		  <metatype>Elf</metatype>
+		  <metavariant>Dryad</metavariant>
+		</allof>
+	  </required>
+      <source>RF</source>
+      <page>138</page>
+    </quality>
+	<quality>
+      <id>ec07f145-a205-4977-ab08-4ad6d971fdcb</id>
+      <name>Infected: Ghoul (Nocturna)</name>
+      <karma>29</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <naturalweapons>
+        <naturalweapon>
+          <name>Infected Claws</name>
+          <reach>0</reach>
+          <damage>({STR}+2)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+        <naturalweapon>
+          <name>Infected Bite</name>
+          <reach>-1</reach>
+          <damage>({STR}+1)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+      </naturalweapons>
+      <bonus useselected="False">
+        <armor>1</armor>
+        <critterpowers>
+          <power>Dual Natured</power>
+          <power select="Hearing">Enhanced Senses</power>
+          <power select="Smell">Enhanced Senses</power>
+          <power select="Sunlight, Moderate">Allergy</power>
+          <power select="Metahuman Flesh">Dietary Requirement</power>
+        </critterpowers>
+        <enableattribute>
+          <name>MAG</name>
+        </enableattribute>
+        <enabletab>
+          <name>critter</name>
+        </enabletab>
+        <essencepenalty>-1</essencepenalty>
+        <limitcritterpowercategory>Infected</limitcritterpowercategory>
+        <replaceattributes>
+          <replaceattribute>
+            <name>BOD</name>
+            <min>4</min>
+            <max>9</max>
+            <aug>13</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>AGI</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>REA</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>STR</name>
+            <min>4</min>
+            <max>9</max>
+            <aug>13</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>WIL</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>LOG</name>
+            <min>1</min>
+            <max>5</max>
+            <aug>9</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>INT</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>CHA</name>
+            <min>1</min>
+            <max>5</max>
+            <aug>9</aug>
+          </replaceattribute>
+        </replaceattributes>
+        <selectattributes>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>-1</val>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>-1</val>
+        </specificattribute>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Magic Resistance</quality>
+          <resenabled />
+          <depenabled />
+          <quality>Latent Dracomorphosis</quality>
+        </oneof>
+      </forbidden>
+      <required>
+	    <allof>
+		  <metatype>Elf</metatype>
+		  <metavariant>Nocturna</metavariant>
+		</allof>
+	  </required>
+      <source>RF</source>
+      <page>138</page>
+    </quality>
+	<quality>
+      <id>ea4c9341-5852-4702-9976-9432a42d1de4</id>
+      <name>Infected: Ghoul (Wakyambi)</name>
+      <karma>29</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <naturalweapons>
+        <naturalweapon>
+          <name>Infected Claws</name>
+          <reach>0</reach>
+          <damage>({STR}+2)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+        <naturalweapon>
+          <name>Infected Bite</name>
+          <reach>-1</reach>
+          <damage>({STR}+1)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+      </naturalweapons>
+      <bonus useselected="False">
+        <armor>1</armor>
+        <critterpowers>
+          <power>Dual Natured</power>
+          <power select="Hearing">Enhanced Senses</power>
+          <power select="Smell">Enhanced Senses</power>
+          <power select="Sunlight, Moderate">Allergy</power>
+          <power select="Metahuman Flesh">Dietary Requirement</power>
+        </critterpowers>
+        <enableattribute>
+          <name>MAG</name>
+        </enableattribute>
+        <enabletab>
+          <name>critter</name>
+        </enabletab>
+        <essencepenalty>-1</essencepenalty>
+        <limitcritterpowercategory>Infected</limitcritterpowercategory>
+        <replaceattributes>
+          <replaceattribute>
+            <name>BOD</name>
+            <min>5</min>
+            <max>10</max>
+            <aug>14</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>AGI</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>REA</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>STR</name>
+            <min>4</min>
+            <max>9</max>
+            <aug>13</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>WIL</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>LOG</name>
+            <min>1</min>
+            <max>4</max>
+            <aug>8</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>INT</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>CHA</name>
+            <min>1</min>
+            <max>4</max>
+            <aug>8</aug>
+          </replaceattribute>
+        </replaceattributes>
+        <selectattributes>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>-1</val>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>-1</val>
+        </specificattribute>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Magic Resistance</quality>
+          <resenabled />
+          <depenabled />
+          <quality>Latent Dracomorphosis</quality>
+        </oneof>
+      </forbidden>
+      <required>
+	    <allof>
+		  <metatype>Elf</metatype>
+		  <metavariant>Wakyambi</metavariant>
+		</allof>
+	  </required>
+      <source>RF</source>
+      <page>138</page>
+    </quality>
+	<quality>
+      <id>3a840e26-d2b9-4c50-a873-7e42c6a44176</id>
+      <name>Infected: Ghoul (Xapiri Thëpë)</name>
+      <karma>29</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <naturalweapons>
+        <naturalweapon>
+          <name>Infected Claws</name>
+          <reach>0</reach>
+          <damage>({STR}+2)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+        <naturalweapon>
+          <name>Infected Bite</name>
+          <reach>-1</reach>
+          <damage>({STR}+1)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+      </naturalweapons>
+      <bonus useselected="False">
+        <armor>1</armor>
+        <critterpowers>
+          <power>Dual Natured</power>
+          <power select="Hearing">Enhanced Senses</power>
+          <power select="Smell">Enhanced Senses</power>
+          <power select="Sunlight, Moderate">Allergy</power>
+          <power select="Metahuman Flesh">Dietary Requirement</power>
+        </critterpowers>
+        <enableattribute>
+          <name>MAG</name>
+        </enableattribute>
+        <enabletab>
+          <name>critter</name>
+        </enabletab>
+        <essencepenalty>-1</essencepenalty>
+        <limitcritterpowercategory>Infected</limitcritterpowercategory>
+        <replaceattributes>
+          <replaceattribute>
+            <name>BOD</name>
+            <min>5</min>
+            <max>10</max>
+            <aug>14</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>AGI</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>REA</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>STR</name>
+            <min>4</min>
+            <max>9</max>
+            <aug>13</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>WIL</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>LOG</name>
+            <min>1</min>
+            <max>4</max>
+            <aug>8</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>INT</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>CHA</name>
+            <min>1</min>
+            <max>5</max>
+            <aug>9</aug>
+          </replaceattribute>
+        </replaceattributes>
+        <selectattributes>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>-1</val>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>-1</val>
+        </specificattribute>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Magic Resistance</quality>
+          <resenabled />
+          <depenabled />
+          <quality>Latent Dracomorphosis</quality>
+        </oneof>
+      </forbidden>
+      <required>
+	    <allof>
+		  <metatype>Elf</metatype>
+		  <metavariant>Xapiri Thëpë</metavariant>
+		</allof>
+	  </required>
+      <source>RF</source>
+      <page>138</page>
+    </quality>
+	<quality>
+      <id>a09d3f62-60ce-4282-ba92-074d4de1cdc5</id>
+      <name>Infected: Ghoul (Hobgoblin)</name>
+      <karma>29</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <naturalweapons>
+        <naturalweapon>
+          <name>Infected Claws</name>
+          <reach>0</reach>
+          <damage>({STR}+2)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+        <naturalweapon>
+          <name>Infected Bite</name>
+          <reach>-1</reach>
+          <damage>({STR}+1)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+      </naturalweapons>
+      <bonus useselected="False">
+        <armor>1</armor>
+        <critterpowers>
+          <power>Dual Natured</power>
+          <power select="Hearing">Enhanced Senses</power>
+          <power select="Smell">Enhanced Senses</power>
+          <power select="Sunlight, Moderate">Allergy</power>
+          <power select="Metahuman Flesh">Dietary Requirement</power>
+        </critterpowers>
+        <enableattribute>
+          <name>MAG</name>
+        </enableattribute>
+        <enabletab>
+          <name>critter</name>
+        </enabletab>
+        <essencepenalty>-1</essencepenalty>
+        <limitcritterpowercategory>Infected</limitcritterpowercategory>
+        <replaceattributes>
+          <replaceattribute>
+            <name>BOD</name>
+            <min>5</min>
+            <max>10</max>
+            <aug>14</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>AGI</name>
+            <min>1</min>
+            <max>6</max>
+            <aug>10</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>REA</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>STR</name>
+            <min>5</min>
+            <max>10</max>
+            <aug>14</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>WIL</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>LOG</name>
+            <min>1</min>
+            <max>4</max>
+            <aug>8</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>INT</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>CHA</name>
+            <min>1</min>
+            <max>5</max>
+            <aug>9</aug>
+          </replaceattribute>
+        </replaceattributes>
+        <selectattributes>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>-1</val>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>-1</val>
+        </specificattribute>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Magic Resistance</quality>
+          <resenabled />
+          <depenabled />
+          <quality>Latent Dracomorphosis</quality>
+        </oneof>
+      </forbidden>
+      <required>
+	    <allof>
+		  <metatype>Ork</metatype>
+		  <metavariant>Hobgoblin</metavariant>
+		</allof>
+	  </required>
+      <source>RF</source>
+      <page>138</page>
+    </quality>
+	<quality>
+      <id>62b3ce01-9a96-43f1-be7a-a812cb703d90</id>
+      <name>Infected: Ghoul (Ogre)</name>
+      <karma>29</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <naturalweapons>
+        <naturalweapon>
+          <name>Infected Claws</name>
+          <reach>0</reach>
+          <damage>({STR}+2)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+        <naturalweapon>
+          <name>Infected Bite</name>
+          <reach>-1</reach>
+          <damage>({STR}+1)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+      </naturalweapons>
+      <bonus useselected="False">
+        <armor>1</armor>
+        <critterpowers>
+          <power>Dual Natured</power>
+          <power select="Hearing">Enhanced Senses</power>
+          <power select="Smell">Enhanced Senses</power>
+          <power select="Sunlight, Moderate">Allergy</power>
+          <power select="Metahuman Flesh">Dietary Requirement</power>
+        </critterpowers>
+        <enableattribute>
+          <name>MAG</name>
+        </enableattribute>
+        <enabletab>
+          <name>critter</name>
+        </enabletab>
+        <essencepenalty>-1</essencepenalty>
+        <limitcritterpowercategory>Infected</limitcritterpowercategory>
+        <replaceattributes>
+          <replaceattribute>
+            <name>BOD</name>
+            <min>8</min>
+            <max>13</max>
+            <aug>17</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>AGI</name>
+            <min>1</min>
+            <max>6</max>
+            <aug>10</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>REA</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>STR</name>
+            <min>6</min>
+            <max>11</max>
+            <aug>15</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>WIL</name>
+            <min>4</min>
+            <max>9</max>
+            <aug>13</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>LOG</name>
+            <min>1</min>
+            <max>4</max>
+            <aug>8</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>INT</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>CHA</name>
+            <min>1</min>
+            <max>2</max>
+            <aug>6</aug>
+          </replaceattribute>
+        </replaceattributes>
+        <selectattributes>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>-1</val>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>-1</val>
+        </specificattribute>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Magic Resistance</quality>
+          <resenabled />
+          <depenabled />
+          <quality>Latent Dracomorphosis</quality>
+        </oneof>
+      </forbidden>
+      <required>
+	    <allof>
+		  <metatype>Ork</metatype>
+		  <metavariant>Ogre</metavariant>
+		</allof>
+	  </required>
+      <source>RF</source>
+      <page>138</page>
+    </quality>
+	<quality>
+      <id>21bc57b8-9553-4ea3-bcb2-9e34c9c18395</id>
+      <name>Infected: Ghoul (Oni)</name>
+      <karma>29</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <naturalweapons>
+        <naturalweapon>
+          <name>Infected Claws</name>
+          <reach>0</reach>
+          <damage>({STR}+2)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+        <naturalweapon>
+          <name>Infected Bite</name>
+          <reach>-1</reach>
+          <damage>({STR}+1)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+      </naturalweapons>
+      <bonus useselected="False">
+        <armor>1</armor>
+        <critterpowers>
+          <power>Dual Natured</power>
+          <power select="Hearing">Enhanced Senses</power>
+          <power select="Smell">Enhanced Senses</power>
+          <power select="Sunlight, Moderate">Allergy</power>
+          <power select="Metahuman Flesh">Dietary Requirement</power>
+        </critterpowers>
+        <enableattribute>
+          <name>MAG</name>
+        </enableattribute>
+        <enabletab>
+          <name>critter</name>
+        </enabletab>
+        <essencepenalty>-1</essencepenalty>
+        <limitcritterpowercategory>Infected</limitcritterpowercategory>
+        <replaceattributes>
+          <replaceattribute>
+            <name>BOD</name>
+            <min>7</min>
+            <max>12</max>
+            <aug>16</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>AGI</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>REA</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>STR</name>
+            <min>5</min>
+            <max>10</max>
+            <aug>14</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>WIL</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>LOG</name>
+            <min>1</min>
+            <max>4</max>
+            <aug>8</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>INT</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>CHA</name>
+            <min>1</min>
+            <max>5</max>
+            <aug>9</aug>
+          </replaceattribute>
+        </replaceattributes>
+        <selectattributes>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>-1</val>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>-1</val>
+        </specificattribute>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Magic Resistance</quality>
+          <resenabled />
+          <depenabled />
+          <quality>Latent Dracomorphosis</quality>
+        </oneof>
+      </forbidden>
+      <required>
+	    <allof>
+		  <metatype>Ork</metatype>
+		  <metavariant>Oni</metavariant>
+		</allof>
+	  </required>
+      <source>RF</source>
+      <page>138</page>
+    </quality>
+	<quality>
+      <id>22f4d836-b018-406a-b320-57805269ee3c</id>
+      <name>Infected: Ghoul (Satyr)</name>
+      <karma>29</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <naturalweapons>
+        <naturalweapon>
+          <name>Infected Claws</name>
+          <reach>0</reach>
+          <damage>({STR}+2)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+        <naturalweapon>
+          <name>Infected Bite</name>
+          <reach>-1</reach>
+          <damage>({STR}+1)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+      </naturalweapons>
+      <bonus useselected="False">
+        <armor>1</armor>
+        <critterpowers>
+          <power>Dual Natured</power>
+          <power select="Hearing">Enhanced Senses</power>
+          <power select="Smell">Enhanced Senses</power>
+          <power select="Sunlight, Moderate">Allergy</power>
+          <power select="Metahuman Flesh">Dietary Requirement</power>
+        </critterpowers>
+        <enableattribute>
+          <name>MAG</name>
+        </enableattribute>
+        <enabletab>
+          <name>critter</name>
+        </enabletab>
+        <essencepenalty>-1</essencepenalty>
+        <limitcritterpowercategory>Infected</limitcritterpowercategory>
+        <replaceattributes>
+          <replaceattribute>
+            <name>BOD</name>
+            <min>6</min>
+            <max>11</max>
+            <aug>15</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>AGI</name>
+            <min>1</min>
+            <max>6</max>
+            <aug>10</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>REA</name>
+            <min>4</min>
+            <max>9</max>
+            <aug>13</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>STR</name>
+            <min>5</min>
+            <max>10</max>
+            <aug>14</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>WIL</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>LOG</name>
+            <min>1</min>
+            <max>5</max>
+            <aug>9</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>INT</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>CHA</name>
+            <min>1</min>
+            <max>3</max>
+            <aug>7</aug>
+          </replaceattribute>
+        </replaceattributes>
+        <selectattributes>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>-1</val>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>-1</val>
+        </specificattribute>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Magic Resistance</quality>
+          <resenabled />
+          <depenabled />
+          <quality>Latent Dracomorphosis</quality>
+        </oneof>
+      </forbidden>
+      <required>
+	    <allof>
+		  <metatype>Ork</metatype>
+		  <metavariant>Satyr</metavariant>
+		</allof>
+	  </required>
+      <source>RF</source>
+      <page>138</page>
+    </quality>
+	<quality>
+      <id>e5fd1aee-f2ca-4247-9060-080a5d62cc06</id>
+      <name>Infected: Ghoul (Cyclops)</name>
+      <karma>29</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <naturalweapons>
+        <naturalweapon>
+          <name>Infected Claws</name>
+          <reach>0</reach>
+          <damage>({STR}+2)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+        <naturalweapon>
+          <name>Infected Bite</name>
+          <reach>-1</reach>
+          <damage>({STR}+1)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+      </naturalweapons>
+      <bonus useselected="False">
+        <armor>1</armor>
+        <critterpowers>
+          <power>Dual Natured</power>
+          <power select="Hearing">Enhanced Senses</power>
+          <power select="Smell">Enhanced Senses</power>
+          <power select="Sunlight, Moderate">Allergy</power>
+          <power select="Metahuman Flesh">Dietary Requirement</power>
+        </critterpowers>
+        <enableattribute>
+          <name>MAG</name>
+        </enableattribute>
+        <enabletab>
+          <name>critter</name>
+        </enabletab>
+        <essencepenalty>-1</essencepenalty>
+        <limitcritterpowercategory>Infected</limitcritterpowercategory>
+        <replaceattributes>
+          <replaceattribute>
+            <name>BOD</name>
+            <min>9</min>
+            <max>14</max>
+            <aug>18</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>AGI</name>
+            <min>1</min>
+            <max>5</max>
+            <aug>9</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>REA</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>STR</name>
+            <min>9</min>
+            <max>14</max>
+            <aug>18</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>WIL</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>LOG</name>
+            <min>1</min>
+            <max>3</max>
+            <aug>7</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>INT</name>
+            <min>1</min>
+            <max>6</max>
+            <aug>10</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>CHA</name>
+            <min>1</min>
+            <max>2</max>
+            <aug>6</aug>
+          </replaceattribute>
+        </replaceattributes>
+        <selectattributes>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>-1</val>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>-1</val>
+        </specificattribute>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Magic Resistance</quality>
+          <resenabled />
+          <depenabled />
+          <quality>Latent Dracomorphosis</quality>
+        </oneof>
+      </forbidden>
+      <required>
+	    <allof>
+		  <metatype>Troll</metatype>
+		  <metavariant>Cyclops</metavariant>
+		</allof>
+	  </required>
+      <source>RF</source>
+      <page>138</page>
+    </quality>
+	<quality>
+      <id>047d91de-99e2-41d6-bde1-ac264378c140</id>
+      <name>Infected: Ghoul (Fomorian)</name>
+      <karma>29</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <naturalweapons>
+        <naturalweapon>
+          <name>Infected Claws</name>
+          <reach>0</reach>
+          <damage>({STR}+2)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+        <naturalweapon>
+          <name>Infected Bite</name>
+          <reach>-1</reach>
+          <damage>({STR}+1)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+      </naturalweapons>
+      <bonus useselected="False">
+        <armor>1</armor>
+        <critterpowers>
+          <power>Dual Natured</power>
+          <power select="Hearing">Enhanced Senses</power>
+          <power select="Smell">Enhanced Senses</power>
+          <power select="Sunlight, Moderate">Allergy</power>
+          <power select="Metahuman Flesh">Dietary Requirement</power>
+        </critterpowers>
+        <enableattribute>
+          <name>MAG</name>
+        </enableattribute>
+        <enabletab>
+          <name>critter</name>
+        </enabletab>
+        <essencepenalty>-1</essencepenalty>
+        <limitcritterpowercategory>Infected</limitcritterpowercategory>
+        <replaceattributes>
+          <replaceattribute>
+            <name>BOD</name>
+            <min>8</min>
+            <max>13</max>
+            <aug>17</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>AGI</name>
+            <min>1</min>
+            <max>5</max>
+            <aug>9</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>REA</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>STR</name>
+            <min>8</min>
+            <max>13</max>
+            <aug>17</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>WIL</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>LOG</name>
+            <min>1</min>
+            <max>3</max>
+            <aug>7</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>INT</name>
+            <min>1</min>
+            <max>5</max>
+            <aug>9</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>CHA</name>
+            <min>1</min>
+            <max>3</max>
+            <aug>7</aug>
+          </replaceattribute>
+        </replaceattributes>
+        <selectattributes>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>-1</val>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>-1</val>
+        </specificattribute>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Magic Resistance</quality>
+          <resenabled />
+          <depenabled />
+          <quality>Latent Dracomorphosis</quality>
+        </oneof>
+      </forbidden>
+      <required>
+	    <allof>
+		  <metatype>Troll</metatype>
+		  <metavariant>Fomorian</metavariant>
+		</allof>
+	  </required>
+      <source>RF</source>
+      <page>138</page>
+    </quality>
+	<quality>
+      <id>5098936c-4a5a-49d0-b34d-9059609d863a</id>
+      <name>Infected: Ghoul (Minotaur)</name>
+      <karma>29</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <naturalweapons>
+        <naturalweapon>
+          <name>Infected Claws</name>
+          <reach>0</reach>
+          <damage>({STR}+2)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+        <naturalweapon>
+          <name>Infected Bite</name>
+          <reach>-1</reach>
+          <damage>({STR}+1)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+      </naturalweapons>
+      <bonus useselected="False">
+        <armor>1</armor>
+        <critterpowers>
+          <power>Dual Natured</power>
+          <power select="Hearing">Enhanced Senses</power>
+          <power select="Smell">Enhanced Senses</power>
+          <power select="Sunlight, Moderate">Allergy</power>
+          <power select="Metahuman Flesh">Dietary Requirement</power>
+        </critterpowers>
+        <enableattribute>
+          <name>MAG</name>
+        </enableattribute>
+        <enabletab>
+          <name>critter</name>
+        </enabletab>
+        <essencepenalty>-1</essencepenalty>
+        <limitcritterpowercategory>Infected</limitcritterpowercategory>
+        <replaceattributes>
+          <replaceattribute>
+            <name>BOD</name>
+            <min>10</min>
+            <max>15</max>
+            <aug>19</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>AGI</name>
+            <min>1</min>
+            <max>5</max>
+            <aug>9</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>REA</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>STR</name>
+            <min>8</min>
+            <max>13</max>
+            <aug>17</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>WIL</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>LOG</name>
+            <min>1</min>
+            <max>4</max>
+            <aug>8</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>INT</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>CHA</name>
+            <min>1</min>
+            <max>2</max>
+            <aug>6</aug>
+          </replaceattribute>
+        </replaceattributes>
+        <selectattributes>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>-1</val>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>-1</val>
+        </specificattribute>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Magic Resistance</quality>
+          <resenabled />
+          <depenabled />
+          <quality>Latent Dracomorphosis</quality>
+        </oneof>
+      </forbidden>
+      <required>
+	    <allof>
+		  <metatype>Troll</metatype>
+		  <metavariant>Minotaur</metavariant>
+		</allof>
+	  </required>
+      <source>RF</source>
+      <page>138</page>
+    </quality>
+	<quality>
+      <id>426991ab-2016-4326-9c87-be0692891075</id>
+      <name>Infected: Ghoul (Giant)</name>
+      <karma>29</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <naturalweapons>
+        <naturalweapon>
+          <name>Infected Claws</name>
+          <reach>0</reach>
+          <damage>({STR}+2)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+        <naturalweapon>
+          <name>Infected Bite</name>
+          <reach>-1</reach>
+          <damage>({STR}+1)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+      </naturalweapons>
+      <bonus useselected="False">
+        <armor>1</armor>
+        <critterpowers>
+          <power>Dual Natured</power>
+          <power select="Hearing">Enhanced Senses</power>
+          <power select="Smell">Enhanced Senses</power>
+          <power select="Sunlight, Moderate">Allergy</power>
+          <power select="Metahuman Flesh">Dietary Requirement</power>
+        </critterpowers>
+        <enableattribute>
+          <name>MAG</name>
+        </enableattribute>
+        <enabletab>
+          <name>critter</name>
+        </enabletab>
+        <essencepenalty>-1</essencepenalty>
+        <limitcritterpowercategory>Infected</limitcritterpowercategory>
+        <replaceattributes>
+          <replaceattribute>
+            <name>BOD</name>
+            <min>9</min>
+            <max>14</max>
+            <aug>18</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>AGI</name>
+            <min>1</min>
+            <max>5</max>
+            <aug>9</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>REA</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>STR</name>
+            <min>8</min>
+            <max>13</max>
+            <aug>17</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>WIL</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>LOG</name>
+            <min>1</min>
+            <max>4</max>
+            <aug>8</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>INT</name>
+            <min>1</min>
+            <max>6</max>
+            <aug>10</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>CHA</name>
+            <min>1</min>
+            <max>3</max>
+            <aug>7</aug>
+          </replaceattribute>
+        </replaceattributes>
+        <selectattributes>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>-1</val>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>-1</val>
+        </specificattribute>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Magic Resistance</quality>
+          <resenabled />
+          <depenabled />
+          <quality>Latent Dracomorphosis</quality>
+        </oneof>
+      </forbidden>
+      <required>
+	    <allof>
+		  <metatype>Troll</metatype>
+		  <metavariant>Giant</metavariant>
+		</allof>
+	  </required>
+      <source>RF</source>
+      <page>138</page>
+    </quality>
+	<quality>
+      <id>8b0f7c08-df30-4bfe-b977-d30ef54b263e</id>
+      <name>Infected: Ghoul (Valkyrie)</name>
+      <karma>29</karma>
+      <category>Positive</category>
+      <contributetolimit>False</contributetolimit>
+      <naturalweapons>
+        <naturalweapon>
+          <name>Infected Claws</name>
+          <reach>0</reach>
+          <damage>({STR}+2)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+        <naturalweapon>
+          <name>Infected Bite</name>
+          <reach>-1</reach>
+          <damage>({STR}+1)P</damage>
+          <ap>-1</ap>
+          <useskill>Unarmed Combat</useskill>
+          <accuracy>Physical</accuracy>
+          <source>RF</source>
+          <page>137</page>
+        </naturalweapon>
+      </naturalweapons>
+      <bonus useselected="False">
+        <armor>1</armor>
+        <critterpowers>
+          <power>Dual Natured</power>
+          <power select="Hearing">Enhanced Senses</power>
+          <power select="Smell">Enhanced Senses</power>
+          <power select="Sunlight, Moderate">Allergy</power>
+          <power select="Metahuman Flesh">Dietary Requirement</power>
+        </critterpowers>
+        <enableattribute>
+          <name>MAG</name>
+        </enableattribute>
+        <enabletab>
+          <name>critter</name>
+        </enabletab>
+        <essencepenalty>-1</essencepenalty>
+        <limitcritterpowercategory>Infected</limitcritterpowercategory>
+        <replaceattributes>
+          <replaceattribute>
+            <name>BOD</name>
+            <min>1</min>
+            <max>9</max>
+            <aug>13</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>AGI</name>
+            <min>1</min>
+            <max>6</max>
+            <aug>10</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>REA</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>STR</name>
+            <min>4</min>
+            <max>9</max>
+            <aug>13</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>WIL</name>
+            <min>3</min>
+            <max>8</max>
+            <aug>12</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>LOG</name>
+            <min>1</min>
+            <max>5</max>
+            <aug>9</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>INT</name>
+            <min>2</min>
+            <max>7</max>
+            <aug>11</aug>
+          </replaceattribute>
+          <replaceattribute>
+            <name>CHA</name>
+            <min>1</min>
+            <max>4</max>
+            <aug>8</aug>
+          </replaceattribute>
+        </replaceattributes>
+        <selectattributes>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>BOD</attribute>
+            <attribute>REA</attribute>
+            <attribute>STR</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+          <selectattribute>
+            <attribute>WIL</attribute>
+            <attribute>INT</attribute>
+            <val>1</val>
+          </selectattribute>
+        </selectattributes>
+        <specificattribute>
+          <name>LOG</name>
+          <val>-1</val>
+        </specificattribute>
+        <specificattribute>
+          <name>CHA</name>
+          <val>-1</val>
+        </specificattribute>
+      </bonus>
+      <forbidden>
+        <oneof>
+          <quality>Magic Resistance</quality>
+          <resenabled />
+          <depenabled />
+          <quality>Latent Dracomorphosis</quality>
+        </oneof>
+      </forbidden>
+      <required>
+	    <allof>
+		  <metatype>Human</metatype>
+		  <metavariant>Valkyrie</metavariant>
+		</allof>
+	  </required>
+      <source>RF</source>
+      <page>138</page>
+    </quality>
+  </qualities>
+  
+  <qualities>
+    <quality>
+	  <name>Infected: Ghoul (Dwarf)</name>
+	  <required amendoperation="replace">
+	    <allof>
+		  <metatype>Dwarf</metatype>
+		  <metavariant>None</metavariant>
+		</allof>
+	  </required>
+	</quality>
+	<quality>
+	  <name>Infected: Ghoul (Elf)</name>
+	  <required amendoperation="replace">
+	    <allof>
+		  <metatype>Elf</metatype>
+		  <metavariant>None</metavariant>
+		</allof>
+	  </required>
+	</quality>
+	<quality>
+	  <name>Infected: Ghoul (Ork)</name>
+	  <required amendoperation="replace">
+	    <allof>
+		  <metatype>Ork</metatype>
+		  <metavariant>None</metavariant>
+		</allof>
+	  </required>
+	</quality>
+	<quality>
+	  <name>Infected: Ghoul (Troll)</name>
+	  <required amendoperation="replace">
+	    <allof>
+		  <metatype>Troll</metatype>
+		  <metavariant>None</metavariant>
+		</allof>
+	  </required>
+	</quality>
+	<quality>
+	  <name>Infected: Ghoul (Human)</name>
+	  <forbidden amendoperation="replace">
+	    <oneof>
+		  <metavariant>Valkyrie</metavariant>
+		</oneof>
+	  </forbidden>
+	</quality>
+  </qualities>
+  <qualities amendoperation="append">
+	<!--First Impression Replacement qualities-->
+	<quality>
+      <id>f0cc97ad-1a03-44df-9c40-42aef532f79f</id>
+      <name>Pathological Liar</name>
+      <karma>4</karma>
+      <category>Positive</category>
+      <bonus>
+        <specificskill>
+          <name>Con</name>
+          <bonus>1</bonus>
+        </specificskill>
+      </bonus>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+	<quality>
+      <id>947ef2a0-b009-4ace-a98b-063a0f0f0d8b</id>
+      <name>Master Haggler</name>
+      <karma>4</karma>
+      <category>Positive</category>
+      <bonus>
+        <specificskill>
+          <name>Negotiation</name>
+          <bonus>1</bonus>
+        </specificskill>
+      </bonus>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+	<quality>
+      <id>7436234f-fd5e-403b-b1e7-802b58b02840</id>
+      <name>Inquisitor</name>
+      <karma>4</karma>
+      <category>Positive</category>
+      <bonus>
+        <specificskill>
+          <name>Intimidation</name>
+          <bonus>1</bonus>
+        </specificskill>
+      </bonus>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+	<quality>
+      <id>c4d3b1ae-433c-4820-9092-7025a4a9a66c</id>
+      <name>Masquerade</name>
+      <karma>4</karma>
+      <category>Positive</category>
+      <bonus>
+        <specificskill>
+          <name>Impersonation</name>
+          <bonus>1</bonus>
+        </specificskill>
+      </bonus>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+	<quality>
+      <id>61731d62-58af-4d61-8f64-dc917cf7d35d</id>
+      <name>Beguiler</name>
+      <karma>4</karma>
+      <category>Positive</category>
+      <bonus>
+        <specificskill>
+          <name>Performance</name>
+          <bonus>1</bonus>
+        </specificskill>
+      </bonus>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+  </qualities>
+</chummer>
