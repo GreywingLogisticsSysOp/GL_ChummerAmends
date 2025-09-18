@@ -2827,34 +2827,6 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
     </accessory>
   </accessories>
 
-<!-- Weapon Buffs -->
- <weapon>
-      <id>e27e14ac-01bb-46e0-8d63-62994052d92c</id>
-      <name>Colt M23</name>
-      <category>Assault Rifles</category>
-      <type>Ranged</type>
-      <conceal>6</conceal>
-      <accuracy>6</accuracy>
-      <reach>0</reach>
-      <damage>9P</damage>
-      <ap>-2</ap>
-      <mode>SA/BF/FA</mode>
-      <rc>0</rc>
-      <ammo>40(c)</ammo>
-      <avail>4R</avail>
-      <cost>750</cost>
-      <source>SR5</source>
-      <page>428</page>
-      <accessorymounts>
-        <mount>Stock</mount>
-        <mount>Side</mount>
-        <mount>Barrel</mount>
-        <mount>Top</mount>
-        <mount>Under</mount>
-      </accessorymounts>
-    </weapon>
-
-
 <!-- Accomodating 6th Edition Weapons-->
   <accessories>
     <accessory>
