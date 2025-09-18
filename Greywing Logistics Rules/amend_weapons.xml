@@ -2827,7 +2827,66 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
     </accessory>
   </accessories>
 
-  <!-- Accomodating 6th Edition Weapons-->
+<!-- Buffs to Weapons -->
+	<weapon>
+    	<sourceid>e27e14ac-01bb-46e0-8d63-62994052d92c</sourceid>
+    	<guid>22cfeb02-717a-44bb-b305-ff1938467126</guid>
+    	<name>Colt M23</name>
+     	<category>Assault Rifles</category>
+    	<type>Ranged</type>
+    	<spec />
+    	<spec2 />
+    	<reach>0</reach>
+    	<damage>9P</damage>
+    	<ap>-2</ap>
+    	<mode>SA/BF/FA</mode>
+    	<rc>0</rc>
+    	<ammo>40(c)</ammo>
+    	<cyberware>False</cyberware>
+    	<ammocategory />
+    	<ammoslots>1</ammoslots>
+    	<sizecategory />
+    	<firingmode>DogBrain</firingmode>
+    	<minrating />
+    	<maxrating />
+    	<rating>0</rating>
+    	<accuracy>6</accuracy>
+		<activeammoslot>1</activeammoslot>
+		<conceal>6</conceal>
+		<avail>4R</avail>
+    	<cost>550</cost>
+    	<weight />
+    	<useskill />
+    	<useskillspec />
+    	<range />
+    	<alternaterange />
+    	<rangemultiply>1</rangemultiply>
+    	<singleshot>1</singleshot>
+    	<shortburst>3</shortburst>
+    	<longburst>6</longburst>
+    	<fullburst>10</fullburst>
+    	<suppressive>20</suppressive>
+    	<allowsingleshot>True</allowsingleshot>
+    	<allowshortburst>True</allowshortburst>
+    	<allowlongburst>True</allowlongburst>
+    	<allowfullburst>True</allowfullburst>
+    	<allowsuppressive>True</allowsuppressive>
+    	<source>SR5</source>
+    	<page>428</page>
+    	<parentid />
+    	<allowaccessory>True</allowaccessory>
+    	<weaponname />
+    	<included>False</included>
+    	<equipped>True</equipped>
+    	<requireammo>True</requireammo>
+    	<accuracy>4</accuracy>
+    	<mount />
+    	<stolen>False</stolen>
+    	<extramount />
+	    <accessories>
+		</accessories>
+		  
+<!-- Accomodating 6th Edition Weapons-->
   <accessories>
     <accessory>
       <name>External Power Source</name>
