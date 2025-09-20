@@ -53,6 +53,16 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
       <name>Synthetic Torso</name>
       <ess>1.0</ess>
     </cyberware>
+
+	<cyberware>
+      <name>Hydraulic Jacks</name>
+      <bonus>
+        <sprintbonus>
+          <category>Ground</category>
+          <val>50*Rating</val>
+        </sprintbonus>
+      </bonus>
+    </cyberware>
   </cyberwares>
 
   <!-- changes the existing critterware to the correct critterware category-->
