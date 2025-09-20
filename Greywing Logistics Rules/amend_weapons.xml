@@ -83,6 +83,15 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
 	  <spec>Spray Pen</spec>
     </weapon>
 
+ <!--Weapon Buff-->
+
+    <weapon>
+      <id>e27e14ac-01bb-46e0-8d63-62994052d92c</id>
+      <name>Colt M23</name>
+      <accuracy>6</accuracy>
+      <cost>750</cost>
+    </weapon>
+	  
 	<!-- Exotic Weapon skill changes (also throughout this doc as some weapons already have an entry)-->
 	<weapon>
       <name>Ares Screech Sonic Rifle</name>
@@ -1605,6 +1614,38 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
       <spec>Sniper Rifles</spec>
       <useskill>Longarms</useskill>
       <ammocategory>Assault Rifles</ammocategory>
+    </weapon>
+
+<!-- 4e Sniper Rifles-->
+    <weapon>
+      <id>ab30989c-f63d-45d5-af90-1312ef684527</id>
+      <name>Walther MA-2100</name>
+      <category>Sniper Rifles</category>
+      <type>Ranged</type>
+      <conceal>6</conceal>
+      <accuracy>8</accuracy>
+      <reach>0</reach>
+      <damage>12P</damage>
+      <ap>-5</ap>
+      <mode>SA</mode>
+      <rc>0</rc>
+      <ammo>10(m)</ammo>
+      <avail>10R</avail>
+      <cost>20000</cost>
+      <source>4e</source>
+      <page>0</page>
+      <accessories>
+        <accessory>
+          <name>Smartgun System, Internal</name>
+        </accessory>
+      </accessories>
+      <accessorymounts>
+        <mount>Stock</mount>
+        <mount>Side</mount>
+        <mount>Barrel</mount>
+        <mount>Top</mount>
+        <mount>Under</mount>
+      </accessorymounts>
     </weapon>
 
     <!-- 4e Sporting Rifles -->
