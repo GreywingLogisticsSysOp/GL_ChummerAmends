@@ -86,6 +86,16 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
  <!--Weapon Buff-->
 
     <weapon>
+      <id>6366691e-c1e0-4d5e-b7a6-1c0371708714</id>
+      <name>Colt Government 2066</name>
+      <accessories>
+        <accessory>
+          <name>Electronic Firing</name>
+        </accessory>
+      </accessories>
+    </weapon>
+
+    <weapon>
       <id>e27e14ac-01bb-46e0-8d63-62994052d92c</id>
       <name>Colt M23</name>
       <accuracy>6</accuracy>
