@@ -62,18 +62,18 @@
     </books>     
     <books amendoperation="append">
         <book>
-            <id>29343593-ceb9-4d22-bfab-32fae650a7b0</id>
-            <name>CC 4e Translation Master Document</name>
+            <id>3bffbca0-747e-433f-9015-d51353fee52a</id>
+            <name>GL 4e Translation Master Document</name>
             <code>4e</code>
         </book>
         <book>
-            <id>e44a2e35-fe95-4a58-b057-161317af5edc</id>
-            <name>CC 6e Translation Master Document</name>
+            <id>2abe4784-5595-4755-8d1d-af31f61c281f</id>
+            <name>GL 6e Translation Master Document</name>
             <code>6e</code>
         </book>
         <book>
-            <id>5ffac241-350b-4b89-9175-034663fd5837</id>
-            <name>CC Master Player Rule Document</name>
+            <id>4465bab9-7e21-4e5a-8ea9-8196d4d0fd60</id>
+            <name>GL Master Player Rule Document</name>
             <code>MPR</code>
         </book>
     </books>
