@@ -148,6 +148,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
       <page>187</page>
       <avail>4</avail>
       <cost>100</cost>
+	  <hide />
     </gear>
     <gear>
       <name>Radical Reagents</name>
@@ -155,7 +156,8 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
       <page>187</page>
       <avail>6</avail>
       <cost>500</cost>
-    </gear>
+      <hide />
+	</gear>
     <gear>
       <name>Shaman Tuxedo</name>
       <hide />
