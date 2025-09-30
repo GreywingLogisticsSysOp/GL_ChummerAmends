@@ -59,7 +59,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
       <bonus>
         <sprintbonus>
           <category>Ground</category>
-          <val>50*Rating</val>
+          <val>25*Rating</val>
         </sprintbonus>
       </bonus>
     </cyberware>
