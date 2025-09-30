@@ -2351,7 +2351,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses />.
       <karma>0</karma>
       <category>Positive</category>
       <bonus>
-        <streetcredmultiplier>15</streetcredmultiplier>
+        <streetcredmultiplier>25</streetcredmultiplier>
       </bonus>
       <source>MPR</source>
       <page>1</page>
