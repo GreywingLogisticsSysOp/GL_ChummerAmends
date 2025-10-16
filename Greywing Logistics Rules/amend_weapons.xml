@@ -2406,40 +2406,118 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
       <weapontype>energy</weapontype>
     </weapon>
 
-    <!-- 6th Edition Weapons -->
-    <weapon>
-      <id>13e8a7a1-b95a-4d23-8045-ef3d10525f5c</id>
-      <name>Ares Predator VI</name>
-      <category>Heavy Pistols</category>
-      <type>Ranged</type>
-      <conceal>0</conceal>
-      <accuracy>5</accuracy>
-      <reach>0</reach>
-      <damage>8P</damage>
-      <ap>-1</ap>
-      <mode>SA/BF</mode>
-      <rc>0</rc>
-      <ammo>10(c)</ammo>
-      <avail>7R</avail>
-      <cost>950</cost>
-      <source>6e</source>
-      <page>0</page>
-      <accessories>
-        <accessory>
-          <name>Smartgun System, Internal</name>
-        </accessory>
-        <accessory>
-          <name>Ammo Skip</name>
-        </accessory>
-      </accessories>
-      <accessorymounts>
-        <mount>Barrel</mount>
-        <mount>Top</mount>
-        <mount>Side</mount>
-        <mount>Stock</mount>
-      </accessorymounts>
-      <spec>Semi-Automatics</spec>
-    </weapon>
+<!-- 6th Edition Weapons -->
+  <weapon>
+    <id>ae322f88-5c6f-45b8-ba14-e1fc485b6910</id>
+    <name>Ruger Lawbringer</name>
+    <category>Heavy Pistols</category>
+    <type>Ranged</type>
+    <conceal>0</conceal>
+    <accuracy>5</accuracy>
+    <reach>0</reach>
+    <damage>8P</damage>
+    <ap>-1</ap>
+    <mode>SA/BF</mode>
+    <rc>0</rc>
+    <ammo>16(c)</ammo>
+    <avail>11R</avail>
+    <cost>4000</cost>
+    <source>6e</source>
+    <page>0</page>
+    <accessories>
+      <accessory>
+        <name>Advanced Safety System, Electro Shocker</name>
+      </accessory>
+      <accessory>
+        <name>Ammo Skip</name>
+      </accessory>
+      <accessory>
+        <name>Gas-Vent 2 System</name>
+      </accessory>
+      <accessory>
+        <name>Safe Target System, Base</name>
+      </accessory>
+      <accessory>
+        <name>Smartgun System, Internal</name>
+      </accessory>
+      <accessory>
+        <name>Weapon Commlink</name>
+        <notes>Comes with an installed Device Rating 4 Commlink.</notes>
+      </accessory>
+    </accessories>
+    <accessorymounts>
+      <mount>Barrel</mount>
+      <mount>Top</mount>
+      <mount>Side</mount>
+      <mount>Stock</mount>
+    </accessorymounts>
+    <spec>Semi-Automatics</spec>
+    <notes>Ruger has surged back onto the scene, taking back the Lone Star contract from Cavalier for officer sidearms, and developed the most recent generation of the Thunderbolt. Much like the Thunderbolt and Thunderstruck before it, the Lawbringer is designed to handle the very worst the lethal streets have to offer to the hard-working LEPs of today’s world, utilizing the most advanced firearm technology available. The Lawbringer uses the latest in safety control features, as well as the cutting-edge Ammo Skip System. The Ammo Skip System allows the officer using a smartlink to select ammo types from a specifically designed magazine and cycle them into the chamber as needed. Possession of a Lawbringer without being a licensed LEP is a serious crime in most jurisdictions, and only a small percentage of Ruger’s production line are available on the market outside of Lone Star officers. At the request of many officers, Ruger also offers an off-duty version called the Lawbringer CS. The Lawbringer CS is a stripped-down version of the original and built on a smaller frame. It lacks the Ammo Skip System, and has a less robust safety system and a smaller magazine, but it’s smaller, making it easier to carry and conceal.</notes>
+  </weapon>
+  <weapon>
+    <id>3a6ac0bf-6ce6-4fb6-b092-d8140a4eced1</id>
+    <name>Ruger Lawbringer CS</name>
+    <category>Heavy Pistols</category>
+    <type>Ranged</type>
+    <conceal>-1</conceal>
+    <accuracy>5</accuracy>
+    <reach>0</reach>
+    <damage>8P</damage>
+    <ap>-1</ap>
+    <mode>SA/BF</mode>
+    <rc>0</rc>
+    <ammo>9(c)</ammo>
+    <avail>4</avail>
+    <cost>1000</cost>
+    <source>6e</source>
+    <page>0</page>
+    <accessories>
+      <accessory>
+        <name>Smartgun System, Internal</name>
+      </accessory>
+    </accessories>
+    <accessorymounts>
+      <mount>Barrel</mount>
+      <mount>Top</mount>
+      <mount>Side</mount>
+      <mount>Stock</mount>
+    </accessorymounts>
+    <spec>Semi-Automatics</spec>
+    <notes>Ruger has surged back onto the scene, taking back the Lone Star contract from Cavalier for officer sidearms, and developed the most recent generation of the Thunderbolt. Much like the Thunderbolt and Thunderstruck before it, the Lawbringer is designed to handle the very worst the lethal streets have to offer to the hard-working LEPs of today’s world, utilizing the most advanced firearm technology available. The Lawbringer uses the latest in safety control features, as well as the cutting-edge Ammo Skip System. The Ammo Skip System allows the officer using a smartlink to select ammo types from a specifically designed magazine and cycle them into the chamber as needed. Possession of a Lawbringer without being a licensed LEP is a serious crime in most jurisdictions, and only a small percentage of Ruger’s production line are available on the market outside of Lone Star officers. At the request of many officers, Ruger also offers an off-duty version called the Lawbringer CS. The Lawbringer CS is a stripped-down version of the original and built on a smaller frame. It lacks the Ammo Skip System, and has a less robust safety system and a smaller magazine, but it’s smaller, making it easier to carry and conceal.</notes>
+  </weapon>  
+  <weapon>
+    <id>13e8a7a1-b95a-4d23-8045-ef3d10525f5c</id>
+    <name>Ares Predator VI</name>
+    <category>Heavy Pistols</category>
+    <type>Ranged</type>
+    <conceal>0</conceal>
+    <accuracy>5</accuracy>
+    <reach>0</reach>
+    <damage>8P</damage>
+    <ap>-1</ap>
+    <mode>SA/BF</mode>
+    <rc>0</rc>
+    <ammo>10(c)</ammo>
+    <avail>7R</avail>
+    <cost>950</cost>
+    <source>6e</source>
+    <page>0</page>
+    <accessories>
+      <accessory>
+        <name>Smartgun System, Internal</name>
+      </accessory>
+      <accessory>
+        <name>Ammo Skip</name>
+      </accessory>
+    </accessories>
+    <accessorymounts>
+      <mount>Barrel</mount>
+      <mount>Top</mount>
+      <mount>Side</mount>
+      <mount>Stock</mount>
+    </accessorymounts>
+    <spec>Semi-Automatics</spec>
+  </weapon>
 	<weapon>
       <id>0cfc1fa6-7f33-435f-8c0f-499c315f8c0c</id>
       <name>Shock Module</name>
