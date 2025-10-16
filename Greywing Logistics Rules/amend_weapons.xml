@@ -2420,7 +2420,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
     <mode>SA/BF</mode>
     <rc>0</rc>
     <ammo>16(c)</ammo>
-    <avail>11R</avail>
+    <avail>11F</avail>
     <cost>4000</cost>
     <source>6e</source>
     <page>0</page>
@@ -2467,7 +2467,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
     <mode>SA/BF</mode>
     <rc>0</rc>
     <ammo>9(c)</ammo>
-    <avail>4</avail>
+    <avail>4R</avail>
     <cost>1000</cost>
     <source>6e</source>
     <page>0</page>
