@@ -2462,7 +2462,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
     <conceal>-1</conceal>
     <accuracy>5</accuracy>
     <reach>0</reach>
-    <damage>8P</damage>
+    <damage>7P</damage>
     <ap>-1</ap>
     <mode>SA/BF</mode>
     <rc>0</rc>
