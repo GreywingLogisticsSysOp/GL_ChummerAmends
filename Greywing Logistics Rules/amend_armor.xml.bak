@@ -17,13 +17,23 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
   You can obtain the full source code for Chummer5a at
   https://github.com/chummer5a/chummer5a
 -->
+
+<!-- Testing -->
+
 <chummer xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema armor.xsd">
   <armors>
     <armor>
       <name>Critter Body Armor</name>
       <rating>100</rating>
     </armor>
-
+	<armor>
+	  <name>Vashon Island: Sleeping Tiger</name>
+	  <mods amendoperation="replace">
+        <name>Custom Fit</name>
+        <name>Newest Model</name>
+        <name>Electrochromic Clothing</name>
+      </mods>
+	</armor>
     <!-- Adding Environmental adaptations-->
     <armor>
       <name>Arctic Diving Suit</name>
