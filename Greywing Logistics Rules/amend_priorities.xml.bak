@@ -107,6 +107,11 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
             <value>7</value>
             <karma>0</karma>
           </metavariant>
+		  <metavariant>
+            <name>E-Ghost</name>
+            <value>7</value>
+            <karma>0</karma>
+          </metavariant>
           <metavariant>
             <name>Deep Foundation A.I.</name>
             <value>3</value>
