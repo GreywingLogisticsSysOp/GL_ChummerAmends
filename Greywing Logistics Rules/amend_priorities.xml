@@ -318,7 +318,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
 
   <priority>
     <id>255da2ba-8d21-4a73-9f81-37156901db72</id>
-    <name>D - Human, Elf, Ork or A.I.</name>
+    <name>D - Any Non-Troll, Non-Shifter Metatype</name>
     <metatypes>
       <metatype>
         <name>Human</name>
@@ -356,6 +356,33 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
             <name>Hobgoblin</name>
             <value>0</value>
             <karma>-5</karma>
+          </metavariant>
+        </metavariants>
+      </metatype>
+	  <metatype>
+        <name>Dwarf</name>
+        <value>0</value>
+        <karma>0</karma>
+        <metavariants>
+          <metavariant>
+            <name>Gnome</name>
+            <value>0</value>
+            <karma>7</karma>
+          </metavariant>
+          <metavariant>
+            <name>Hanuman</name>
+            <value>0</value>
+            <karma>5</karma>
+          </metavariant>
+          <metavariant>
+            <name>Koborokuru</name>
+            <value>0</value>
+            <karma>0</karma>
+          </metavariant>
+          <metavariant>
+            <name>Menehune</name>
+            <value>0</value>
+            <karma>2</karma>
           </metavariant>
         </metavariants>
       </metatype>
