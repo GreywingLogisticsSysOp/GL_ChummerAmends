@@ -628,14 +628,6 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses />.
       </forbidden>
     </quality>
     <quality>
-      <name>Incomplete Deprogramming</name>
-      <forbidden amendoperation="append">
-        <oneof>
-          <metatype>AI</metatype>
-        </oneof>
-      </forbidden>
-    </quality>
-    <quality>
       <name>Infirm</name>
       <forbidden amendoperation="append">
         <oneof>
@@ -994,6 +986,11 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses />.
 	
 	<quality>
       <name>First Impression</name>
+      <hide />
+    </quality>
+	
+	<quality>
+      <name>Incomplete Deprogramming</name>
       <hide />
     </quality>
 
