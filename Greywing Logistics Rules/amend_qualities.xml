@@ -2176,7 +2176,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses />.
     <quality>
       <name>Consummate Professional</name>
       <bonus>
-        <streetcredmultiplier>35</streetcredmultiplier>
+        <streetcredmultiplier>70</streetcredmultiplier>
       </bonus>
     </quality>
 
@@ -2348,7 +2348,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses />.
       <karma>0</karma>
       <category>Positive</category>
       <bonus>
-        <streetcredmultiplier>25</streetcredmultiplier>
+        <streetcredmultiplier>35</streetcredmultiplier>
       </bonus>
       <source>MPR</source>
       <page>1</page>
