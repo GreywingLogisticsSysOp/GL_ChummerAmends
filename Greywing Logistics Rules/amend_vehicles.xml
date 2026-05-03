@@ -4034,6 +4034,13 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
 					<maxrating>7</maxrating>
 				</gear>
 			</gears>
+            <mods>
+				<name>Landing Drone Rack (Medium)</name>
+				<name>Landing Drone Rack (Medium)</name>
+				<name>Landing Drone Rack (Medium)</name>
+				<name>Landing Drone Rack (Medium)</name>
+				<name>Retrans Unit</name>
+			</mods>
 			<seats>4</seats>
 		</vehicle>
 	</vehicles>
