@@ -401,7 +401,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
     </gear>
     <gear>
       <name>Grenade: Krime Party</name>
-      <hide />
+      <cost>200</cost>
     </gear>
     <gear>
       <name>Grenade: Krime Cocktail</name>
