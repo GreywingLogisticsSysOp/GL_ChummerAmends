@@ -2398,6 +2398,11 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
       <cost>0</cost>
       <source>6e</source>
       <page>0</page>
+      <accessories>
+        <accessory>
+            <name>Smartgun System, Internal</name>
+        </accessory>
+      </accessories>
       <allowaccessory>False</allowaccessory>
       <cyberware>True</cyberware>
       <hide />
