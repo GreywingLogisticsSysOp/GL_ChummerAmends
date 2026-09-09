@@ -2413,7 +2413,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
 
 <!-- 6th Edition Weapons -->
   <weapon>
-    <id>ae322f88-5c6f-45b8-ba14-e1fc485b6910</id>
+    <id>9f047662-a918-40be-9808-94b493bbd604</id>
     <name>rEVOlution Arms Iron Eagle</name>
     <category>Heavy Pistols</category>
     <type>Ranged</type>
@@ -2447,7 +2447,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
     <notes>Orks and trolls rejoice, there is a heavy pistol you can pretty much call your own again. This monster offers power unattainable by other semi-auto heavy pistols but leaves those with a smaller frame a bit the worse for wear after too much time behind the trigger.</notes>
   </weapon>
   <weapon>
-    <id>ae322f88-5c6f-45b8-ba14-e1fc485b6910</id>
+    <id>f438e980-3b2b-4a60-aad9-4bf554813a61</id>
     <name>Ranger Arms M-1400 "Springfield"</name>
     <category>Sniper Rifle</category>
     <type>Ranged</type>
