@@ -2449,7 +2449,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
   <weapon>
     <id>f438e980-3b2b-4a60-aad9-4bf554813a61</id>
     <name>Ranger Arms M-1400 "Springfield"</name>
-    <category>Sniper Rifle</category>
+    <category>Sniper Rifles</category>
     <type>Ranged</type>
     <conceal>0</conceal>
     <accuracy>7</accuracy>
