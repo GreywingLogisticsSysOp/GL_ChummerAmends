@@ -2463,10 +2463,6 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
     <cost>6000</cost>
     <source>6e</source>
     <page>0</page>
-    <accessories>
-    <accessory>
-    </accessory>
-    </accessories>
     <accessorymounts>
       <mount>Barrel</mount>
       <mount>Top</mount>
