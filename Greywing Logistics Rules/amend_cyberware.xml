@@ -34,7 +34,41 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
     </grade>
   </grades>
 
+<!-- Enhancement rating changes -->
+  <cyberwares>
+    <cyberware>
+      <name>Vision Enhancement</name>
+      <rating>6</rating>
+      <capacity>[Rating * (1 + number(Rating > 3))]</capacity>
+    </cyberware>
 
+    <cyberware>
+      <name>Audio Enhancement</name>
+      <rating>6</rating>
+      <capacity>[Rating * (1 + number(Rating > 3))]</capacity>
+    </cyberware>
+
+    <cyberware>
+      <name>Olfactory Booster</name>
+      <rating>6</rating>
+    </cyberware>
+  </cyberwares>
+
+<!-- Cybereyes/Cyberears rating changes -->
+  <cyberwares>
+    <cyberware>
+      <name>Cybereyes Basic System</name>
+      <rating>6</rating>
+      <capacity>Rating * 4</capacity>
+    </cyberware>
+
+    <cyberware>
+      <name>Cyberears</name>
+      <rating>6</rating>
+      <capacity>Rating * 4</capacity>
+    </cyberware>
+  </cyberwares>
+	
 <!-- Core ware balance tweaks-->
   <cyberwares>
     <cyberware>
