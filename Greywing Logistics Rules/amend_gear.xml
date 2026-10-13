@@ -443,15 +443,19 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
 	<gear>
 	  <id>45b2ee71-590b-4f17-9541-ae1576bfda2e</id>
       <name>Parachute</name>
-      <cost>1000</cost>
       <avail>4</avail>
+      <cost>1000</cost>
+	  <source>MPR</source>
+	  <page>0</page>
     </gear>
     <gear>
 	  <id>36425ec8-1028-40fd-826b-157d7c3c25be</id>
       <name>Halo Parachute</name>
-      <cost>3000</cost>
-      <avail>8</avail>
-    </gear>
+	  <avail>8</avail>
+	  <cost>3000</cost>
+	  <source>MPR</source>
+	  <page>0</page>
+	</gear>
   <!-- Ritual Components for Necro Mages-->
     <gear>
       <id>246f0df7-a2e2-4290-80d1-d7eeae33712a</id>
