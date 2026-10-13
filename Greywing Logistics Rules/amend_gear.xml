@@ -56,18 +56,6 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
       <hide />
     </gear>-->
 
-	<!-- Adding Parachutes -->
-	<gear>
-      <name>Parachute</name>
-      <cost>1000</cost>
-      <avail>4</avail>
-    </gear>
-    <gear>
-      <name>Halo Parachute</name>
-      <cost>3000</cost>
-      <avail>8</avail>
-    </gear>
-
 	<!-- Changes to Arrowheads -->
 	<gear>
 		<name>Arrow: Monotip Head</name>
@@ -451,6 +439,17 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
 
   <!-- New gear, such as the plugin for the briefcase shielding -->
   <gears amendoperation="append">
+  <!-- Adding Parachutes -->
+	<gear>
+      <name>Parachute</name>
+      <cost>1000</cost>
+      <avail>4</avail>
+    </gear>
+    <gear>
+      <name>Halo Parachute</name>
+      <cost>3000</cost>
+      <avail>8</avail>
+    </gear>
   <!-- Ritual Components for Necro Mages-->
     <gear>
       <id>246f0df7-a2e2-4290-80d1-d7eeae33712a</id>
