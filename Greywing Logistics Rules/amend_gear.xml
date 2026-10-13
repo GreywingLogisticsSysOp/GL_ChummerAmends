@@ -441,11 +441,13 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
   <gears amendoperation="append">
   <!-- Adding Parachutes -->
 	<gear>
+	  <id>45b2ee71-590b-4f17-9541-ae1576bfda2e</id>
       <name>Parachute</name>
       <cost>1000</cost>
       <avail>4</avail>
     </gear>
     <gear>
+	  <id>36425ec8-1028-40fd-826b-157d7c3c25be</id>
       <name>Halo Parachute</name>
       <cost>3000</cost>
       <avail>8</avail>
