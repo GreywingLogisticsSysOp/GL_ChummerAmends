@@ -56,6 +56,19 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses/>.
       <hide />
     </gear>-->
 
+	<!-- Adding Parachutes -->
+	<gear>
+      <name>Parachute</name>
+      <cost>1000</cost>
+      <avail>4</avail>
+    </gear>
+    <gear>
+      <name>Halo Parachute</name>
+      <cost>3000</cost>
+      <avail>8</avail>
+    </gear>
+
+	<!-- Changes to Arrowheads -->
 	<gear>
 		<name>Arrow: Monotip Head</name>
 		<weaponbonus>
