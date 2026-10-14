@@ -6761,10 +6761,10 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses />.
       <karma>4</karma>
       <category>Positive</category>
         <bonus>
-          <swapskillspecattribute>
+          <swapskillattribute>
             <attribute>WIL</attribute>
     		<limittoskill>Animal Handling</limittoskill>
-          </swapskillspecattribute>
+          </swapskillattribute>
         </bonus>
       <source>MPR</source>
       <page>0</page>
