@@ -6753,6 +6753,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses />.
       <page>0</page>
     </quality>
   </qualities>
+  <!-- Adding new Quality for Animal Handling -->
   <qualities>
     <quality>
       <id>85a3ab40-ec92-4c93-b0b6-c5832eabffd5</id>
@@ -6760,11 +6761,10 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses />.
       <karma>4</karma>
       <category>Positive</category>
         <bonus>
-        <!-- Example: Adding a dynamic bonus to Pistol skill tests equal to your Logic attribute instead of its regular attribute -->
-          <specificskill>
-            <name>Animal Handling</name>
-            <val>{WIL}</val>
-          </specificskill>
+          <swapskillspecattribute>
+            <attribute>WIL</attribute>
+    		<limittoskill>Animal Handling</limittoskill>
+          </swapskillspecattribute>
         </bonus>
       <source>MPR</source>
       <page>0</page>
