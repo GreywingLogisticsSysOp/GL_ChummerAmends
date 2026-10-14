@@ -6685,7 +6685,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses />.
 	<quality>
       <id>f0cc97ad-1a03-44df-9c40-42aef532f79f</id>
       <name>Practiced Liar</name>
-      <karma>4</karma>
+      <karma>3</karma>
       <category>Positive</category>
       <bonus>
         <specificskill>
@@ -6699,7 +6699,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses />.
 	<quality>
       <id>947ef2a0-b009-4ace-a98b-063a0f0f0d8b</id>
       <name>Master Haggler</name>
-      <karma>4</karma>
+      <karma>3</karma>
       <category>Positive</category>
       <bonus>
         <specificskill>
@@ -6713,7 +6713,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses />.
 	<quality>
       <id>7436234f-fd5e-403b-b1e7-802b58b02840</id>
       <name>Inquisitor</name>
-      <karma>4</karma>
+      <karma>3</karma>
       <category>Positive</category>
       <bonus>
         <specificskill>
@@ -6727,7 +6727,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses />.
 	<quality>
       <id>c4d3b1ae-433c-4820-9092-7025a4a9a66c</id>
       <name>Masquerade</name>
-      <karma>4</karma>
+      <karma>3</karma>
       <category>Positive</category>
       <bonus>
         <specificskill>
@@ -6741,7 +6741,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses />.
 	<quality>
       <id>61731d62-58af-4d61-8f64-dc917cf7d35d</id>
       <name>Beguiler</name>
-      <karma>4</karma>
+      <karma>3</karma>
       <category>Positive</category>
       <bonus>
         <specificskill>
@@ -6749,6 +6749,23 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses />.
           <bonus>1</bonus>
         </specificskill>
       </bonus>
+      <source>MPR</source>
+      <page>0</page>
+    </quality>
+  </qualities>
+  <qualities>
+    <quality>
+      <id>85a3ab40-ec92-4c93-b0b6-c5832eabffd5</id>
+      <name>Persistent Handler</name>
+      <karma>4</karma>
+      <category>Positive</category>
+        <bonus>
+        <!-- Example: Adding a dynamic bonus to Pistol skill tests equal to your Logic attribute instead of its regular attribute -->
+          <specificskill>
+            <name>Animal Handling</name>
+            <val>{WIL}</val>
+          </specificskill>
+        </bonus>
       <source>MPR</source>
       <page>0</page>
     </quality>
