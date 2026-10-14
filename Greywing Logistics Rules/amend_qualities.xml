@@ -6754,7 +6754,7 @@ along with Chummer5a.  If not, see <http://www.gnu.org/licenses />.
     </quality>
   </qualities>
   <!-- Adding new Quality for Animal Handling -->
-  <qualities>
+  <qualities amendoperation="append">
     <quality>
       <id>85a3ab40-ec92-4c93-b0b6-c5832eabffd5</id>
       <name>Persistent Handler</name>
